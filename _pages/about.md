@@ -19,6 +19,6 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
-Avi Srivastava is an Assistant Professor in the Gene Expression & Regulation Program at the Ellen and Ronald Caplan Cancer Center, Wistar Institute.
+Avi Srivastava is an Assistant Professor in the Gene Expression & Regulation Program at Ellen and Ronald Caplan Cancer Center of the Wistar Institute.
 
-Before joining Wistar, he was a postdoctoral researcher working with professor Rahul Satija in the Department of Biology at New York University and New York genome Center. He obtained Ph.D. in Computer Science at Stony Brook University, New York.
+Before joining Wistar, he was a postdoctoral researcher working with professor Rahul Satija in the Department of Biology at New York University and New York genome Center. He obtained Ph.D. in Computer Science at Stony Brook University, New York, advised by professor Rob Patro.
