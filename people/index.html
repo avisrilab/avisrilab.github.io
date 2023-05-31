@@ -10,9 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>a post with videos | Srivastava Lab</title>
+    <title>People | Srivastava Lab</title>
     <meta name="author" content="Avi  Srivastava">
-    <meta name="description" content="this is what included videos could look like">
+    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -38,7 +39,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://avisrilab.github.io/sample-posts/2023/04/24/videos.html">
+    <link rel="canonical" href="https://avisrilab.github.io/people/">
 
     <!-- Dark Mode -->
     
@@ -78,8 +79,8 @@
               
 
               <!-- Other pages -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/people/">People</a>
+              <li class="nav-item active">
+                <a class="nav-link" href="/people/">People<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/publications/">Publications</a>
@@ -112,146 +113,57 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- _layouts/post.html -->
+        <!-- page.html -->
+        <div class="post">
 
-<div class="post">
+          <header class="post-header">
+            <h1 class="post-title">People</h1>
+            <p class="post-description"></p>
+          </header>
 
-  <header class="post-header">
-    <h1 class="post-title">a post with videos</h1>
-    <p class="post-meta">April 24, 2023</p>
-    <p class="post-tags">
-      <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
-        ·  
-        <a href="/blog/tag/including">
-          <i class="fas fa-hashtag fa-sm"></i> including</a>  
-          <a href="/blog/tag/videos">
-          <i class="fas fa-hashtag fa-sm"></i> videos</a>  
-          
-        ·  
-        <a href="/blog/category/sample-posts">
-          <i class="fas fa-tag fa-sm"></i> sample-posts</a>  
-          
+          <article>
+            <!-- pages/projects.md -->
+<div class="projects">
+  <!-- Display categorized projects -->
+  <h2 class="category">Principal Investigator</h2>
+  <!-- Generate cards for each project -->
+  <div class="grid">
+<!-- _includes/projects.html -->
+<div class="grid-sizer"></div>
+<div class="grid-item">
+  <a href="/people/avi/">
+      <div class="card hoverable">
+<figure>
 
-    </p>
-  </header>
-
-  <article class="post-content">
+  <picture>
     
-    <div id="markdown-content">
-      <p>This is an example post with videos. It supports local video files.</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        
-
-<figure>
-
-  
-
-  <video src="/assets/video/pexels-engin-akyurt-6069112-960x540-30fps.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" autoplay="" controls=""></video>
-
-  
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        
-
-<figure>
-
-  
-
-  <video src="/assets/video/pexels-engin-akyurt-6069112-960x540-30fps.mp4" class="img-fluid rounded z-depth-1" width="auto" height="auto" controls=""></video>
-
-  
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    A simple, elegant caption looks good between video rows, after each row, or doesn't have to be there at all.
-</div>
-
-<p>It does also support embedding videos from different sources. Here are some examples:</p>
-
-<div class="row mt-3">
-    <div class="col-sm mt-3 mt-md-0">
-        
-
-<figure>
-
-  
-
-  <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"></iframe>
-
-  
-
-</figure>
-
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        
-
-<figure>
-
-  
-
-  <iframe src="https://player.vimeo.com/video/524933864?h=1ac4fd9fb4&amp;title=0&amp;byline=0&amp;portrait=0" class="img-fluid rounded z-depth-1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" width="auto" height="auto"></iframe>
-
-  
-
-</figure>
-
-    </div>
-</div>
-
-    </div>
-  </article>
-
-
-  
+    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/prof_pic-480.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/prof_pic-800.webp"></source>
+    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/prof_pic-1400.webp"></source>
     
-    <br>
-    <hr>
-    <br>
-    <ul class="list-disc pl-8"></ul>
 
-    <!-- Adds related posts to the end of an article -->
-    <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2>
-    <p class="mb-2">Here are some more articles you might like to read next:</p>
-  
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/prof_pic.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/2022/04/23/displaying-external-posts-on-your-al-folio-blog.html">Displaying External Posts on Your al-folio Blog</a>
-  </li>
+  </picture>
 
-  
+</figure>
 
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/sample-posts/blockquotes/2023/05/12/custom-blockquotes.html">a post with custom blockquotes</a>
-  </li>
-
-  
-
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/sample-posts/toc/sidebar/2023/04/25/sidebar-table-of-contents.html">a post with table of contents on a sidebar</a>
-  </li>
-
-  
-
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/sample-posts/2023/04/25/audios.html">a post with audios</a>
-  </li>
-
-  
-
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/sample-posts/2023/03/20/tables.html">displaying beautiful tables with Bootstrap Tables</a>
-  </li>
-
+        <div class="card-body">
+          <h2 class="card-title text-camelcase">Avi Srivastava</h2>
+          <p class="card-text">Ph.D., Computer Science <br> Stony Brook University</p>
+          <div class="row ml-1 mr-1 p-0">
+          </div>
+        </div>
+      </div>
+    </a>
 </div>
+  </div>
+</div>
+
+          </article>
+
+        </div>
 
       
     </div>
