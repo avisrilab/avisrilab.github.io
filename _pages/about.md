@@ -3,18 +3,29 @@ layout: about
 title: Home
 permalink: /
 subtitle: <b><font size="+2">Integrative Systems Biology</font>
-
 profile:
-  # align: right
+  align: right
   # image: prof_pic.png
   # image_circular: false # crops the image to make it circular
-  address:
+  # address:
     # <p><b><font size="+2">Avi Srivastava</font></p>
     # <p>Assistant Professor</p>
     # <p>The Wistar Institute</p>
     # <p>3601 Spruce Street</p>
     # <p>Philadelphia, Pennsylvania 19104</p>
-
+carousels:
+  - images: 
+    - image: /assets/img/publication_preview/accting.jpg
+    - image: /assets/img/publication_preview/bayesian.jpg
+    - image: /assets/img/publication_preview/cnt.jpg
+    - image: /assets/img/publication_preview/aln.jpg
+    - image: /assets/img/publication_preview/signac.jpg
+    - image: /assets/img/publication_preview/minnow.jpg
+    - image: /assets/img/publication_preview/rapmap.jpg
+    - image: /assets/img/publication_preview/puffer.jpg
+    - image: /assets/img/publication_preview/rapclust.jpg
+    - image: /assets/img/publication_preview/compression.jpg
+    - image: /assets/img/publication_preview/ddfact.jpg
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"

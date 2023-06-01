@@ -27,7 +27,16 @@ layout: default
               path=profile_image_path
               class=profile_image_class
               alt=page.profile.image -%}
+            {%- else -%}
+              {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+              {% include carousel.html 
+                height="65" 
+                unit="%" 
+                duration="7" 
+                class=profile_image_class
+                number="1" %}
             {% endif -%}
+
             {%- if page.profile.address %}
             <div class="address">
               {{ page.profile.address }}
