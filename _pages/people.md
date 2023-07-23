@@ -6,12 +6,17 @@ permalink: /people/
 nav: true
 nav_order: 1
 published: true
-display_categories: [Principal Investigator]
+display_categories: [Team]
 horizontal: false
 ---
 
 <!-- pages/projects.md -->
 <div class="projects">
+  <font size="+1"> We are actively seeking expansion for our lab at various levels, offering exciting opportunities in both computational and experimental positions. <button style="background-color: light-grey">
+    <a href="{{ 'contact' | relative_url }}">Join us!</a>
+  </button>
+ </font>
+
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {%- for category in page.display_categories %}

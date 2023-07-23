@@ -1,10 +1,10 @@
 ---
 layout: page
 title: Avi Srivastava
-description: Ph.D., Computer Science <br> Stony Brook University
+description: Ph.D., Computer Science <br> Principal Investigator
 img: assets/img/prof_pic.png
 importance: 1
-category: Principal Investigator
+category: [Team]
 scholar_userid: HhKXdy4AAAAJ
 email: asrivastava@wistar.org
 github_username: k3yavi

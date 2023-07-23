@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-subtitle: <b><font size="+2">Integrative Systems Biology</font>
+subtitle: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4734377/"><b><font size="+2">Integrative Systems Biology</font></a>
 profile:
   align: right
   # image: prof_pic.png
