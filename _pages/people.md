@@ -4,7 +4,7 @@ title: People
 permalink: /people/
 # description: A growing collection of your cool projects.
 nav: true
-nav_order: 1
+nav_order: 3
 published: true
 display_categories: [Team]
 horizontal: false

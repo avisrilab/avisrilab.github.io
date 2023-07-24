@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Srivastava Lab is opening soon :sparkles: :tada:
+Srivastava Lab is opening doors on September 1, 2023 :sparkles: :tada:
