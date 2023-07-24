@@ -13,20 +13,9 @@ layout: default
 
         <article>
           {% if page.profile -%}
-          <!-- carousel code -->
-          <!-- {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-          {% include carousel.html 
-            height="300" 
-            unit="px" 
-            duration="7" 
-            class=profile_image_class
-            number="1" %} -->
-          <!-- carousel code ends -->
-          <div class="row justify-content-sm-center">
-            <div class="col-sm-12 mt-3 mt-md-0">
-                {% include figure.html path="/assets/img/publication_preview/scnt.png" title="scChromHMM" class="img-fluid rounded z-depth-0" %}
-            </div>
-          </div>
+          <!-- Container for the image gallery -->
+          {% include gallery.html -%}
+          <!-- Container ends for the image gallery -->
 
           <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
             {%- if page.profile.image %}
