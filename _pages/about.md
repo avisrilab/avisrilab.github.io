@@ -32,10 +32,12 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Srivastava laboratory is part of the Gene Expression & Regulation Program at Ellen and Ronald Caplan Cancer Center.
+Welcome to the Srivastava lab! Our lab is set to launch from our home base at <a href="https://wistar.org/">the Wistar Institute</a>, Philadelphia on September 1, 2023. The lab is part of the <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center/gene-expression-and-regulation-program#:~:text=The%20Gene%20Expression%20and%20Regulation,in%20cancer%20etiology%20and%20therapeutics.">Gene Expression and Regulation Program</a> at the <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center">Ellen and Ronald Caplan Cancer Center</a> of the Wistar Institute.
 
-<font size="+2">What We Do</font>
-Srivastava lab pursues a quantitative understanding of the regulatory mechanism of the epigenome, and how biological systems are dysregulated to a failed (diseased) state.
+Our lab seeks to develop a comprehensive understanding of how the epigenome regulates transcription to determine cell fate, with a particular emphasis on blood cell development and its dysregulation in leukemia. Our research interests lie at the exciting intersection of epigenetics, computational, and cancer biology. As we strive to achieve our goals, we are assembling a talented team of experimentalists and computational biologists. Together, we will harness the power of cutting-edge multimodal single-cell technologies to investigate chromatin state activity and its dynamic changes during the intricate process of cell differentiation.
 
-<!-- Before joining Wistar, he was a postdoctoral researcher working with professor Rahul Satija in the Department of Biology at New York University and New York genome Center. He obtained Ph.D. in Computer Science at Stony Brook University, New York, advised by professor Rob Patro. -->
+Exciting opportunities await as we actively seek to expand our lab at multiple levels. Learn more about our lab's cutting-edge <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch with us – <button style="background-color: light-grey">
+    <a href="{{ 'contact' | relative_url }}">join our journey!</a>
+  </button>
+
 

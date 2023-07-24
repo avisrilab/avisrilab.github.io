@@ -6,13 +6,23 @@ layout: default
       <div class="post">
         <header class="post-header">
           <h1 class="post-title">
-           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
+           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %} for
           </h1>
           <p class="desc">{{ page.subtitle }}</p>
         </header>
 
         <article>
           {% if page.profile -%}
+          <!-- carousel code -->
+          <!-- {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
+          {% include carousel.html 
+            height="300" 
+            unit="px" 
+            duration="7" 
+            class=profile_image_class
+            number="1" %} -->
+          <!-- carousel code ends -->
+
           <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
             {%- if page.profile.image %}
               {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
@@ -27,14 +37,6 @@ layout: default
               path=profile_image_path
               class=profile_image_class
               alt=page.profile.image -%}
-            {%- else -%}
-              {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% include carousel.html 
-                height="65" 
-                unit="%" 
-                duration="7" 
-                class=profile_image_class
-                number="1" %}
             {% endif -%}
 
             {%- if page.profile.address %}
