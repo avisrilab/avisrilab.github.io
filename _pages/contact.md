@@ -8,7 +8,7 @@ nav: true
 nav_order: 4
 ---
 
-We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines. We actively seek to expand our lab at multiple levels. Learn more about our lab's <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch for the following open positions.
+We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines. We actively seek to expand our lab at multiple levels. Learn more about our lab's <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch for any of the following open positions.
 
 <font size="+2">Staff Scientists</font>
 We are currently seeking talented and enthusiastic individuals to become part of our vibrant community as both experimental and computational staff scientists. In this role, you will collaborate with our lab members on ongoing research while also having the unique opportunity to lead their own projects, while also receive cross-training in computational analysis and experimental work. If you are interested in helping build the lab, please reach out!
@@ -35,11 +35,14 @@ If you are enthusiastic about contributing to groundbreaking research, we encour
 </div>
 
 
+<font size="+2">Contact</font>
+<p>Dr. Avi Srivastava <br>
+  <a href="mailto:asrivastava@wistar.org">asrivastava@wistar.org</a> <br>
+  (<a href="{{ 'people/avi' | relative_url }}">Alternate ways to connect</a>)
+</p>
 
-
-
-<p><b><font size="+2">Srivastava Lab</font><p>
-<p>The Wistar Institute<br>
+<p> Srivastava lab<br>
+The Wistar Institute<br>
 3601 Spruce Street<br>
 Philadelphia, Pennsylvania 19104</p>
 

@@ -27,9 +27,8 @@ linkedin_username: avi-srivastava-ph-d-3a703814
   <a href="https://orcid.org/{{ page.orcid_id }}" title="ORCID"><i class="ai ai-orcid"></i></a>
   <a href="https://www.linkedin.com/in/{{ page.linkedin_username }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
 
-
 <!-- <div class="caption"> -->
-  Avi is an Assistant Professor in the Gene Expression & Regulation Program at Ellen and Ronald Caplan Cancer Center, Wistar Institute.Before joining Wistar, he was a postdoctoral researcher working with professor Rahul Satija in the Department of Biology at New York University and New York genome Center. He obtained Ph.D. in Computer Science at Stony Brook University, New York, advised by professor Rob Patro.
+  Avi is an Assistant Professor in the <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center/gene-expression-and-regulation-program">Gene Expression & Regulation Program</a> at <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center">Ellen and Ronald Caplan Cancer Center</a>, <a href="https://wistar.org/">the Wistar Institute</a>. Before joining Wistar, he was a postdoctoral researcher working with professor <a href="https://satijalab.org/">Rahul Satija</a> in the <a href="https://as.nyu.edu/departments/biology.html">Department of Biology</a> at <a href="https://www.nyu.edu/">New York University</a> and <a href="https://www.nygenome.org/">New York genome Center</a>. He obtained Ph.D. in <a href="https://www.cs.stonybrook.edu/">Computer Science</a> at <a href="https://www.stonybrook.edu/">Stony Brook University</a>, New York, advised by professor <a href="https://combine-lab.github.io/">Rob Patro</a>.
 <!-- </div> -->
 
 <!-- 
