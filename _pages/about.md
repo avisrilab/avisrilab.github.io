@@ -24,6 +24,7 @@ news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+funders: true
 ---
 
 Welcome to the Srivastava lab! Our lab is set to launch from our home base at <a href="https://wistar.org/">the Wistar Institute</a>, Philadelphia on September 1, 2023. The lab is part of the <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center/gene-expression-and-regulation-program#:~:text=The%20Gene%20Expression%20and%20Regulation,in%20cancer%20etiology%20and%20therapeutics.">Gene Expression and Regulation Program</a> at the <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center">Ellen and Ronald Caplan Cancer Center</a> of the Wistar Institute.

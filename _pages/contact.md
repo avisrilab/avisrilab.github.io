@@ -6,6 +6,7 @@ published: true
 # description: Materials for courses you taught. Replace this text with your description.
 nav: true
 nav_order: 4
+funders: true
 ---
 
 We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines. We actively seek to expand our lab at multiple levels. Learn more about our lab's <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch for any of the following open positions.
@@ -54,5 +55,17 @@ Philadelphia, Pennsylvania 19104</p>
   <div class="contact-note">
     {{ site.contact_note }}
   </div>
-
 </div>
+
+<!-- Funders -->
+{%- if page.funders %}
+<center><font size="+1">The Srivastava Lab is funded by the generous support of</font></center><br>
+<div class="row justify-content-sm-center">
+  <div class="col-sm-3 mt-3 mt-md-0">
+      {% include figure.html path="/assets/img/wistar.png" class="img-fluid rounded z-depth-0" %}
+  </div>
+  <div class="col-sm-4 mt-3 mt-md-0">
+    {% include figure.html path="/assets/img/nci.svg" class="img-fluid rounded z-depth-0" %}
+  </div>
+</div>
+{%- endif %}
