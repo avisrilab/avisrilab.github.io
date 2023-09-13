@@ -9,22 +9,7 @@ nav_order: 4
 funders: true
 ---
 
-We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines. We actively seek to expand our lab at multiple levels. Learn more about our lab's <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch for any of the following open positions.
-
-<font size="+2">Staff Scientists</font>
-We are currently seeking talented and enthusiastic individuals to become part of our vibrant community as both experimental and computational staff scientists. In this role, you will collaborate with our lab members on ongoing research while also having the unique opportunity to lead their own projects, while also receiving cross-training in computational analysis and experimental work. If you are interested in helping build the lab, please reach out!
-
-We welcome applications from scientists with diverse backgrounds and levels of experience, ranging from BS through PhD. Currently, we have openings for the following positions:
-<p>1. Lab manager </p>
-<p>2. Computational Biologist </p>
-
-A detailed job description will be available soon, in the meantime we encourage interested applicants to reach out to Avi via <a href="mailto:asrivastava@wistar.org">email</a> or Twitter (<a href="https://twitter.com/k3yavi">@k3yavi</a>).
-
-<font size="+2">Postdocs</font>
-We are currently inviting applications for multiple postdoctoral positions. We welcome individuals who are keenly interested in our lab's <a href="{{ 'research' | relative_url }}">research</a>. Our lab offers mentored training in various fields, including multi-omics analysis, high-performance algorithm design, software engineering, novel single-cell genomics technologies, and related fields. We have positions for both computational and experimental research, but we are enthusiastic to recruit individuals with experience in molecular biology and experimental research who seek to grow their careers by receiving mentored training in interdisciplinary computational research.
-
-If you are enthusiastic about contributing to groundbreaking research, we encourage you to contact Avi via <a href="mailto:asrivastava@wistar.org">email</a> or Twitter (<a href="https://twitter.com/k3yavi">@k3yavi</a>), along with your CV and a brief outline of your broad area of interests for future work.
-
+We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines. We actively seek to expand our lab at multiple levels. Learn more about our lab's <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch with Avi via <a href="mailto:asrivastava@wistar.org">email</a> or Twitter (<a href="https://twitter.com/k3yavi">@k3yavi</a>).
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
