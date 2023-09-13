@@ -12,8 +12,8 @@ horizontal: false
 
 <!-- pages/projects.md -->
 <div class="projects">
-  <font size="+1"> We are actively seeking expansion for our lab at various levels, offering exciting opportunities in both computational and experimental positions. <button style="background-color: light-grey">
-    <a href="{{ 'contact' | relative_url }}">Join us!</a>
+  <font size="+1"> We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines, <button style="background-color: light-grey">
+    <a href="{{ 'contact' | relative_url }}">Get in touch!</a>
   </button>
  </font>
 
