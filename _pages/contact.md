@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /contact/
-title: Join/Contact
+title: Contact
 published: true
 # description: Materials for courses you taught. Replace this text with your description.
 nav: true
