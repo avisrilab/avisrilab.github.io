@@ -49,9 +49,6 @@ Philadelphia, Pennsylvania 19104</p>
 {%- if page.funders %}
 <center><font size="+1">The Srivastava Lab is funded by the generous support of</font></center><br>
 <div class="row justify-content-sm-center">
-  <div class="col-sm-3 mt-3 mt-md-0">
-      {% include figure.html path="/assets/img/wistar.png" class="img-fluid rounded z-depth-0" %}
-  </div>
   <div class="col-sm-4 mt-3 mt-md-0">
     {% include figure.html path="/assets/img/nci.svg" class="img-fluid rounded z-depth-0" %}
   </div>
