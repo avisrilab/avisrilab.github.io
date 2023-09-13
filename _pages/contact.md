@@ -9,7 +9,7 @@ nav_order: 4
 funders: true
 ---
 
-We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines. We actively seek to expand our lab at multiple levels. Learn more about our lab's <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch with Avi via <a href="mailto:asrivastava@wistar.org">email</a> or Twitter (<a href="https://twitter.com/k3yavi">@k3yavi</a>).
+We constantly seek out exceptional individuals with diverse backgrounds and expertise in various fields, such as mathematics, biology, computer science, and related disciplines. Learn more about our lab's <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch with Avi via <a href="mailto:asrivastava@wistar.org">email</a> or Twitter (<a href="https://twitter.com/k3yavi">@k3yavi</a>).
 
 <div class="row justify-content-sm-center">
   <div class="col-sm-10 mt-3 mt-md-0">
