@@ -417,7 +417,13 @@ code, kbd {
   display: flex;
   flex-wrap: wrap;
   gap: 0.875rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
+}
+
+/* Lab-built tools: bigger, more prominent */
+.tool-strip--lab {
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .tool-item {
@@ -437,6 +443,23 @@ code, kbd {
   box-shadow: var(--shadow-sm);
   transform: translateY(-2px);
   text-decoration: none;
+}
+
+/* Featured (lab) tools: larger thumbnail, accented border */
+.tool-item--featured {
+  padding: 0.9rem 1.25rem;
+  border-color: var(--accent);
+  border-width: 1.5px;
+}
+.tool-item--featured img {
+  width: 56px;
+  height: 56px;
+}
+.tool-item--featured .tool-item__name {
+  font-size: 1rem;
+}
+.tool-item--featured .tool-item__journal {
+  font-size: 0.8rem;
 }
 
 .tool-item img {
@@ -459,6 +482,29 @@ code, kbd {
   font-size: 0.72rem;
   color: var(--text-muted);
   margin-top: 2px;
+}
+
+/* Prior-work divider */
+.prior-work {
+  border-top: 1px solid var(--border);
+  padding-top: 1.75rem;
+  margin-top: 0.5rem;
+}
+
+.prior-work__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.tool-strip--prior .tool-item {
+  opacity: 0.8;
+}
+.tool-strip--prior .tool-item:hover {
+  opacity: 1;
 }
 
 /* ── News list ───────────────────────────────────────────────── */
