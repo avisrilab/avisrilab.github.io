@@ -41,14 +41,16 @@
   <div class="page-header">
     <div class="container">
       <p class="page-header__label">Research</p>
-      <h1 class="page-header__title">Methods, models, and biology</h1>
+      <h1 class="page-header__title">Technology, computation, biology</h1>
       <p class="page-header__sub">
-        We are a computational biology group. We build isoform-resolved
-        single-cell platforms, probabilistic models, and high-performance
-        algorithms that turn modern genomics measurements into a quantitative
-        picture of how the genome is read, regulated, and rewritten &mdash;
-        at the level of individual transcript isoforms, in individual cells,
-        across differentiation, immune response, and disease.
+        The Srivastava Lab is a technology and computation group working on
+        post-transcriptional regulation of cell state. We build
+        <strong>BenchDrop-seq</strong> &mdash; a benchtop, microfluidics-free
+        platform for isoform-resolved single-cell RNA-seq &mdash; and the
+        <strong>Bagpiper</strong> pipeline that turns long reads into
+        isoform&thinsp;&times;&thinsp;cell counts. We apply both to two diseases
+        we take equally seriously: drug resistance in NRAS-mutant melanoma, and
+        immune dysregulation in multiple sclerosis and EBV infection.
       </p>
     </div>
   </div>
@@ -57,205 +59,169 @@
   <section class="section section--subtle" style="padding: 32px 0;">
     <div class="container">
       <div class="research-toc">
-        <div class="research-toc__title">Jump to</div>
+        <div class="research-toc__title">Four pillars</div>
         <ol class="research-toc__list">
-          <li><a href="#isoforms">01 &mdash; Isoform switching in cancer and immune disease</a></li>
-          <li><a href="#regulatory">02 &mdash; Chromatin dynamics and gene-regulatory networks</a></li>
-          <li><a href="#multimodal">03 &mdash; Multimodal single-cell genomics</a></li>
-          <li><a href="#scalable">04 &mdash; Scalable, fast, and reproducible quantification</a></li>
-          <li><a href="#uncertainty">05 &mdash; Uncertainty-aware models for noisy biology</a></li>
+          <li><a href="#measure">01 &mdash; Measure &middot; BenchDrop-seq platform</a></li>
+          <li><a href="#quantify">02 &mdash; Quantify &middot; Bagpiper isoform pipeline</a></li>
+          <li><a href="#integrate">03 &mdash; Integrate &middot; Cross-platform projection</a></li>
+          <li><a href="#apply">04 &mdash; Apply &middot; Cancer &amp; autoimmunity</a></li>
         </ol>
       </div>
     </div>
   </section>
 
-  <!-- ── Research themes ────────────────────────────────────── -->
+  <!-- ── Research pillars ───────────────────────────────────── -->
   <div class="container">
 
-    <div class="research-theme" id="isoforms">
+    <div class="research-theme" id="measure">
       <div class="research-theme__inner">
         <div>
-          <div class="research-theme__num">01</div>
-          <h2 class="research-theme__title">Isoform switching in cancer and immune disease</h2>
+          <div class="research-theme__num">01 &middot; Measure</div>
+          <h2 class="research-theme__title">BenchDrop-seq platform</h2>
           <p class="research-theme__body">
-            How does isoform switching drive resistance to targeted therapy in
-            NRAS-mutant melanoma? How does EBV hijack the splicing machinery to
-            dysregulate the immune response? Standard single-cell RNA-seq cannot
-            answer these questions because it captures only the three-prime end
-            of transcripts, collapsing more than two hundred thousand distinct
-            transcript isoforms into roughly twenty thousand gene-level counts.
-            Fewer than five percent of isoform diversity is visible in a standard
-            single-cell experiment &mdash; and that invisible fraction is precisely
-            where splicing-driven disease mechanisms live.
-          </p>
-          <p class="research-theme__body">
-            We built <strong>BenchDrop-seq</strong> to close this gap: a
-            microfluidics-free platform that combines PIP-seq single-cell capture
-            with Oxford Nanopore long-read sequencing, all on a standard lab bench
-            with no dedicated instrument. Our <strong>Bagpiper</strong> pipeline
-            handles the unique computational challenges of long-read single-cell
-            data &mdash; spacer-anchored barcode recovery, multi-mapping resolution
-            via expectation maximization, and isoform-level count matrices. We
-            apply BenchDrop-seq to ask where isoform switching drives biology that
-            gene-level analysis cannot see: resistance to pan-RAS inhibition in
-            NRAS-mutant melanoma with the Villanueva Lab, and EBV-driven immune
-            dysregulation with the Lieberman Lab, both at Wistar.
+            The Srivastava Lab builds <strong>BenchDrop-seq</strong>, a
+            microfluidics-free benchtop platform that combines PIP-seq single-cell
+            capture with Oxford Nanopore long-read sequencing. It runs on any
+            standard lab bench without a dedicated instrument, puts isoform-level
+            single-cell transcriptomics within reach of any group with a
+            thermocycler, and extends naturally to chromatin accessibility with
+            <strong>PIP-ATAC</strong>. Every protocol is open, reproducible, and
+            engineered to scale from pilot experiments to atlas-scale immune
+            profiling.
           </p>
           <div class="research-theme__tools">
             <span class="tool-tag">BenchDrop-seq</span>
-            <span class="tool-tag">Bagpiper</span>
             <span class="tool-tag">PIP-seq</span>
             <span class="tool-tag">Oxford Nanopore</span>
             <span class="tool-tag">PIP-ATAC</span>
           </div>
         </div>
         <div class="research-theme__img-wrap">
-          <img class="research-theme__img" src="assets/img/publication_preview/isoform_blindspot.jpg" alt="Isoform-resolved transcriptomics">
+          <img class="research-theme__img" src="assets/img/publication_preview/isoform_blindspot.jpg" alt="BenchDrop-seq benchtop single-cell long-read platform">
         </div>
       </div>
     </div>
 
-    <div class="research-theme" id="regulatory">
+    <div class="research-theme" id="quantify">
       <div class="research-theme__inner">
         <div>
-          <div class="research-theme__num">02</div>
-          <h2 class="research-theme__title">Chromatin dynamics and gene-regulatory networks</h2>
+          <div class="research-theme__num">02 &middot; Quantify</div>
+          <h2 class="research-theme__title">Bagpiper isoform pipeline</h2>
           <p class="research-theme__body">
-            Why do melanoma cells escape targeted therapy without acquiring new
-            mutations? Why do some EBV-infected B cells differentiate into
-            effective antigen presenters while others enter a latent, dysregulated
-            state? Much of the answer lives in chromatin &mdash; the cell&rsquo;s
-            working memory &mdash; where regulatory elements switch on and off
-            to reshape transcriptional output without changing the underlying
-            genome.
-          </p>
-          <p class="research-theme__body">
-            We use single-cell CUT&amp;Tag and related assays to track how
-            regulatory elements switch on and off across differentiation, and we
-            build chromatin-aware gene-regulatory network models that explicitly
-            link those elements to their target genes. The questions we love most
-            are about <em>dynamics</em>: which regulators move first, which
-            downstream programs follow, and where the system becomes brittle
-            &mdash; with applications in melanoma progression and immune cell
-            differentiation.
+            Long-read single-cell data is computationally distinct from short-read
+            data: barcodes drift, reads disagree about which isoform they came
+            from, and UMI deduplication has to honour splice-junction evidence
+            rather than 3&prime; anchor alone. <strong>Bagpiper</strong> handles
+            these problems end-to-end: spacer-anchored barcode recovery,
+            junction-based read assignment, expectation-maximization multi-mapping
+            resolution, and principled isoform &times; cell count matrices. The
+            result is a reproducible path from raw Nanopore signal to
+            isoform-resolved quantification that downstream analyses can actually
+            trust.
           </p>
           <div class="research-theme__tools">
-            <span class="tool-tag">scCUT&amp;Tag-pro</span>
-            <span class="tool-tag">Signac</span>
-            <span class="tool-tag">GRN modelling</span>
+            <span class="tool-tag">Bagpiper</span>
+            <span class="tool-tag">isoform quantification</span>
+            <span class="tool-tag">junction-aware UMI</span>
+            <span class="tool-tag">EM multi-mapping</span>
           </div>
         </div>
         <div class="research-theme__img-wrap">
-          <img class="research-theme__img" src="assets/img/publication_preview/cnt.jpg" alt="Regulatory genomics">
+          <img class="research-theme__img" src="assets/img/publication_preview/bayesian.jpg" alt="Bagpiper isoform quantification">
         </div>
       </div>
     </div>
 
-    <div class="research-theme" id="multimodal">
+    <div class="research-theme" id="integrate">
       <div class="research-theme__inner">
         <div>
-          <div class="research-theme__num">03</div>
-          <h2 class="research-theme__title">Multimodal single-cell genomics</h2>
+          <div class="research-theme__num">03 &middot; Integrate</div>
+          <h2 class="research-theme__title">Cross-platform projection &amp; multimodal integration</h2>
           <p class="research-theme__body">
-            Disease is rarely one-dimensional. A melanoma cell escaping targeted
-            therapy changes its transcriptome, its chromatin state, and its
-            surface-marker profile in concert; so does a T cell exhausted by
-            chronic viral infection. We build joint models and integration
-            frameworks that let those modalities reinforce each other, so a single
-            cell can be described by a single, coherent state rather than a stack
-            of disagreeing tables.
-          </p>
-          <p class="research-theme__body">
-            This work powers community tools including
-            <a href="https://satijalab.org/seurat/" target="_blank" rel="noopener">Seurat v5</a>,
-            <a href="https://stuartlab.org/signac/" target="_blank" rel="noopener">Signac</a>, and
-            <a href="https://www.nature.com/articles/s41587-022-01250-0" target="_blank" rel="noopener">scCUT&amp;Tag-pro</a>.
+            Isoform-level measurements only become interpretable when they sit
+            alongside gene-level atlases, chromatin state, and surface-protein
+            markers. The lab builds two-layer annotation strategies that transfer
+            cell identity from established short-read references onto long-read
+            BenchDrop-seq data, and multimodal integration frameworks that align
+            transcriptome, chromatin, and isoform information into a single
+            coherent state per cell. These methods make BenchDrop-seq datasets
+            immediately comparable to existing immune and tumor atlases, without
+            forcing users to choose between depth and breadth.
           </p>
           <div class="research-theme__tools">
-            <span class="tool-tag">Seurat v5</span>
-            <span class="tool-tag">Signac</span>
-            <span class="tool-tag">scCUT&amp;Tag-pro</span>
-            <span class="tool-tag">WNN</span>
+            <span class="tool-tag">two-layer annotation</span>
+            <span class="tool-tag">cross-platform projection</span>
+            <span class="tool-tag">multimodal integration</span>
           </div>
         </div>
         <div class="research-theme__img-wrap">
-          <img class="research-theme__img" src="assets/img/publication_preview/scnt.png" alt="Multimodal single-cell">
+          <img class="research-theme__img" src="assets/img/publication_preview/scnt.png" alt="Cross-platform projection and multimodal integration">
         </div>
       </div>
     </div>
 
-    <div class="research-theme" id="scalable">
+    <div class="research-theme" id="apply">
       <div class="research-theme__inner">
         <div>
-          <div class="research-theme__num">04</div>
-          <h2 class="research-theme__title">Scalable, fast, and reproducible quantification</h2>
+          <div class="research-theme__num">04 &middot; Apply</div>
+          <h2 class="research-theme__title">Cancer and autoimmunity, as co-equal programs</h2>
           <p class="research-theme__body">
-            Atlas-scale experiments are now the norm rather than the exception,
-            and tumor heterogeneity and treatment-response studies only work at
-            that scale. We invest heavily in algorithmic engineering &mdash;
-            succinct indices, lightweight mapping, careful UMI deduplication
-            &mdash; to keep RNA-seq and single-cell RNA-seq quantification fast,
-            memory-frugal, and reproducible across machines, enabling atlas-scale
-            analysis of tumor heterogeneity and treatment response.
+            The lab runs two biological programs side by side rather than ranking
+            one over the other. In cancer, BenchDrop-seq is applied to
+            <strong>NRAS-mutant melanoma</strong> to identify the drug-tolerant
+            persister states that survive pan-RAS inhibition and to track the
+            <strong>RRAS isoform switching</strong> that accompanies resistance,
+            in collaboration with the Villanueva Lab at Wistar.
           </p>
           <p class="research-theme__body">
-            This is the lineage that includes
-            <a href="https://academic.oup.com/bioinformatics/article/32/12/i192/2288985" target="_blank" rel="noopener">RapMap</a>,
-            <a href="https://salmon.readthedocs.io/" target="_blank" rel="noopener">salmon</a>,
-            the
-            <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02151-8" target="_blank" rel="noopener">alignment-vs-mapping</a>
-            study, and the alevin/alevin-fry single-cell quantifiers. We care about
-            clean abstractions almost as much as benchmarks.
+            In autoimmunity, the same pipeline profiles
+            <strong>multiple sclerosis</strong> patient immune cells captured with
+            Parse Biosciences and <strong>EBV-driven immune dysregulation</strong>
+            in <em>ex vivo</em> PBMC models, asking where splicing rewires T cell
+            and B cell fate decisions &mdash; in collaboration with the Lieberman
+            Lab at Wistar. Cancer and autoimmunity are treated as two windows onto
+            the same underlying question: how post-transcriptional regulation
+            decides cell state.
           </p>
           <div class="research-theme__tools">
-            <span class="tool-tag">salmon</span>
-            <span class="tool-tag">alevin-fry</span>
-            <span class="tool-tag">RapMap</span>
-            <span class="tool-tag">Terminus</span>
+            <span class="tool-tag">NRAS melanoma</span>
+            <span class="tool-tag">pan-RAS inhibitor DTPs</span>
+            <span class="tool-tag">RRAS isoform switching</span>
+            <span class="tool-tag">MS (Parse Bio)</span>
+            <span class="tool-tag">EBV PBMC models</span>
           </div>
         </div>
         <div class="research-theme__img-wrap">
-          <img class="research-theme__img" src="assets/img/publication_preview/salmon_logo.png" alt="Scalable quantification">
-        </div>
-      </div>
-    </div>
-
-    <div class="research-theme" id="uncertainty">
-      <div class="research-theme__inner">
-        <div>
-          <div class="research-theme__num">05</div>
-          <h2 class="research-theme__title">Uncertainty-aware models for noisy biology</h2>
-          <p class="research-theme__body">
-            Single-cell data is sparse, multi-mapping, and full of reads that
-            quietly disagree about which gene they came from. Most pipelines either
-            discard the ambiguity or hide it behind a confident-looking number.
-            We instead build Bayesian and probabilistic models that propagate that
-            uncertainty all the way through quantification, differential analysis,
-            and downstream inference &mdash; so that clinical decisions built on
-            single-cell data reflect what we genuinely do and do not know.
-          </p>
-          <p class="research-theme__body">
-            The result is methods like
-            <a href="https://salmon.readthedocs.io/" target="_blank" rel="noopener">alevin</a>
-            and
-            <a href="https://github.com/COMBINE-lab/alevin-fry" target="_blank" rel="noopener">alevin-fry</a>,
-            plus inferential-replicate workflows that let downstream analyses honour
-            what we genuinely <em>do not</em> know.
-          </p>
-          <div class="research-theme__tools">
-            <span class="tool-tag">alevin</span>
-            <span class="tool-tag">alevin-fry</span>
-            <span class="tool-tag">SWISH</span>
-            <span class="tool-tag">Airpart</span>
-          </div>
-        </div>
-        <div class="research-theme__img-wrap">
-          <img class="research-theme__img" src="assets/img/publication_preview/bayesian.jpg" alt="Bayesian methods">
+          <img class="research-theme__img" src="assets/img/publication_preview/cnt.jpg" alt="Cancer and autoimmunity applications">
         </div>
       </div>
     </div>
 
   </div>
+
+  <!-- ── Foundations note ───────────────────────────────────── -->
+  <section class="section" style="padding: 48px 0;">
+    <div class="container">
+      <div class="foundations-note">
+        <p class="foundations-note__label">Foundations &mdash; not active Wistar directions</p>
+        <p class="foundations-note__body">
+          Tools developed during Avi&rsquo;s graduate work with Rob Patro
+          (<a href="https://salmon.readthedocs.io/" target="_blank" rel="noopener">salmon</a>,
+          <a href="https://github.com/COMBINE-lab/alevin-fry" target="_blank" rel="noopener">alevin</a>,
+          <a href="https://www.nature.com/articles/s41592-022-01408-3" target="_blank" rel="noopener">alevin-fry</a>,
+          RapMap, Terminus) and postdoctoral work with Rahul Satija
+          (<a href="https://www.nature.com/articles/s41587-023-01767-y" target="_blank" rel="noopener">Seurat v5</a>,
+          <a href="https://www.nature.com/articles/s41592-021-01282-5" target="_blank" rel="noopener">Signac</a>,
+          <a href="https://www.nature.com/articles/s41587-022-01250-0" target="_blank" rel="noopener">scCUT&amp;Tag-pro</a>)
+          are widely used across the single-cell community and remain
+          foundational to the field. They are <em>not</em> active research
+          directions of the Srivastava Lab at Wistar &mdash; the lab&rsquo;s
+          independent program is the four pillars above. See
+          <a href="publications.html">publications</a> for the full record.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- ── Collaborations ─────────────────────────────────────── -->
   <section class="section section--subtle">
@@ -292,7 +258,7 @@
   </section>
 
   <!-- ── Selected papers link ───────────────────────────────── -->
-  <section class="section section--subtle">
+  <section class="section">
     <div class="container" style="text-align:center">
       <p class="section-label">Publications</p>
       <h2 class="section-title">Full record</h2>

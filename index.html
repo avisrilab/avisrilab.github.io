@@ -86,44 +86,60 @@
           <div class="stat__label">Tool users</div>
         </div>
         <div class="stat">
-          <div class="stat__num">5</div>
-          <div class="stat__label">Research themes</div>
+          <div class="stat__num">4</div>
+          <div class="stat__label">Research pillars</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ── Research themes ────────────────────────────────────── -->
+  <!-- ── Why we exist ───────────────────────────────────────── -->
+  <section class="section section--subtle">
+    <div class="container">
+      <div class="why-exist">
+        <p class="section-label">Why we exist</p>
+        <p class="why-exist__body">
+          Biology is currently measured at gene-level resolution, which collapses
+          roughly twenty thousand protein-coding genes into a single number each and
+          erases the more than two hundred thousand isoforms those genes actually
+          produce. The choices hidden inside that collapse &mdash; which exon is
+          included, which 3&prime; end is used, which regulatory feature is
+          decorated &mdash; are exactly the choices that drive drug-resistant states
+          in cancer and hyperactivated states in autoimmune disease. The Srivastava
+          Lab builds the technology and the computation needed to read that
+          regulation at isoform resolution, in individual cells, before the protein
+          is ever made.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research pillars ───────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <p class="section-label">Research themes</p>
-      <h2 class="section-title">Five interlocking threads</h2>
-      <p class="section-sub">We start from the biology &mdash; isoform switching in melanoma, chromatin dynamics in immune disease &mdash; and build the platforms, models, and algorithms needed to answer it.</p>
+      <p class="section-label">Research pillars</p>
+      <h2 class="section-title">Measure &middot; Quantify &middot; Integrate &middot; Apply</h2>
+      <p class="section-sub">Four tightly coupled efforts: a benchtop single-cell platform, a long-read isoform quantification pipeline, cross-platform integration, and co-equal biological programs in cancer and autoimmunity.</p>
       <div class="theme-grid">
-        <a class="theme-card" href="research.html#isoforms">
-          <div class="theme-card__num">01</div>
-          <div class="theme-card__title">Isoform switching in cancer and immune disease</div>
-          <p class="theme-card__body">BenchDrop-seq &amp; Bagpiper applied to NRAS-mutant melanoma and EBV-driven immune dysregulation &mdash; recovering the 95&percnt; of isoform diversity invisible to standard assays.</p>
+        <a class="theme-card" href="research.html#measure">
+          <div class="theme-card__num">01 &middot; Measure</div>
+          <div class="theme-card__title">BenchDrop-seq platform</div>
+          <p class="theme-card__body">Microfluidics-free benchtop single-cell RNA-seq. PIP-seq capture + Oxford Nanopore sequencing on any standard lab bench, extending naturally to chromatin via PIP-ATAC.</p>
         </a>
-        <a class="theme-card" href="research.html#regulatory">
-          <div class="theme-card__num">02</div>
-          <div class="theme-card__title">Chromatin dynamics &amp; GRNs</div>
-          <p class="theme-card__body">Single-cell CUT&amp;Tag and gene-regulatory network models that ask which regulators move first in melanoma progression and immune differentiation.</p>
+        <a class="theme-card" href="research.html#quantify">
+          <div class="theme-card__num">02 &middot; Quantify</div>
+          <div class="theme-card__title">Bagpiper isoform pipeline</div>
+          <p class="theme-card__body">Spacer-anchored barcode recovery, junction-based read assignment, EM-based multi-mapping resolution, and principled isoform &times; cell count matrices from raw Nanopore signal.</p>
         </a>
-        <a class="theme-card" href="research.html#multimodal">
-          <div class="theme-card__num">03</div>
-          <div class="theme-card__title">Multimodal integration</div>
-          <p class="theme-card__body">Joint models for RNA, chromatin, histone marks, and surface proteins &mdash; one cell described by one coherent state rather than disagreeing tables.</p>
+        <a class="theme-card" href="research.html#integrate">
+          <div class="theme-card__num">03 &middot; Integrate</div>
+          <div class="theme-card__title">Cross-platform projection</div>
+          <p class="theme-card__body">Two-layer annotation strategies that transfer cell identity from short-read atlases to long-read BenchDrop-seq data, and multimodal frameworks that align RNA, chromatin, and isoform state per cell.</p>
         </a>
-        <a class="theme-card" href="research.html#scalable">
-          <div class="theme-card__num">04</div>
-          <div class="theme-card__title">Scalable quantification</div>
-          <p class="theme-card__body">Memory-frugal algorithms (salmon &middot; alevin &middot; alevin-fry &middot; Bagpiper) that make atlas-scale single-cell and long-read analysis of tumor heterogeneity and treatment response reproducible.</p>
-        </a>
-        <a class="theme-card" href="research.html#uncertainty">
-          <div class="theme-card__num">05</div>
-          <div class="theme-card__title">Uncertainty-aware models</div>
-          <p class="theme-card__body">Bayesian methods that propagate multi-mapping ambiguity through quantification and inference &mdash; so clinical decisions reflect what we genuinely do and do not know.</p>
+        <a class="theme-card" href="research.html#apply">
+          <div class="theme-card__num">04 &middot; Apply</div>
+          <div class="theme-card__title">Cancer &amp; autoimmunity</div>
+          <p class="theme-card__body">Two co-equal biological programs: drug-tolerant persister states in NRAS-mutant melanoma, and splicing rewiring of immune cell fate in multiple sclerosis and EBV-driven dysregulation.</p>
         </a>
       </div>
     </div>
