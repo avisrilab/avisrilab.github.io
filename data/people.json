@@ -12,29 +12,53 @@
     "scholar": "HhKXdy4AAAAJ",
     "orcid": "0000-0001-9798-2079",
     "linkedin": "avi-srivastava-ph-d-3a703814",
-    "bio": "Avi is an Assistant Professor at The Wistar Institute in Philadelphia. He is a computational biologist by training and by temperament — his research sits at the intersection of statistical machine learning, high-performance algorithms, and modern functional genomics. The lab builds isoform-resolved single-cell platforms (BenchDrop-seq), probabilistic quantification methods (salmon · alevin · alevin-fry · Bagpiper), and multimodal integration frameworks underlying Signac, Seurat v5, and scCUT&Tag-pro. His work has appeared in Nature Methods, Nature Biotechnology, Cell, Genome Biology, Bioinformatics, and Nature Reviews Genetics. Before joining Wistar, Avi was a postdoctoral fellow with Rahul Satija at the New York Genome Center and NYU. He earned his Ph.D. in Computer Science at Stony Brook University, advised by Rob Patro.",
+    "bio": "Avi is an Assistant Professor at The Wistar Institute in Philadelphia. He is a computational biologist by training and by temperament — his research sits at the intersection of statistical machine learning, high-performance algorithms, and modern functional genomics. The lab builds isoform-resolved single-cell platforms (BenchDrop-seq), probabilistic quantification methods (salmon · alevin · alevin-fry · Bagpiper), and multimodal integration frameworks underlying Signac and Seurat v5. His work has appeared in Nature Methods, Nature Biotechnology, Cell, Genome Biology, Bioinformatics, and Nature Reviews Genetics. Before joining Wistar, Avi was a postdoctoral fellow with Rahul Satija at the New York Genome Center and NYU. He earned his Ph.D. in Computer Science at Stony Brook University, advised by Rob Patro.",
     "importance": 1,
-    "status": "current"
-  },
-  {
-    "id": "jamie-bregman",
-    "name": "Jamie Bregman",
-    "role": "Graduate Students",
-    "tagline": "Bagpiper pipeline · long-read barcode recovery",
-    "status": "current"
-  },
-  {
-    "id": "calen-nichols",
-    "name": "Calen Nichols",
-    "role": "Graduate Students",
-    "tagline": "Single-cell technologies · BenchDrop-seq",
     "status": "current"
   },
   {
     "id": "rajeev-ramisetti",
     "name": "Rajeev Ramisetti",
-    "role": "Graduate Students",
-    "tagline": "PIP-ATAC · multi-omic molecular biology",
-    "status": "current"
+    "role": "Postdoctoral Researchers",
+    "tagline": "Postdoctoral Researcher · Epigenetics & Molecular Biology",
+    "photo": "assets/img/people/rajeev-ramisetti.jpg",
+    "status": "alumni"
+  },
+  {
+    "id": "jamie-bregman",
+    "name": "Jamie Bregman",
+    "role": "Research Assistants",
+    "tagline": "Dry-lab Research Assistant · High-throughput Algorithms",
+    "photo": "assets/img/people/jamie-bregman.jpg",
+    "status": "alumni"
+  },
+  {
+    "id": "calen-nichols",
+    "name": "Calen Nichols",
+    "role": "Research Assistants",
+    "tagline": "Wet-lab Research Assistant · Single-cell Technologies",
+    "photo": "assets/img/people/calen-nichols.jpg",
+    "status": "alumni"
+  },
+  {
+    "id": "tatiana",
+    "name": "Tatiana",
+    "role": "Rotation Students",
+    "tagline": "Rotation Student",
+    "status": "alumni"
+  },
+  {
+    "id": "julia-malnak",
+    "name": "Julia Malnak",
+    "role": "Rotation Students",
+    "tagline": "Rotation Student",
+    "status": "alumni"
+  },
+  {
+    "id": "tyler",
+    "name": "Tyler",
+    "role": "Rotation Students",
+    "tagline": "Rotation Student",
+    "status": "alumni"
   }
 ]

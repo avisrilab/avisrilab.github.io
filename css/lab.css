@@ -227,9 +227,37 @@ code, kbd {
 
 /* ── Hero ────────────────────────────────────────────────────── */
 .hero {
-  padding: 96px 0 80px;
+  padding: 80px 0 70px;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
+}
+
+/* Two-column layout: text left, RNA image right */
+.hero__split {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (max-width: 860px) {
+  .hero__split {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero__visual { order: -1; max-width: 280px; margin: 0 auto; }
+}
+
+.hero__rna-img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 20px 60px rgba(232, 73, 16, 0.18), 0 4px 16px rgba(0,0,0,0.08);
+  display: block;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.hero__rna-img:hover {
+  transform: scale(1.02) rotate(1deg);
+  box-shadow: 0 28px 70px rgba(232, 73, 16, 0.24), 0 6px 20px rgba(0,0,0,0.10);
 }
 
 .hero__eyebrow {
@@ -241,36 +269,39 @@ code, kbd {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero__title {
-  margin-bottom: 1.5rem;
-  max-width: 16ch;
+  margin-bottom: 0.75rem;
+  max-width: 18ch;
 }
 
+/* Fix: use text-decoration instead of display:block ::after (which created the dot) */
 .hero__title em {
   font-style: normal;
-  position: relative;
   color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
 }
 
-.hero__title em::after {
-  content: '';
-  display: block;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 2px;
-  margin-top: 4px;
-  width: 100%;
+.hero__vision {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
 }
 
 .hero__lead {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  max-width: 50ch;
-  line-height: 1.75;
-  margin-bottom: 2.5rem;
+  max-width: 52ch;
+  line-height: 1.78;
+  margin-bottom: 2rem;
 }
 
 .hero__cta {

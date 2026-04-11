@@ -1,15 +1,23 @@
 [
   {
+    "date": "Apr 2026",
+    "text": "Avi presents <em>Isoform-Resolved Single-Cell Transcriptomics of Immunological Dysregulation</em> at the Wistar Institute Faculty Seminar. <a href=\"https://wistar.org\">Talk slides</a> cover BenchDrop-seq, Bagpiper, and the RRAS isoform switching story in melanoma."
+  },
+  {
     "date": "Mar 2026",
     "text": "<a href=\"https://www.biorxiv.org/content/10.1101/2026.03.12.706999\">BenchDrop-seq</a> posted on bioRxiv. A microfluidics-free benchtop platform for single-cell long-read RNA sequencing — PIP-seq capture combined with Oxford Nanopore sequencing and the Bagpiper analysis pipeline."
   },
   {
-    "date": "Apr 2026",
-    "text": "Srivastava Lab opens at <a href=\"https://wistar.org\">The Wistar Institute</a> in Philadelphia. We develop isoform-resolved single-cell platforms, probabilistic quantification methods, and multi-omic integration frameworks for understanding gene regulation and disease."
+    "date": "Jan 2026",
+    "text": "Srivastava Lab opens at <a href=\"https://wistar.org\">The Wistar Institute</a> in Philadelphia. The lab builds isoform-resolved single-cell platforms and probabilistic models to decode the splicing code governing cell identity and disease."
   },
   {
     "date": "Nov 2025",
     "text": "New preprint: <a href=\"https://www.biorxiv.org/content/10.1101/2025.11.20.689441\">EBV infection outcomes determined by monocyte and Treg-driven immune dynamics</a> in an ex vivo PBMC model. A collaboration with the Lieberman lab at Wistar."
+  },
+  {
+    "date": "Oct 2024",
+    "text": "New preprint: <a href=\"https://www.biorxiv.org/content/10.1101/2024.10.10.617685\">Targetable treatment resistance in thyroid cancer with clonal hematopoiesis</a>."
   },
   {
     "date": "May 2023",
