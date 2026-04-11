@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/lab.css">
-  <link rel="icon" href="assets/img/wistar.ico">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
 
@@ -41,21 +41,30 @@
   <!-- ── Hero ───────────────────────────────────────────────── -->
   <section class="hero">
     <div class="container">
-      <p class="hero__eyebrow">Srivastava Lab &middot; The Wistar Institute &middot; Philadelphia</p>
-      <h1 class="hero__title">
-        Computational tools<br>
-        for understanding<br>
-        <em>how cells decide</em>.
-      </h1>
-      <p class="hero__lead">
-        We build isoform-resolved single-cell platforms, probabilistic models,
-        and high-performance algorithms that reveal the RNA layer controlling
-        gene regulation, cell fate, and disease — one transcript at a time.
-      </p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="research.html">Our research &rarr;</a>
-        <a class="btn btn--ghost"   href="publications.html">Publications</a>
-        <a class="btn btn--ghost"   href="people.html">People</a>
+      <div class="hero__split">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Srivastava Lab &middot; The Wistar Institute &middot; Philadelphia</p>
+          <h1 class="hero__title">
+            We decode the splicing code<br>
+            <em>that cancer breaks</em>.
+          </h1>
+          <p class="hero__vision">One isoform. One cell. One truth at a time.</p>
+          <p class="hero__lead">
+            We build isoform-resolved single-cell platforms, probabilistic models,
+            and high-performance algorithms that turn long-read single-cell data
+            into a quantitative picture of how the genome is read, spliced, and
+            rewritten &mdash; at the level of individual transcript isoforms,
+            in individual cells, across differentiation, immune response, and disease.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="research.html">Our research &rarr;</a>
+            <a class="btn btn--ghost"   href="publications.html">Publications</a>
+            <a class="btn btn--ghost"   href="people.html">People</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <img class="hero__rna-img" src="assets/img/rna_helix_hero.jpg" alt="RNA isoform landscape — single-cell long-read sequencing">
+        </div>
       </div>
     </div>
   </section>
@@ -88,33 +97,33 @@
   <section class="section">
     <div class="container">
       <p class="section-label">Research themes</p>
-      <h2 class="section-title">Four interlocking threads</h2>
-      <p class="section-sub">From isoform-resolved long-read platforms to chromatin biology &mdash; with a bias for tools other labs can use the next morning.</p>
+      <h2 class="section-title">Five interlocking threads</h2>
+      <p class="section-sub">From bench to bit: we measure at single-cell resolution, quantify with rigour, integrate across modalities, decode regulatory logic, and apply it to the cancers that splicing breaks.</p>
       <div class="theme-grid">
-        <a class="theme-card" href="research.html#multimodal">
+        <a class="theme-card" href="research.html#isoforms">
           <div class="theme-card__num">01</div>
-          <div class="theme-card__title">Multimodal single-cell genomics</div>
-          <p class="theme-card__body">Joint models for RNA, chromatin, histone marks, and surface proteins &mdash; one cell, one coherent state.</p>
-        </a>
-        <a class="theme-card" href="research.html#uncertainty">
-          <div class="theme-card__num">02</div>
-          <div class="theme-card__title">Uncertainty-aware ML</div>
-          <p class="theme-card__body">Bayesian and probabilistic methods that propagate what we don&rsquo;t know all the way through the analysis.</p>
+          <div class="theme-card__title">Isoform-resolved single-cell</div>
+          <p class="theme-card__body">BenchDrop-seq &mdash; PIP-seq capture + Oxford Nanopore on any lab bench, revealing the 95&percnt; of isoform diversity invisible to standard assays.</p>
         </a>
         <a class="theme-card" href="research.html#scalable">
-          <div class="theme-card__num">03</div>
+          <div class="theme-card__num">02</div>
           <div class="theme-card__title">Scalable quantification</div>
-          <p class="theme-card__body">Memory-frugal algorithms (salmon &middot; alevin &middot; alevin-fry) that make atlas-scale analysis practical.</p>
+          <p class="theme-card__body">Memory-frugal algorithms (salmon · alevin · alevin-fry · Bagpiper) that make atlas-scale single-cell and long-read analysis fast and reproducible.</p>
+        </a>
+        <a class="theme-card" href="research.html#uncertainty">
+          <div class="theme-card__num">03</div>
+          <div class="theme-card__title">Uncertainty-aware models</div>
+          <p class="theme-card__body">Bayesian and probabilistic methods that propagate multi-mapping ambiguity all the way through quantification, differential analysis, and inference.</p>
+        </a>
+        <a class="theme-card" href="research.html#multimodal">
+          <div class="theme-card__num">04</div>
+          <div class="theme-card__title">Multimodal integration</div>
+          <p class="theme-card__body">Joint models for RNA, chromatin, histone marks, and surface proteins &mdash; one cell described by one coherent state rather than disagreeing tables.</p>
         </a>
         <a class="theme-card" href="research.html#regulatory">
-          <div class="theme-card__num">04</div>
-          <div class="theme-card__title">Regulatory genomics</div>
-          <p class="theme-card__body">Chromatin dynamics and gene-regulatory networks across differentiation and disease.</p>
-        </a>
-        <a class="theme-card" href="research.html#isoforms">
           <div class="theme-card__num">05</div>
-          <div class="theme-card__title">Isoform-resolved transcriptomics</div>
-          <p class="theme-card__body">BenchDrop-seq &mdash; a microfluidics-free long-read platform that sees 95% of isoform diversity invisible to standard single-cell assays.</p>
+          <div class="theme-card__title">Regulatory genomics</div>
+          <p class="theme-card__body">Chromatin dynamics and gene-regulatory networks: which regulators move first, which programs follow, where the system becomes brittle in disease.</p>
         </a>
       </div>
     </div>
@@ -205,7 +214,7 @@
           <div class="footer__nav-group">
             <div class="footer__nav-title">Connect</div>
             <ul class="footer__nav-links">
-              <li><a href="https://github.com/k3yavi" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://github.com/avisrilab" target="_blank" rel="noopener">GitHub</a></li>
               <li><a href="https://twitter.com/k3yavi" target="_blank" rel="noopener">Twitter / X</a></li>
               <li><a href="https://scholar.google.com/citations?user=HhKXdy4AAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
               <li><a href="mailto:asrivastava@wistar.org">asrivastava@wistar.org</a></li>
