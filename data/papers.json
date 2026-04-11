@@ -1,0 +1,265 @@
+[
+  {
+    "id": "bregman2026",
+    "title": "BenchDrop-seq: a microfluidics-free platform for benchtop single-cell long-read RNA sequencing",
+    "authors": ["Jamie Bregman", "Calen Nichols", "Rajeev Ramisetti", "Avi Srivastava"],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.1101/2026.03.12.706999",
+    "selected": true
+  },
+  {
+    "id": "yoon2025",
+    "title": "EBV infection outcomes determined by monocyte and Treg-driven immune dynamics in an ex vivo PBMC model",
+    "authors": ["L Yoon", "LN MacMullen", "LJ Castro Muñoz", "A Gu", "Jamie Bregman", "MS Campion", "Avi Srivastava", "et al."],
+    "journal": "bioRxiv",
+    "year": 2025,
+    "doi": "10.1101/2025.11.20.689441",
+    "selected": false
+  },
+  {
+    "id": "vela2025",
+    "title": "TET2-mutant clonal hematopoiesis enrichment in the tumor microenvironment is an actionable driver of treatment resistance in solid tumors: thyroid cancer as a paradigm",
+    "authors": ["PS Vela", "V Tiedje", "JL Yang", "BR Untch", "L Boucai", "AJ Stonestrom", "AB Costa", "Avi Srivastava", "et al."],
+    "journal": "Cancer Research",
+    "year": 2025,
+    "selected": false
+  },
+  {
+    "id": "tiedje2024",
+    "title": "Targetable treatment resistance in thyroid cancer with clonal hematopoiesis",
+    "authors": ["V Tiedje", "PS Vela", "JL Yang", "BR Untch", "L Boucai", "AJ Stonestrom", "AB Costa", "Avi Srivastava", "et al."],
+    "journal": "bioRxiv",
+    "year": 2024,
+    "doi": "10.1101/2024.10.10.617685",
+    "selected": false
+  },
+  {
+    "id": "hao2023",
+    "title": "Dictionary learning for integrative, multimodal and scalable single-cell analysis",
+    "authors": ["Yuhan Hao", "Tim Stuart", "Madeline H. Kowalski", "Saket Choudhary", "Paul Hoffman", "Austin Hartman", "Avi Srivastava", "Gesmira Molla", "Shaista Madad", "Carlos Fernandez-Granda", "Rahul Satija"],
+    "journal": "Nature Biotechnology",
+    "year": 2023,
+    "doi": "10.1038/s41587-023-01767-y",
+    "preview": "assets/img/publication_preview/sv5.jpg",
+    "selected": true
+  },
+  {
+    "id": "heumos2023",
+    "title": "Best practices for single-cell analysis across modalities",
+    "authors": ["Lukas Heumos", "Anna C. Schaar", "Christopher Lance", "Avi Srivastava", "et al.", "Fabian J. Theis"],
+    "journal": "Nature Reviews Genetics",
+    "year": 2023,
+    "doi": "10.1038/s41576-023-00586-w",
+    "preview": "assets/img/publication_preview/bestpractice.jpg",
+    "selected": false
+  },
+  {
+    "id": "zhang2022",
+    "title": "Characterizing cellular heterogeneity in chromatin state with scCUT&Tag-pro",
+    "authors": ["Bingjie Zhang", "Avi Srivastava", "Eleni Mimitou", "Tim Stuart", "Ivan Raimondi", "Yuhan Hao", "Peter Smibert", "Rahul Satija"],
+    "journal": "Nature Biotechnology",
+    "year": 2022,
+    "doi": "10.1038/s41587-022-01250-0",
+    "preview": "assets/img/publication_preview/cnt.jpg",
+    "selected": true
+  },
+  {
+    "id": "he2022",
+    "title": "Alevin-fry unlocks rapid, accurate and memory-frugal quantification of single-cell RNA-seq data",
+    "authors": ["Dongze He", "Mohsen Zakeri", "Hirak Sarkar", "Charlotte Soneson", "Avi Srivastava", "Rob Patro"],
+    "journal": "Nature Methods",
+    "year": 2022,
+    "doi": "10.1038/s41592-022-01408-3",
+    "preview": "assets/img/publication_preview/fry.jpg",
+    "selected": true
+  },
+  {
+    "id": "mu2022",
+    "title": "Airpart: interpretable statistical models for analyzing allelic imbalance in single-cell datasets",
+    "authors": ["Wancen Mu", "Hirak Sarkar", "Avi Srivastava", "Kwangbom Choi", "Rob Patro", "Michael I Love"],
+    "journal": "Bioinformatics",
+    "year": 2022,
+    "doi": "10.1093/bioinformatics/btac212",
+    "preview": "assets/img/publication_preview/airpart.jpg",
+    "selected": false
+  },
+  {
+    "id": "soneson2021",
+    "title": "Preprocessing choices affect RNA velocity results for droplet scRNA-seq data",
+    "authors": ["Charlotte Soneson", "Avi Srivastava", "Rob Patro", "Michael B. Stadler"],
+    "journal": "PLOS Computational Biology",
+    "year": 2021,
+    "doi": "10.1371/journal.pcbi.1008585",
+    "preview": "assets/img/publication_preview/soneson.jpg",
+    "selected": false
+  },
+  {
+    "id": "stuart2021",
+    "title": "Single-cell chromatin state analysis with Signac",
+    "authors": ["Tim Stuart", "Avi Srivastava", "Shaista Madad", "Caleb A. Lareau", "Rahul Satija"],
+    "journal": "Nature Methods",
+    "year": 2021,
+    "doi": "10.1038/s41592-021-01282-5",
+    "preview": "assets/img/publication_preview/signac.jpg",
+    "selected": true
+  },
+  {
+    "id": "vanburen2021",
+    "title": "Compression of quantification uncertainty for scRNA-seq counts",
+    "authors": ["Scott Van Buren", "Hirak Sarkar", "Avi Srivastava", "Naim U Rashid", "Rob Patro", "Michael I Love"],
+    "journal": "Bioinformatics",
+    "year": 2021,
+    "doi": "10.1093/bioinformatics/btab001",
+    "preview": "assets/img/publication_preview/compression.jpg",
+    "selected": false
+  },
+  {
+    "id": "hao2021",
+    "title": "Integrated analysis of multimodal single-cell data",
+    "authors": ["Yuhan Hao", "Stephanie Hao", "Erica Andersen-Nissen", "William M. Mauck", "Shiwei Zheng", "Andrew Butler", "Maddie J. Lee", "Aaron J. Wilk", "Charlotte Darby", "Michael Zager", "Paul Hoffman", "Marlon Stoeckius", "Efthymia Papalexi", "Eleni P. Mimitou", "Jaison Jain", "Avi Srivastava", "Tim Stuart", "Lamar M. Fleming", "Bertrand Yeung", "Angela J. Rogers", "Juliana M. McElrath", "Catherine A. Blish", "Raphael Gottardo", "Peter Smibert", "Rahul Satija"],
+    "journal": "Cell",
+    "year": 2021,
+    "doi": "10.1016/j.cell.2021.04.048",
+    "preview": "assets/img/publication_preview/wnn.jpg",
+    "selected": false
+  },
+  {
+    "id": "zakeri2021",
+    "title": "A like-for-like comparison of lightweight-mapping pipelines for single-cell RNA-seq data pre-processing",
+    "authors": ["Mohsen Zakeri", "Avi Srivastava", "Hirak Sarkar", "Rob Patro"],
+    "journal": "bioRxiv",
+    "year": 2021,
+    "doi": "10.1101/2021.02.10.430656",
+    "preview": "assets/img/publication_preview/zkeri.jpg",
+    "selected": false
+  },
+  {
+    "id": "srivastava2021",
+    "title": "Accounting for fragments of unexpected origin improves transcript quantification in RNA-seq simulations focused on increased realism",
+    "authors": ["Avi Srivastava", "Mohsen Zakeri", "Hirak Sarkar", "Charlotte Soneson", "Carl Kingsford", "Rob Patro"],
+    "journal": "bioRxiv",
+    "year": 2021,
+    "doi": "10.1101/2021.01.17.426996",
+    "preview": "assets/img/publication_preview/accting.jpg",
+    "selected": false
+  },
+  {
+    "id": "sarkar2020b",
+    "title": "Accurate, efficient, and uncertainty-aware expression quantification of single-cell RNA-seq data",
+    "authors": ["Hirak Sarkar", "Avi Srivastava", "Mohsen Zakeri", "Scott K. Van Buren", "Naim U Rashid", "Michael I Love", "Rob Patro"],
+    "journal": "bioRxiv",
+    "year": 2020,
+    "selected": false
+  },
+  {
+    "id": "srivastava2020a",
+    "title": "Alignment and mapping methodology influence transcript abundance estimation",
+    "authors": ["Avi Srivastava", "Laraib Malik", "Hirak Sarkar", "Mohsen Zakeri", "Fatemeh Almodaresi", "Charlotte Soneson", "Michael I. Love", "Carl Kingsford", "Rob Patro"],
+    "journal": "Genome Biology",
+    "year": 2020,
+    "doi": "10.1186/s13059-020-02151-8",
+    "preview": "assets/img/publication_preview/aln.jpg",
+    "selected": true
+  },
+  {
+    "id": "sarkar2020a",
+    "title": "Terminus enables the discovery of data-driven, robust transcript groups from RNA-seq data",
+    "authors": ["Hirak Sarkar", "Avi Srivastava", "Héctor Corrada Bravo", "Michael I Love", "Rob Patro"],
+    "journal": "Bioinformatics",
+    "year": 2020,
+    "doi": "10.1093/bioinformatics/btaa448",
+    "preview": "assets/img/publication_preview/terminus.jpg",
+    "selected": false
+  },
+  {
+    "id": "srivastava2020b",
+    "title": "A Bayesian framework for inter-cellular information sharing improves dscRNA-seq quantification",
+    "authors": ["Avi Srivastava", "Laraib Malik", "Hirak Sarkar", "Rob Patro"],
+    "journal": "Bioinformatics",
+    "year": 2020,
+    "doi": "10.1093/bioinformatics/btaa450",
+    "preview": "assets/img/publication_preview/bayesian.jpg",
+    "selected": false
+  },
+  {
+    "id": "srivastava2019",
+    "title": "Alevin efficiently estimates accurate gene abundances from dscRNA-seq data",
+    "authors": ["Avi Srivastava", "Laraib Malik", "Tom Smith", "Ian Sudbery", "Rob Patro"],
+    "journal": "Genome Biology",
+    "year": 2019,
+    "doi": "10.1186/s13059-019-1670-y",
+    "preview": "assets/img/publication_preview/alevin.jpg",
+    "selected": true
+  },
+  {
+    "id": "zhu2019",
+    "title": "Nonparametric expression analysis using inferential replicate counts",
+    "authors": ["Anqi Zhu", "Avi Srivastava", "Joseph G Ibrahim", "Rob Patro", "Michael I Love"],
+    "journal": "Nucleic Acids Research",
+    "year": 2019,
+    "doi": "10.1093/nar/gkz622",
+    "preview": "assets/img/publication_preview/swish.jpg",
+    "selected": false
+  },
+  {
+    "id": "sarkar2019",
+    "title": "Minnow: a principled framework for rapid simulation of dscRNA-seq data at the read level",
+    "authors": ["Hirak Sarkar", "Avi Srivastava", "Rob Patro"],
+    "journal": "Bioinformatics",
+    "year": 2019,
+    "doi": "10.1093/bioinformatics/btz351",
+    "preview": "assets/img/publication_preview/minnow.jpg",
+    "selected": false
+  },
+  {
+    "id": "almodaresi2018",
+    "title": "A space and time-efficient index for the compacted colored de Bruijn graph",
+    "authors": ["Fatemeh Almodaresi", "Hirak Sarkar", "Avi Srivastava", "Rob Patro"],
+    "journal": "Bioinformatics",
+    "year": 2018,
+    "doi": "10.1093/bioinformatics/bty292",
+    "preview": "assets/img/publication_preview/puffer.jpg",
+    "selected": false
+  },
+  {
+    "id": "gruning2018",
+    "title": "Bioconda: sustainable and comprehensive software distribution for the life sciences",
+    "authors": ["Björn Grüning", "Ryan Dale", "Andreas Sjödin", "Brad A. Chapman", "Jillian Rowe", "Christopher H. Tomkins-Tinch", "Renan Valieris", "Johannes Köster"],
+    "journal": "Nature Methods",
+    "year": 2018,
+    "doi": "10.1038/s41592-018-0046-7",
+    "preview": "assets/img/publication_preview/bio.jpg",
+    "selected": false
+  },
+  {
+    "id": "zakeri2017",
+    "title": "Improved data-driven likelihood factorizations for transcript abundance estimation",
+    "authors": ["Mohsen Zakeri", "Avi Srivastava", "Fatemeh Almodaresi", "Rob Patro"],
+    "journal": "Bioinformatics",
+    "year": 2017,
+    "doi": "10.1093/bioinformatics/btx262",
+    "preview": "assets/img/publication_preview/ddfact.jpg",
+    "selected": false
+  },
+  {
+    "id": "srivastava2016a",
+    "title": "Accurate, Fast and Lightweight Clustering of de novo Transcriptomes using Fragment Equivalence Classes",
+    "authors": ["Avi Srivastava", "Hirak Sarkar", "Laraib Malik", "Rob Patro"],
+    "journal": "RECOMB-seq preprint",
+    "year": 2016,
+    "doi": "10.48550/ARXIV.1604.03250",
+    "preview": "assets/img/publication_preview/rapclust.jpg",
+    "selected": false
+  },
+  {
+    "id": "srivastava2016b",
+    "title": "RapMap: a rapid, sensitive and accurate tool for mapping RNA-seq reads to transcriptomes",
+    "authors": ["Avi Srivastava", "Hirak Sarkar", "Nitish Gupta", "Rob Patro"],
+    "journal": "Bioinformatics",
+    "year": 2016,
+    "doi": "10.1093/bioinformatics/btw277",
+    "preview": "assets/img/publication_preview/rapmap.jpg",
+    "selected": false
+  }
+]
