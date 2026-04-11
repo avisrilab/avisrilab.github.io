@@ -1,0 +1,332 @@
+/******************************************************************************
+ * Srivastava Lab — custom layout primitives
+ * Hero, section, card grid, publication strip, role groups, member cards.
+ * Designed to coexist with the al-folio base styles; respects dark mode by
+ * pulling colours from the existing CSS variables in _themes.scss.
+ *****************************************************************************/
+
+// ---------------------------------------------------------------------------
+// Hero
+// ---------------------------------------------------------------------------
+
+.lab-hero {
+  position: relative;
+  margin: 1rem 0 3rem;
+  padding: 3rem 2rem 3.25rem;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    radial-gradient(1200px 400px at -10% -20%, rgba(var(--lab-accent-rgb, 119, 51, 255), 0.18), transparent 60%),
+    radial-gradient(900px 380px at 110% 120%, rgba(var(--lab-accent2-rgb, 0, 200, 220), 0.16), transparent 55%),
+    linear-gradient(160deg, var(--global-card-bg-color) 0%, var(--global-bg-color) 100%);
+  border: 1px solid var(--global-divider-color);
+  box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.25);
+}
+
+.lab-hero__inner {
+  max-width: 760px;
+}
+
+.lab-hero__eyebrow {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin-bottom: 0.75rem;
+}
+
+.lab-hero__title {
+  font-family: 'Inter', 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 4vw, 2.85rem);
+  line-height: 1.12;
+  margin: 0 0 1rem;
+  color: var(--global-text-color);
+}
+
+.lab-hero__accent {
+  background: linear-gradient(120deg, var(--global-theme-color), var(--global-hover-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+}
+
+.lab-hero__lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  max-width: 640px;
+  margin: 0 0 1.75rem;
+}
+
+.lab-hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.75rem;
+}
+
+.lab-btn {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  font-family: 'Inter', 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: 1px solid var(--global-theme-color);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.lab-btn--primary {
+  background: var(--global-theme-color);
+  color: var(--global-hover-text-color);
+
+  &:hover { color: var(--global-hover-text-color); }
+}
+
+.lab-btn--ghost {
+  background: transparent;
+  color: var(--global-theme-color);
+
+  &:hover { background: rgba(127, 127, 127, 0.08); color: var(--global-theme-color); }
+}
+
+// ---------------------------------------------------------------------------
+// Generic section header
+// ---------------------------------------------------------------------------
+
+.lab-section {
+  margin: 3rem 0 2rem;
+}
+
+.lab-section__title {
+  font-family: 'Inter', 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin: 0 0 0.4rem;
+  color: var(--global-text-color);
+}
+
+.lab-section__sub {
+  color: var(--global-text-color-light);
+  margin-bottom: 1.5rem;
+  max-width: 720px;
+}
+
+// ---------------------------------------------------------------------------
+// Theme card grid
+// ---------------------------------------------------------------------------
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.lab-card {
+  display: block;
+  padding: 1.25rem 1.25rem 1.4rem;
+  border-radius: 14px;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 32px -22px rgba(0, 0, 0, 0.35);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.lab-card__icon {
+  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.lab-card__title {
+  font-family: 'Inter', 'Roboto Slab', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: var(--global-text-color);
+}
+
+.lab-card__text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--global-text-color-light);
+}
+
+// ---------------------------------------------------------------------------
+// Publication strip
+// ---------------------------------------------------------------------------
+
+.lab-pubstrip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.85rem;
+}
+
+.lab-pubstrip__item {
+  display: block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  span {
+    display: block;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.85rem;
+    font-family: 'Inter', 'Roboto', sans-serif;
+    font-weight: 500;
+    color: var(--global-text-color);
+    border-top: 1px solid var(--global-divider-color);
+  }
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 28px -20px rgba(0, 0, 0, 0.35);
+
+    img { transform: scale(1.04); }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// People page
+// ---------------------------------------------------------------------------
+
+.lab-role-block {
+  margin: 2rem 0 1.5rem;
+}
+
+.lab-role-block__title {
+  font-family: 'Inter', 'Roboto Slab', serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  color: var(--global-text-color);
+}
+
+.lab-people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.lab-member {
+  display: block;
+  padding: 1rem;
+  border-radius: 14px;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 32px -22px rgba(0, 0, 0, 0.35);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.lab-member__photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0.25rem auto 0.85rem;
+  border: 2px solid var(--global-divider-color);
+}
+
+.lab-member__name {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--global-text-color);
+  margin: 0 0 0.15rem;
+}
+
+.lab-member__role {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin: 0 0 0.25rem;
+}
+
+.lab-member__tagline {
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  margin: 0;
+  line-height: 1.35;
+}
+
+// ---------------------------------------------------------------------------
+// Research page section anchors
+// ---------------------------------------------------------------------------
+
+.lab-research-theme {
+  margin: 2.25rem 0 0.5rem;
+  padding-top: 0.25rem;
+
+  h3 {
+    font-family: 'Inter', 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--global-text-color);
+  }
+
+  p {
+    color: var(--global-text-color);
+    line-height: 1.6;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Mobile tweaks
+// ---------------------------------------------------------------------------
+
+@media (max-width: 600px) {
+  .lab-hero {
+    padding: 2rem 1.25rem 2.25rem;
+    border-radius: 14px;
+  }
+
+  .lab-hero__title { font-size: clamp(1.5rem, 7vw, 2rem); }
+
+  .lab-hero__cta { gap: 0.5rem; }
+
+  .lab-btn { padding: 0.55rem 0.95rem; font-size: 0.9rem; }
+}

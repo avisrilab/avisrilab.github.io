@@ -2,37 +2,105 @@
 layout: about
 title: Home
 permalink: /
-subtitle: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4734377/"><b><font size="+2">Integrative Systems Biology</font></a>
-profile:
-  align: right
-  # image: prof_pic.png
-  # image_circular: false # crops the image to make it circular
-carousels:
-  - images: 
-    - image: /assets/img/publication_preview/accting.jpg
-    - image: /assets/img/publication_preview/bayesian.jpg
-    - image: /assets/img/publication_preview/cnt.jpg
-    - image: /assets/img/publication_preview/aln.jpg
-    - image: /assets/img/publication_preview/signac.jpg
-    - image: /assets/img/publication_preview/minnow.jpg
-    - image: /assets/img/publication_preview/rapmap.jpg
-    - image: /assets/img/publication_preview/puffer.jpg
-    - image: /assets/img/publication_preview/rapclust.jpg
-    - image: /assets/img/publication_preview/compression.jpg
-    - image: /assets/img/publication_preview/ddfact.jpg
-news: true  # includes a list of news items
-latest_posts: false  # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
-funders: true
+hide_default_header: true
+news: true
+latest_posts: false
+selected_papers: false
+social: true
 ---
 
-Welcome to the Srivastava lab! Our lab is part of the <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center/gene-expression-and-regulation-program#:~:text=The%20Gene%20Expression%20and%20Regulation,in%20cancer%20etiology%20and%20therapeutics.">Gene Expression and Regulation Program</a> at the <a href="https://wistar.org/research-discoveries/ellen-and-ronald-caplan-cancer-center">Ellen and Ronald Caplan Cancer Center</a> of the <a href="https://wistar.org/">Wistar Institute.</a>
+<section class="lab-hero">
+  <div class="lab-hero__inner">
+    <p class="lab-hero__eyebrow">Srivastava Lab &middot; The Wistar Institute</p>
+    <h1 class="lab-hero__title">
+      Decoding cell fate with<br>
+      <span class="lab-hero__accent">multimodal&nbsp;data</span> and
+      <span class="lab-hero__accent">uncertainty&#8209;aware&nbsp;ML</span>.
+    </h1>
+    <p class="lab-hero__lead">
+      We build computational tools and statistical models that turn raw single-cell and
+      epigenomic measurements into a quantitative understanding of <em>how</em> the genome
+      is read, regulated, and rewritten as cells make decisions.
+    </p>
+    <div class="lab-hero__cta">
+      <a class="lab-btn lab-btn--primary" href="{{ 'research' | relative_url }}">Explore research &rarr;</a>
+      <a class="lab-btn lab-btn--ghost" href="{{ 'publications' | relative_url }}">Publications</a>
+      <a class="lab-btn lab-btn--ghost" href="{{ 'people' | relative_url }}">People</a>
+    </div>
+  </div>
+</section>
 
-Our lab seeks to develop a comprehensive understanding of how the epigenome regulates transcription to determine cell fate, with a particular emphasis on blood cell development and its dysregulation in leukemia. Our research interests lie at the exciting intersection of epigenetics, computational, and cancer biology. As we strive to achieve our goals, we are assembling a talented team of experimentalists and computational biologists. Together, we plan to harness the power of cutting-edge <u><i>multimodal single-cell technologies</i></u> and <u><i>uncertainty-aware computational models</i></u> to investigate chromatin state activity and its dynamic changes during the intricate process of cell differentiation. Please check our <a href="{{ 'research' | relative_url }}">research</a> page for more details!
+<section class="lab-section">
+  <h2 class="lab-section__title">What we work on</h2>
+  <p class="lab-section__sub">
+    Four interlocking threads that span methods, models, and biology &mdash; with a
+    bias for tools other labs can use.
+  </p>
+  <div class="lab-grid">
+    <a class="lab-card" href="{{ 'research' | relative_url }}#multimodal-single-cell">
+      <span class="lab-card__icon">🧬</span>
+      <h3 class="lab-card__title">Multimodal single-cell</h3>
+      <p class="lab-card__text">
+        Joint models for RNA, chromatin accessibility, histone marks, and surface
+        proteins &mdash; so a single cell tells a single, coherent story.
+      </p>
+    </a>
+    <a class="lab-card" href="{{ 'research' | relative_url }}#uncertainty-aware-ml">
+      <span class="lab-card__icon">📐</span>
+      <h3 class="lab-card__title">Uncertainty-aware ML</h3>
+      <p class="lab-card__text">
+        Bayesian and probabilistic methods that quantify what we don&rsquo;t know,
+        not just what we predict. The error bars matter as much as the point estimates.
+      </p>
+    </a>
+    <a class="lab-card" href="{{ 'research' | relative_url }}#scalable-quantification">
+      <span class="lab-card__icon">⚡</span>
+      <h3 class="lab-card__title">Scalable quantification</h3>
+      <p class="lab-card__text">
+        Fast, memory-frugal algorithms (the salmon &middot; alevin &middot; alevin-fry
+        lineage) that make atlas-scale RNA-seq analysis practical on a laptop.
+      </p>
+    </a>
+    <a class="lab-card" href="{{ 'research' | relative_url }}#regulatory-genomics">
+      <span class="lab-card__icon">🧠</span>
+      <h3 class="lab-card__title">Regulatory genomics</h3>
+      <p class="lab-card__text">
+        Linking chromatin state and gene-regulatory networks to the dynamics of
+        differentiation, with applications across development and disease.
+      </p>
+    </a>
+  </div>
+</section>
 
-Exciting opportunities await as we actively seek to expand our lab at multiple levels. Learn more about our lab's cutting-edge <a href="{{ 'research' | relative_url }}">research</a> and explore our extensive list of <a href="{{ 'publications' | relative_url }}">publications</a>. If our work captivates your interest, don't hesitate to get in touch with us – <button style="background-color: light-grey">
-    <a href="{{ 'contact' | relative_url }}">join our journey!</a>
-  </button>
-
-
+<section class="lab-section">
+  <h2 class="lab-section__title">Open-source, by default</h2>
+  <p class="lab-section__sub">
+    Our methods ship as community tools that other labs &mdash; experimental and computational &mdash; can pick up tomorrow.
+  </p>
+  <div class="lab-pubstrip">
+    <a class="lab-pubstrip__item" href="https://www.nature.com/articles/s41592-022-01408-3" title="alevin-fry — Nature Methods 2022">
+      <img src="{{ '/assets/img/publication_preview/fry.jpg' | relative_url }}" alt="alevin-fry">
+      <span>alevin-fry</span>
+    </a>
+    <a class="lab-pubstrip__item" href="https://www.nature.com/articles/s41587-022-01250-0" title="scCUT&Tag-pro — Nature Biotechnology 2022">
+      <img src="{{ '/assets/img/publication_preview/cnt.jpg' | relative_url }}" alt="scCUT&Tag-pro">
+      <span>scCUT&amp;Tag-pro</span>
+    </a>
+    <a class="lab-pubstrip__item" href="https://www.nature.com/articles/s41592-021-01282-5" title="Signac — Nature Methods 2021">
+      <img src="{{ '/assets/img/publication_preview/signac.jpg' | relative_url }}" alt="Signac">
+      <span>Signac</span>
+    </a>
+    <a class="lab-pubstrip__item" href="https://www.nature.com/articles/s41587-023-01767-y" title="Dictionary learning — Nature Biotechnology 2023">
+      <img src="{{ '/assets/img/publication_preview/sv5.jpg' | relative_url }}" alt="Dictionary learning">
+      <span>Seurat&nbsp;v5</span>
+    </a>
+    <a class="lab-pubstrip__item" href="https://link.springer.com/article/10.1186/s13059-019-1670-y" title="alevin — Genome Biology 2019">
+      <img src="{{ '/assets/img/publication_preview/alevin.jpg' | relative_url }}" alt="alevin">
+      <span>alevin</span>
+    </a>
+    <a class="lab-pubstrip__item" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02151-8" title="Alignment & mapping methodology — Genome Biology 2020">
+      <img src="{{ '/assets/img/publication_preview/aln.jpg' | relative_url }}" alt="Alignment methodology">
+      <span>aln&nbsp;study</span>
+    </a>
+  </div>
+</section>
