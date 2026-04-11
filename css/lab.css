@@ -507,6 +507,64 @@ code, kbd {
   opacity: 1;
 }
 
+/* ── Collaborations list (research page) ────────────────────── */
+.collab-list {
+  list-style: none;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.collab-list li {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.collab-list strong { color: var(--text); }
+
+/* ── Tools section: clearer lab vs prior split ───────────────── */
+.tools-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-top: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+.tools-heading--prior {
+  color: var(--text-muted);
+}
+
+/* ── Lab environment block (people page) ─────────────────────── */
+.lab-env {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  margin: 2.5rem 0 3rem;
+}
+.lab-env__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.lab-env__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+.lab-env p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+.lab-env p:not(:last-child) { margin-bottom: 0.9rem; }
+
 /* ── News list ───────────────────────────────────────────────── */
 .news-list {
   list-style: none;
