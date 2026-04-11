@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Research
+description: Methods, models, and biology — with a bias for open-source tools.
 permalink: /research/
 nav: true
 nav_order: 1

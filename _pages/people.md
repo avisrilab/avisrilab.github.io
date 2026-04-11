@@ -1,6 +1,7 @@
 ---
 layout: page
 title: People
+description: The humans behind the code and the experiments.
 permalink: /people/
 nav: true
 nav_order: 3
