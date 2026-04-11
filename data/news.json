@@ -1,0 +1,26 @@
+[
+  {
+    "date": "Apr 2026",
+    "text": "Srivastava Lab opens at <a href=\"https://wistar.org\">The Wistar Institute</a> in Philadelphia. We are a new computational biology group working on multimodal single-cell genomics and probabilistic methods for gene regulation."
+  },
+  {
+    "date": "May 2023",
+    "text": "<a href=\"https://www.nature.com/articles/s41587-023-01767-y\">Seurat v5</a> published in <em>Nature Biotechnology</em>. Dictionary learning for integrative, multimodal and scalable single-cell analysis."
+  },
+  {
+    "date": "Mar 2023",
+    "text": "<a href=\"https://www.nature.com/articles/s41576-023-00586-w\">Best practices for single-cell analysis across modalities</a> published in <em>Nature Reviews Genetics</em>."
+  },
+  {
+    "date": "Mar 2022",
+    "text": "<a href=\"https://www.nature.com/articles/s41592-022-01408-3\">Alevin-fry</a> published in <em>Nature Methods</em>. Rapid, accurate and memory-frugal quantification of single-cell RNA-seq data."
+  },
+  {
+    "date": "Mar 2022",
+    "text": "<a href=\"https://www.nature.com/articles/s41587-022-01250-0\">scCUT&amp;Tag-pro</a> published in <em>Nature Biotechnology</em>. Characterizing cellular heterogeneity in chromatin state with a new multimodal single-cell assay."
+  },
+  {
+    "date": "Nov 2021",
+    "text": "<a href=\"https://www.nature.com/articles/s41592-021-01282-5\">Signac</a> published in <em>Nature Methods</em>. A comprehensive toolkit for the analysis of single-cell chromatin data."
+  }
+]

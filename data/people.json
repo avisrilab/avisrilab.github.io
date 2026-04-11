@@ -1,0 +1,19 @@
+[
+  {
+    "id": "avi",
+    "name": "Avi Srivastava",
+    "role": "Principal Investigator",
+    "title": "Assistant Professor",
+    "institution": "The Wistar Institute",
+    "photo": "assets/img/prof_pic.png",
+    "email": "asrivastava@wistar.org",
+    "github": "k3yavi",
+    "twitter": "k3yavi",
+    "scholar": "HhKXdy4AAAAJ",
+    "orcid": "0000-0001-9798-2079",
+    "linkedin": "avi-srivastava-ph-d-3a703814",
+    "bio": "Avi is an Assistant Professor at The Wistar Institute in Philadelphia. He is a computational biologist by training and by temperament — his research sits at the intersection of statistical machine learning, high-performance algorithms, and modern functional genomics. Across his career, Avi has built methods and tools that the single-cell community now uses every day: from the salmon / alevin / alevin-fry lineage of quantification tools, to multimodal integration frameworks underlying Signac and Seurat v5, to the scCUT&Tag-pro assay-and-analysis pair for single-cell chromatin states. His work has appeared in Nature Methods, Nature Biotechnology, Cell, Genome Biology, Bioinformatics, and Nature Reviews Genetics. Before joining Wistar, Avi was a postdoctoral fellow with Rahul Satija at the New York Genome Center and NYU. He earned his Ph.D. in Computer Science at Stony Brook University, advised by Rob Patro.",
+    "importance": 1,
+    "status": "current"
+  }
+]

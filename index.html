@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Srivastava Lab — Computational Biology · Wistar Institute</title>
+  <meta name="description" content="Computational biology group at The Wistar Institute building probabilistic models and high-performance algorithms for multimodal single-cell genomics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="icon" href="assets/img/wistar.ico">
+</head>
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a class="nav__logo" href="index.html">Srivastava <span>Lab</span></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__right">
+          <button class="nav__icon-btn" id="themeToggle" aria-label="Toggle colour scheme"></button>
+          <button class="nav__icon-btn nav__hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="3" y1="6"  x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero__eyebrow">Srivastava Lab &middot; The Wistar Institute &middot; Philadelphia</p>
+      <h1 class="hero__title">
+        Computational tools<br>
+        for understanding<br>
+        <em>how cells decide</em>.
+      </h1>
+      <p class="hero__lead">
+        We build probabilistic models and high-performance algorithms
+        that translate multimodal single-cell measurements into a precise,
+        uncertainty-aware picture of gene regulation and cell fate.
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="research.html">Our research &rarr;</a>
+        <a class="btn btn--ghost"   href="publications.html">Publications</a>
+        <a class="btn btn--ghost"   href="people.html">People</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stats ──────────────────────────────────────────────── -->
+  <div class="stats">
+    <div class="container">
+      <div class="stats__inner">
+        <div class="stat">
+          <div class="stat__num">5K+</div>
+          <div class="stat__label">Citations</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">25+</div>
+          <div class="stat__label">Publications</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">10K+</div>
+          <div class="stat__label">Tool users</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num">4</div>
+          <div class="stat__label">Research themes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Research themes ────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">Research themes</p>
+      <h2 class="section-title">Four interlocking threads</h2>
+      <p class="section-sub">From fast algorithms to chromatin biology &mdash; with a bias for tools other labs can use the next morning.</p>
+      <div class="theme-grid">
+        <a class="theme-card" href="research.html#multimodal">
+          <div class="theme-card__num">01</div>
+          <div class="theme-card__title">Multimodal single-cell genomics</div>
+          <p class="theme-card__body">Joint models for RNA, chromatin, histone marks, and surface proteins &mdash; one cell, one coherent state.</p>
+        </a>
+        <a class="theme-card" href="research.html#uncertainty">
+          <div class="theme-card__num">02</div>
+          <div class="theme-card__title">Uncertainty-aware ML</div>
+          <p class="theme-card__body">Bayesian and probabilistic methods that propagate what we don&rsquo;t know all the way through the analysis.</p>
+        </a>
+        <a class="theme-card" href="research.html#scalable">
+          <div class="theme-card__num">03</div>
+          <div class="theme-card__title">Scalable quantification</div>
+          <p class="theme-card__body">Memory-frugal algorithms (salmon &middot; alevin &middot; alevin-fry) that make atlas-scale analysis practical.</p>
+        </a>
+        <a class="theme-card" href="research.html#regulatory">
+          <div class="theme-card__num">04</div>
+          <div class="theme-card__title">Regulatory genomics</div>
+          <p class="theme-card__body">Chromatin dynamics and gene-regulatory networks across differentiation and disease.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Featured tools ─────────────────────────────────────── -->
+  <section class="section section--subtle">
+    <div class="container">
+      <p class="section-label">Open-source tools &amp; papers</p>
+      <h2 class="section-title">Software the field relies on</h2>
+      <p class="section-sub">Every method we publish ships with open, documented, reproducible code.</p>
+      <div class="tool-strip">
+        <a class="tool-item" href="https://www.nature.com/articles/s41592-022-01408-3" target="_blank" rel="noopener">
+          <img src="assets/img/publication_preview/fry.jpg" alt="alevin-fry">
+          <div>
+            <div class="tool-item__name">alevin-fry</div>
+            <div class="tool-item__journal">Nature Methods 2022</div>
+          </div>
+        </a>
+        <a class="tool-item" href="https://www.nature.com/articles/s41587-022-01250-0" target="_blank" rel="noopener">
+          <img src="assets/img/publication_preview/cnt.jpg" alt="scCUT&amp;Tag-pro">
+          <div>
+            <div class="tool-item__name">scCUT&amp;Tag-pro</div>
+            <div class="tool-item__journal">Nature Biotechnology 2022</div>
+          </div>
+        </a>
+        <a class="tool-item" href="https://www.nature.com/articles/s41592-021-01282-5" target="_blank" rel="noopener">
+          <img src="assets/img/publication_preview/signac.jpg" alt="Signac">
+          <div>
+            <div class="tool-item__name">Signac</div>
+            <div class="tool-item__journal">Nature Methods 2021</div>
+          </div>
+        </a>
+        <a class="tool-item" href="https://www.nature.com/articles/s41587-023-01767-y" target="_blank" rel="noopener">
+          <img src="assets/img/publication_preview/sv5.jpg" alt="Seurat v5">
+          <div>
+            <div class="tool-item__name">Seurat v5</div>
+            <div class="tool-item__journal">Nature Biotechnology 2023</div>
+          </div>
+        </a>
+        <a class="tool-item" href="https://link.springer.com/article/10.1186/s13059-019-1670-y" target="_blank" rel="noopener">
+          <img src="assets/img/publication_preview/alevin.jpg" alt="alevin">
+          <div>
+            <div class="tool-item__name">alevin</div>
+            <div class="tool-item__journal">Genome Biology 2019</div>
+          </div>
+        </a>
+        <a class="tool-item" href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02151-8" target="_blank" rel="noopener">
+          <img src="assets/img/publication_preview/aln.jpg" alt="Alignment study">
+          <div>
+            <div class="tool-item__name">Alignment study</div>
+            <div class="tool-item__journal">Genome Biology 2020</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── News ───────────────────────────────────────────────── -->
+  <section class="section">
+    <div class="container">
+      <p class="section-label">News</p>
+      <h2 class="section-title">What&rsquo;s happening</h2>
+      <ul class="news-list" id="newsList">
+        <li class="loading">Loading&hellip;</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand">Srivastava <span>Lab</span></div>
+          <div class="footer__tagline">Computational Biology &middot; The Wistar Institute &middot; Philadelphia</div>
+        </div>
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <div class="footer__nav-title">Navigate</div>
+            <ul class="footer__nav-links">
+              <li><a href="research.html">Research</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="people.html">People</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <div class="footer__nav-title">Connect</div>
+            <ul class="footer__nav-links">
+              <li><a href="https://github.com/k3yavi" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://twitter.com/k3yavi" target="_blank" rel="noopener">Twitter / X</a></li>
+              <li><a href="https://scholar.google.com/citations?user=HhKXdy4AAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><a href="mailto:asrivastava@wistar.org">asrivastava@wistar.org</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Srivastava Lab. All rights reserved.</p>
+        <p class="footer__copy"><a href="https://wistar.org" target="_blank" rel="noopener">The Wistar Institute</a> &middot; Philadelphia, PA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lab.js"></script>
+</body>
+</html>

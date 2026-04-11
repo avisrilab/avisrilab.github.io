@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research — Srivastava Lab</title>
+  <meta name="description" content="Research themes at the Srivastava Lab: multimodal single-cell genomics, uncertainty-aware ML, scalable quantification, and regulatory genomics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/lab.css">
+  <link rel="icon" href="assets/img/wistar.ico">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a class="nav__logo" href="index.html">Srivastava <span>Lab</span></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav__right">
+          <button class="nav__icon-btn" id="themeToggle" aria-label="Toggle colour scheme"></button>
+          <button class="nav__icon-btn nav__hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+              <line x1="3" y1="6"  x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page header ────────────────────────────────────────── -->
+  <div class="page-header">
+    <div class="container">
+      <p class="page-header__label">Research</p>
+      <h1 class="page-header__title">Methods, models, and biology</h1>
+      <p class="page-header__sub">
+        We are a computational biology group. We design statistical models,
+        machine-learning methods, and high-performance algorithms that turn
+        modern genomics measurements &mdash; especially multimodal single-cell data
+        &mdash; into a quantitative picture of how the genome is read, regulated,
+        and rewritten as cells differentiate, respond to stimuli, and occasionally
+        go wrong.
+      </p>
+    </div>
+  </div>
+
+  <!-- ── Table of contents ──────────────────────────────────── -->
+  <section class="section section--subtle" style="padding: 32px 0;">
+    <div class="container">
+      <div class="research-toc">
+        <div class="research-toc__title">Jump to</div>
+        <ol class="research-toc__list">
+          <li><a href="#multimodal">01 &mdash; Multimodal single-cell genomics</a></li>
+          <li><a href="#uncertainty">02 &mdash; Uncertainty-aware models for noisy biology</a></li>
+          <li><a href="#scalable">03 &mdash; Scalable, fast, and reproducible quantification</a></li>
+          <li><a href="#regulatory">04 &mdash; Chromatin dynamics and gene-regulatory networks</a></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research themes ────────────────────────────────────── -->
+  <div class="container">
+
+    <div class="research-theme" id="multimodal">
+      <div class="research-theme__inner">
+        <div>
+          <div class="research-theme__num">01</div>
+          <h2 class="research-theme__title">Multimodal single-cell genomics</h2>
+          <p class="research-theme__body">
+            A single cell now routinely yields measurements of its transcriptome,
+            its chromatin accessibility, its histone modification landscape, and its
+            surface proteome &mdash; each modality with its own biases and blind spots.
+            We build joint models and integration frameworks that let those modalities
+            reinforce each other, so a single cell can be described by a single,
+            coherent state rather than a stack of disagreeing tables.
+          </p>
+          <p class="research-theme__body">
+            This work powers community tools including
+            <a href="https://satijalab.org/seurat/" target="_blank" rel="noopener">Seurat v5</a>,
+            <a href="https://stuartlab.org/signac/" target="_blank" rel="noopener">Signac</a>, and
+            <a href="https://www.nature.com/articles/s41587-022-01250-0" target="_blank" rel="noopener">scCUT&amp;Tag-pro</a>.
+          </p>
+          <div class="research-theme__tools">
+            <span class="tool-tag">Seurat v5</span>
+            <span class="tool-tag">Signac</span>
+            <span class="tool-tag">scCUT&amp;Tag-pro</span>
+            <span class="tool-tag">WNN</span>
+          </div>
+        </div>
+        <div class="research-theme__img-wrap">
+          <img class="research-theme__img" src="assets/img/publication_preview/scnt.png" alt="Multimodal single-cell">
+        </div>
+      </div>
+    </div>
+
+    <div class="research-theme" id="uncertainty">
+      <div class="research-theme__inner">
+        <div>
+          <div class="research-theme__num">02</div>
+          <h2 class="research-theme__title">Uncertainty-aware models for noisy biology</h2>
+          <p class="research-theme__body">
+            Single-cell data is sparse, multi-mapping, and full of reads that quietly
+            disagree about which gene they came from. Most pipelines either discard
+            the ambiguity or hide it behind a confident-looking number. We instead
+            build Bayesian and probabilistic models that propagate that uncertainty
+            all the way through quantification, differential analysis, and downstream
+            inference.
+          </p>
+          <p class="research-theme__body">
+            The result is methods like
+            <a href="https://salmon.readthedocs.io/" target="_blank" rel="noopener">alevin</a>
+            and
+            <a href="https://github.com/COMBINE-lab/alevin-fry" target="_blank" rel="noopener">alevin-fry</a>,
+            plus inferential-replicate workflows that let downstream analyses honour
+            what we genuinely <em>do not</em> know.
+          </p>
+          <div class="research-theme__tools">
+            <span class="tool-tag">alevin</span>
+            <span class="tool-tag">alevin-fry</span>
+            <span class="tool-tag">SWISH</span>
+            <span class="tool-tag">Airpart</span>
+          </div>
+        </div>
+        <div class="research-theme__img-wrap">
+          <img class="research-theme__img" src="assets/img/publication_preview/bayesian.jpg" alt="Bayesian methods">
+        </div>
+      </div>
+    </div>
+
+    <div class="research-theme" id="scalable">
+      <div class="research-theme__inner">
+        <div>
+          <div class="research-theme__num">03</div>
+          <h2 class="research-theme__title">Scalable, fast, and reproducible quantification</h2>
+          <p class="research-theme__body">
+            Atlas-scale experiments are now the norm rather than the exception.
+            We invest heavily in algorithmic engineering &mdash; succinct indices,
+            lightweight mapping, careful UMI deduplication &mdash; to keep RNA-seq
+            and single-cell RNA-seq quantification fast, memory-frugal, and
+            reproducible across machines.
+          </p>
+          <p class="research-theme__body">
+            This is the lineage that includes
+            <a href="https://academic.oup.com/bioinformatics/article/32/12/i192/2288985" target="_blank" rel="noopener">RapMap</a>,
+            <a href="https://salmon.readthedocs.io/" target="_blank" rel="noopener">salmon</a>,
+            the
+            <a href="https://genomebiology.biomedcentral.com/articles/10.1186/s13059-020-02151-8" target="_blank" rel="noopener">alignment-vs-mapping</a>
+            study, and the alevin/alevin-fry single-cell quantifiers. We care about
+            clean abstractions almost as much as benchmarks.
+          </p>
+          <div class="research-theme__tools">
+            <span class="tool-tag">salmon</span>
+            <span class="tool-tag">alevin-fry</span>
+            <span class="tool-tag">RapMap</span>
+            <span class="tool-tag">Terminus</span>
+          </div>
+        </div>
+        <div class="research-theme__img-wrap">
+          <img class="research-theme__img" src="assets/img/publication_preview/salmon_logo.png" alt="Scalable quantification">
+        </div>
+      </div>
+    </div>
+
+    <div class="research-theme" id="regulatory">
+      <div class="research-theme__inner">
+        <div>
+          <div class="research-theme__num">04</div>
+          <h2 class="research-theme__title">Chromatin dynamics and gene-regulatory networks</h2>
+          <p class="research-theme__body">
+            Chromatin state is the cell&rsquo;s working memory. We use single-cell
+            CUT&amp;Tag and related assays to track how regulatory elements switch
+            on and off across differentiation, and we build chromatin-aware
+            gene-regulatory network models that explicitly link those elements to
+            their target genes.
+          </p>
+          <p class="research-theme__body">
+            The questions we love most are about <em>dynamics</em>: which regulators
+            move first, which downstream programs follow, and where the system becomes
+            brittle &mdash; with applications across normal development, immune
+            responses, and disease.
+          </p>
+          <div class="research-theme__tools">
+            <span class="tool-tag">scCUT&amp;Tag-pro</span>
+            <span class="tool-tag">Signac</span>
+            <span class="tool-tag">GRN modelling</span>
+          </div>
+        </div>
+        <div class="research-theme__img-wrap">
+          <img class="research-theme__img" src="assets/img/publication_preview/cnt.jpg" alt="Regulatory genomics">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Selected papers link ───────────────────────────────── -->
+  <section class="section section--subtle">
+    <div class="container" style="text-align:center">
+      <p class="section-label">Publications</p>
+      <h2 class="section-title">Full record</h2>
+      <p class="section-sub" style="margin:0 auto 2rem">For a complete list of publications from the Srivastava Lab and its members&rsquo; prior work, see the publications page.</p>
+      <a class="btn btn--primary" href="publications.html">View all publications &rarr;</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand">Srivastava <span>Lab</span></div>
+          <div class="footer__tagline">Computational Biology &middot; The Wistar Institute &middot; Philadelphia</div>
+        </div>
+        <nav class="footer__nav">
+          <div class="footer__nav-group">
+            <div class="footer__nav-title">Navigate</div>
+            <ul class="footer__nav-links">
+              <li><a href="research.html">Research</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="people.html">People</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__nav-group">
+            <div class="footer__nav-title">Connect</div>
+            <ul class="footer__nav-links">
+              <li><a href="https://github.com/k3yavi" target="_blank" rel="noopener">GitHub</a></li>
+              <li><a href="https://twitter.com/k3yavi" target="_blank" rel="noopener">Twitter / X</a></li>
+              <li><a href="https://scholar.google.com/citations?user=HhKXdy4AAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+              <li><a href="mailto:asrivastava@wistar.org">asrivastava@wistar.org</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; 2026 Srivastava Lab. All rights reserved.</p>
+        <p class="footer__copy"><a href="https://wistar.org" target="_blank" rel="noopener">The Wistar Institute</a> &middot; Philadelphia, PA</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/lab.js"></script>
+</body>
+</html>
