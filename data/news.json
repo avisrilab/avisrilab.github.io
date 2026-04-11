@@ -1,7 +1,15 @@
 [
   {
+    "date": "Mar 2026",
+    "text": "<a href=\"https://www.biorxiv.org/content/10.1101/2026.03.12.706999\">BenchDrop-seq</a> posted on bioRxiv. A microfluidics-free benchtop platform for single-cell long-read RNA sequencing — PIP-seq capture combined with Oxford Nanopore sequencing and the Bagpiper analysis pipeline."
+  },
+  {
     "date": "Apr 2026",
-    "text": "Srivastava Lab opens at <a href=\"https://wistar.org\">The Wistar Institute</a> in Philadelphia. We are a new computational biology group working on multimodal single-cell genomics and probabilistic methods for gene regulation."
+    "text": "Srivastava Lab opens at <a href=\"https://wistar.org\">The Wistar Institute</a> in Philadelphia. We develop isoform-resolved single-cell platforms, probabilistic quantification methods, and multi-omic integration frameworks for understanding gene regulation and disease."
+  },
+  {
+    "date": "Nov 2025",
+    "text": "New preprint: <a href=\"https://www.biorxiv.org/content/10.1101/2025.11.20.689441\">EBV infection outcomes determined by monocyte and Treg-driven immune dynamics</a> in an ex vivo PBMC model. A collaboration with the Lieberman lab at Wistar."
   },
   {
     "date": "May 2023",

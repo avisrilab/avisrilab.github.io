@@ -43,12 +43,12 @@
       <p class="page-header__label">Research</p>
       <h1 class="page-header__title">Methods, models, and biology</h1>
       <p class="page-header__sub">
-        We are a computational biology group. We design statistical models,
-        machine-learning methods, and high-performance algorithms that turn
-        modern genomics measurements &mdash; especially multimodal single-cell data
-        &mdash; into a quantitative picture of how the genome is read, regulated,
-        and rewritten as cells differentiate, respond to stimuli, and occasionally
-        go wrong.
+        We are a computational biology group. We build isoform-resolved
+        single-cell platforms, probabilistic models, and high-performance
+        algorithms that turn modern genomics measurements into a quantitative
+        picture of how the genome is read, regulated, and rewritten &mdash;
+        at the level of individual transcript isoforms, in individual cells,
+        across differentiation, immune response, and disease.
       </p>
     </div>
   </div>
@@ -63,6 +63,7 @@
           <li><a href="#uncertainty">02 &mdash; Uncertainty-aware models for noisy biology</a></li>
           <li><a href="#scalable">03 &mdash; Scalable, fast, and reproducible quantification</a></li>
           <li><a href="#regulatory">04 &mdash; Chromatin dynamics and gene-regulatory networks</a></li>
+          <li><a href="#isoforms">05 &mdash; Isoform-resolved single-cell transcriptomics</a></li>
         </ol>
       </div>
     </div>
@@ -197,6 +198,48 @@
         </div>
         <div class="research-theme__img-wrap">
           <img class="research-theme__img" src="assets/img/publication_preview/cnt.jpg" alt="Regulatory genomics">
+        </div>
+      </div>
+    </div>
+
+    <div class="research-theme" id="isoforms">
+      <div class="research-theme__inner">
+        <div>
+          <div class="research-theme__num">05</div>
+          <h2 class="research-theme__title">Isoform-resolved single-cell transcriptomics</h2>
+          <p class="research-theme__body">
+            Standard single-cell RNA-seq captures the three-prime end of
+            transcripts and counts reads per gene. But a gene is not the unit
+            of biology &mdash; the isoform is. Through alternative splicing,
+            UTR choice, and alternative polyadenylation, twenty thousand
+            protein-coding genes produce more than two hundred thousand distinct
+            transcript isoforms. Fewer than five percent of this diversity is
+            visible in a standard single-cell experiment.
+          </p>
+          <p class="research-theme__body">
+            We built <strong>BenchDrop-seq</strong> to close this gap: a
+            microfluidics-free platform that combines PIP-seq single-cell
+            capture with Oxford Nanopore long-read sequencing, all on a standard
+            lab bench with no dedicated instrument. Our
+            <strong>Bagpiper</strong> pipeline handles the unique computational
+            challenges of long-read single-cell data &mdash; spacer-anchored
+            barcode recovery, multi-mapping resolution via expectation
+            maximization, and isoform-level count matrices. We apply
+            BenchDrop-seq to ask where isoform switching drives biology that
+            gene-level analysis cannot see: resistance to pan-RAS inhibition in
+            NRAS-mutant melanoma, and EBV-driven immune dysregulation in
+            collaboration with the Villanueva and Lieberman labs at Wistar.
+          </p>
+          <div class="research-theme__tools">
+            <span class="tool-tag">BenchDrop-seq</span>
+            <span class="tool-tag">Bagpiper</span>
+            <span class="tool-tag">PIP-seq</span>
+            <span class="tool-tag">Oxford Nanopore</span>
+            <span class="tool-tag">PIP-ATAC</span>
+          </div>
+        </div>
+        <div class="research-theme__img-wrap">
+          <img class="research-theme__img" src="assets/img/publication_preview/scnt.png" alt="Isoform-resolved transcriptomics">
         </div>
       </div>
     </div>

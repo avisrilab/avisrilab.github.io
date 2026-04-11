@@ -1,5 +1,40 @@
 [
   {
+    "id": "bregman2026",
+    "title": "BenchDrop-seq: a microfluidics-free platform for benchtop single-cell long-read RNA sequencing",
+    "authors": ["Jamie Bregman", "Calen Nichols", "Rajeev Ramisetti", "Avi Srivastava"],
+    "journal": "bioRxiv",
+    "year": 2026,
+    "doi": "10.1101/2026.03.12.706999",
+    "selected": true
+  },
+  {
+    "id": "yoon2025",
+    "title": "EBV infection outcomes determined by monocyte and Treg-driven immune dynamics in an ex vivo PBMC model",
+    "authors": ["L Yoon", "LN MacMullen", "LJ Castro Muñoz", "A Gu", "Jamie Bregman", "MS Campion", "Avi Srivastava", "et al."],
+    "journal": "bioRxiv",
+    "year": 2025,
+    "doi": "10.1101/2025.11.20.689441",
+    "selected": false
+  },
+  {
+    "id": "vela2025",
+    "title": "TET2-mutant clonal hematopoiesis enrichment in the tumor microenvironment is an actionable driver of treatment resistance in solid tumors: thyroid cancer as a paradigm",
+    "authors": ["PS Vela", "V Tiedje", "JL Yang", "BR Untch", "L Boucai", "AJ Stonestrom", "AB Costa", "Avi Srivastava", "et al."],
+    "journal": "Cancer Research",
+    "year": 2025,
+    "selected": false
+  },
+  {
+    "id": "tiedje2024",
+    "title": "Targetable treatment resistance in thyroid cancer with clonal hematopoiesis",
+    "authors": ["V Tiedje", "PS Vela", "JL Yang", "BR Untch", "L Boucai", "AJ Stonestrom", "AB Costa", "Avi Srivastava", "et al."],
+    "journal": "bioRxiv",
+    "year": 2024,
+    "doi": "10.1101/2024.10.10.617685",
+    "selected": false
+  },
+  {
     "id": "hao2023",
     "title": "Dictionary learning for integrative, multimodal and scalable single-cell analysis",
     "authors": ["Yuhan Hao", "Tim Stuart", "Madeline H. Kowalski", "Saket Choudhary", "Paul Hoffman", "Austin Hartman", "Avi Srivastava", "Gesmira Molla", "Shaista Madad", "Carlos Fernandez-Granda", "Rahul Satija"],
@@ -12,7 +47,7 @@
   {
     "id": "heumos2023",
     "title": "Best practices for single-cell analysis across modalities",
-    "authors": ["Lukas Heumos", "Anna C. Schaar", "Christopher Lance", "...", "Avi Srivastava", "...", "Fabian J. Theis"],
+    "authors": ["Lukas Heumos", "Anna C. Schaar", "Christopher Lance", "Avi Srivastava", "et al.", "Fabian J. Theis"],
     "journal": "Nature Reviews Genetics",
     "year": 2023,
     "doi": "10.1038/s41576-023-00586-w",
@@ -93,7 +128,7 @@
     "id": "zakeri2021",
     "title": "A like-for-like comparison of lightweight-mapping pipelines for single-cell RNA-seq data pre-processing",
     "authors": ["Mohsen Zakeri", "Avi Srivastava", "Hirak Sarkar", "Rob Patro"],
-    "journal": "BioRxiv preprint",
+    "journal": "bioRxiv",
     "year": 2021,
     "doi": "10.1101/2021.02.10.430656",
     "preview": "assets/img/publication_preview/zkeri.jpg",
@@ -103,10 +138,18 @@
     "id": "srivastava2021",
     "title": "Accounting for fragments of unexpected origin improves transcript quantification in RNA-seq simulations focused on increased realism",
     "authors": ["Avi Srivastava", "Mohsen Zakeri", "Hirak Sarkar", "Charlotte Soneson", "Carl Kingsford", "Rob Patro"],
-    "journal": "BioRxiv preprint",
+    "journal": "bioRxiv",
     "year": 2021,
     "doi": "10.1101/2021.01.17.426996",
     "preview": "assets/img/publication_preview/accting.jpg",
+    "selected": false
+  },
+  {
+    "id": "sarkar2020b",
+    "title": "Accurate, efficient, and uncertainty-aware expression quantification of single-cell RNA-seq data",
+    "authors": ["Hirak Sarkar", "Avi Srivastava", "Mohsen Zakeri", "Scott K. Van Buren", "Naim U Rashid", "Michael I Love", "Rob Patro"],
+    "journal": "bioRxiv",
+    "year": 2020,
     "selected": false
   },
   {
@@ -120,7 +163,7 @@
     "selected": true
   },
   {
-    "id": "sarkar2020",
+    "id": "sarkar2020a",
     "title": "Terminus enables the discovery of data-driven, robust transcript groups from RNA-seq data",
     "authors": ["Hirak Sarkar", "Avi Srivastava", "Héctor Corrada Bravo", "Michael I Love", "Rob Patro"],
     "journal": "Bioinformatics",
@@ -180,7 +223,7 @@
     "selected": false
   },
   {
-    "id": "grüning2018",
+    "id": "gruning2018",
     "title": "Bioconda: sustainable and comprehensive software distribution for the life sciences",
     "authors": ["Björn Grüning", "Ryan Dale", "Andreas Sjödin", "Brad A. Chapman", "Jillian Rowe", "Christopher H. Tomkins-Tinch", "Renan Valieris", "Johannes Köster"],
     "journal": "Nature Methods",
