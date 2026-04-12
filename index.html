@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Srivastava Lab — Computational Biology · Wistar Institute</title>
-  <meta name="description" content="Computational biology group at The Wistar Institute building probabilistic models and high-performance algorithms for multimodal single-cell genomics.">
+  <title>Srivastava Lab — Isoform-resolved single-cell biology · Wistar Institute</title>
+  <meta name="description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper — technology and computation for reading post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -45,17 +45,30 @@
         <div class="hero__content">
           <p class="hero__eyebrow">Srivastava Lab &middot; The Wistar Institute &middot; Philadelphia</p>
           <h1 class="hero__title">
-            We decode the splicing code<br>
-            <em>that cancer breaks</em>.
+            Before the protein,<br>
+            <em>there is choice</em>.
           </h1>
-          <p class="hero__vision">One isoform. One cell. One truth at a time.</p>
+          <p class="hero__vision">One exon. One cell. One decision at a time.</p>
           <p class="hero__lead">
-            We build isoform-resolved single-cell platforms, probabilistic models,
-            and high-performance algorithms that turn long-read single-cell data
-            into a quantitative picture of how the genome is read, spliced, and
-            rewritten &mdash; at the level of individual transcript isoforms,
-            in individual cells, across differentiation, immune response, and disease.
+            Splicing is where a gene becomes an isoform &mdash; quietly rewritten
+            in both drug-resistant cancer and hyperactivated autoimmune disease.
+            The Srivastava Lab builds the technology and the computation to read
+            those decisions one cell, one isoform at a time.
           </p>
+          <ul class="hero__anchors">
+            <li class="hero__anchor">
+              <span class="hero__anchor-label">Technology</span>
+              <span class="hero__anchor-text">BenchDrop-seq &mdash; PIP-seq capture + Oxford Nanopore, on any lab bench</span>
+            </li>
+            <li class="hero__anchor">
+              <span class="hero__anchor-label">Computation</span>
+              <span class="hero__anchor-text">Bagpiper &mdash; spacer-anchored barcodes and junction-aware isoform counts</span>
+            </li>
+            <li class="hero__anchor">
+              <span class="hero__anchor-label">Biology</span>
+              <span class="hero__anchor-text">From NRAS-mutant melanoma to multiple sclerosis and EBV dysregulation</span>
+            </li>
+          </ul>
           <div class="hero__cta">
             <a class="btn btn--primary" href="research.html">Our research &rarr;</a>
             <a class="btn btn--ghost"   href="publications.html">Publications</a>
@@ -86,44 +99,60 @@
           <div class="stat__label">Tool users</div>
         </div>
         <div class="stat">
-          <div class="stat__num">5</div>
-          <div class="stat__label">Research themes</div>
+          <div class="stat__num">4</div>
+          <div class="stat__label">Research pillars</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ── Research themes ────────────────────────────────────── -->
+  <!-- ── Why we exist ───────────────────────────────────────── -->
+  <section class="section section--subtle">
+    <div class="container">
+      <div class="why-exist">
+        <p class="section-label">Why we exist</p>
+        <p class="why-exist__body">
+          Biology is currently measured at gene-level resolution, which collapses
+          roughly twenty thousand protein-coding genes into a single number each and
+          erases the more than two hundred thousand isoforms those genes actually
+          produce. The choices hidden inside that collapse &mdash; which exon is
+          included, which 3&prime; end is used, which regulatory feature is
+          decorated &mdash; are exactly the choices that drive drug-resistant states
+          in cancer and hyperactivated states in autoimmune disease. The Srivastava
+          Lab builds the technology and the computation needed to read that
+          regulation at isoform resolution, in individual cells, before the protein
+          is ever made.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Research pillars ───────────────────────────────────── -->
   <section class="section">
     <div class="container">
-      <p class="section-label">Research themes</p>
-      <h2 class="section-title">Five interlocking threads</h2>
-      <p class="section-sub">We start from the biology &mdash; isoform switching in melanoma, chromatin dynamics in immune disease &mdash; and build the platforms, models, and algorithms needed to answer it.</p>
+      <p class="section-label">Research pillars</p>
+      <h2 class="section-title">Measure &middot; Quantify &middot; Integrate &middot; Apply</h2>
+      <p class="section-sub">Four tightly coupled efforts: a benchtop single-cell platform, a long-read isoform quantification pipeline, cross-platform integration, and co-equal biological programs in cancer and autoimmunity.</p>
       <div class="theme-grid">
-        <a class="theme-card" href="research.html#isoforms">
-          <div class="theme-card__num">01</div>
-          <div class="theme-card__title">Isoform switching in cancer and immune disease</div>
-          <p class="theme-card__body">BenchDrop-seq &amp; Bagpiper applied to NRAS-mutant melanoma and EBV-driven immune dysregulation &mdash; recovering the 95&percnt; of isoform diversity invisible to standard assays.</p>
+        <a class="theme-card" href="research.html#measure">
+          <div class="theme-card__num">01 &middot; Measure</div>
+          <div class="theme-card__title">BenchDrop-seq platform</div>
+          <p class="theme-card__body">Microfluidics-free benchtop single-cell RNA-seq. PIP-seq capture + Oxford Nanopore sequencing on any standard lab bench, extending naturally to chromatin via PIP-ATAC.</p>
         </a>
-        <a class="theme-card" href="research.html#regulatory">
-          <div class="theme-card__num">02</div>
-          <div class="theme-card__title">Chromatin dynamics &amp; GRNs</div>
-          <p class="theme-card__body">Single-cell CUT&amp;Tag and gene-regulatory network models that ask which regulators move first in melanoma progression and immune differentiation.</p>
+        <a class="theme-card" href="research.html#quantify">
+          <div class="theme-card__num">02 &middot; Quantify</div>
+          <div class="theme-card__title">Bagpiper isoform pipeline</div>
+          <p class="theme-card__body">Spacer-anchored barcode recovery, junction-based read assignment, EM-based multi-mapping resolution, and principled isoform &times; cell count matrices from raw Nanopore signal.</p>
         </a>
-        <a class="theme-card" href="research.html#multimodal">
-          <div class="theme-card__num">03</div>
-          <div class="theme-card__title">Multimodal integration</div>
-          <p class="theme-card__body">Joint models for RNA, chromatin, histone marks, and surface proteins &mdash; one cell described by one coherent state rather than disagreeing tables.</p>
+        <a class="theme-card" href="research.html#integrate">
+          <div class="theme-card__num">03 &middot; Integrate</div>
+          <div class="theme-card__title">Cross-platform projection</div>
+          <p class="theme-card__body">Two-layer annotation strategies that transfer cell identity from short-read atlases to long-read BenchDrop-seq data, and multimodal frameworks that align RNA, chromatin, and isoform state per cell.</p>
         </a>
-        <a class="theme-card" href="research.html#scalable">
-          <div class="theme-card__num">04</div>
-          <div class="theme-card__title">Scalable quantification</div>
-          <p class="theme-card__body">Memory-frugal algorithms (salmon &middot; alevin &middot; alevin-fry &middot; Bagpiper) that make atlas-scale single-cell and long-read analysis of tumor heterogeneity and treatment response reproducible.</p>
-        </a>
-        <a class="theme-card" href="research.html#uncertainty">
-          <div class="theme-card__num">05</div>
-          <div class="theme-card__title">Uncertainty-aware models</div>
-          <p class="theme-card__body">Bayesian methods that propagate multi-mapping ambiguity through quantification and inference &mdash; so clinical decisions reflect what we genuinely do and do not know.</p>
+        <a class="theme-card" href="research.html#apply">
+          <div class="theme-card__num">04 &middot; Apply</div>
+          <div class="theme-card__title">Cancer &amp; autoimmunity</div>
+          <p class="theme-card__body">Two co-equal biological programs: drug-tolerant persister states in NRAS-mutant melanoma, and splicing rewiring of immune cell fate in multiple sclerosis and EBV-driven dysregulation.</p>
         </a>
       </div>
     </div>
