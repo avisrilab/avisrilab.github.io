@@ -42,11 +42,15 @@
     dpr = Math.min(devicePixelRatio || 1, 2);
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    const mobile = W < 760;
-    cx0 = mobile ? W * 0.5 : W * 0.7; cy0 = mobile ? H * 0.24 : H * 0.42;
-    S = mobile ? W * 0.8 : Math.min(W * 0.42, H * 0.82);
+    // Must match the CSS query that stacks the hero.
+    const stacked = matchMedia('(max-width: 1023px), (orientation: portrait)').matches;
+    // Stacked: the cloud lives in the space above the text block.
+    const copy = cv.parentElement.querySelector('.dotfield__copy');
+    const free = stacked && copy ? Math.max(copy.offsetTop, H * 0.3) : H;
+    cx0 = stacked ? W * 0.5 : W * 0.7; cy0 = stacked ? free * 0.5 : H * 0.4;
+    S = stacked ? Math.min(W * 0.66, free * 0.85) : Math.min(W * 0.38, H * 0.7);
   }
-  addEventListener('resize', size); size();
+  size();
 
   // Timeline: target 0 = gene, 1 = isoform. Auto-cycles until the visitor picks one.
   let target = 1, mix = reduce ? 1 : 0, auto = !reduce, last = performance.now(), hold = 0;
@@ -80,7 +84,23 @@
       const px = cx0 + (x + jx) * S, py = cy0 + (y + jy) * S, s = d.sz * (d.k === AMBER ? 1 + 0.4 * m : 1);
       ctx.beginPath(); ctx.arc(px, py, s, 0, 6.283); ctx.fill();
     }
-    requestAnimationFrame(frame);
+    // Keep animating only while visible; reduced motion draws a single still frame.
+    if (!reduce && onScreen && !document.hidden) requestAnimationFrame(frame); else running = false;
   }
-  requestAnimationFrame(frame);
+
+  // Pause when the hero is scrolled away or the tab is hidden, so the page costs nothing in the background.
+  let running = false, onScreen = true;
+  function start() {
+    if (running || !onScreen || document.hidden) return;
+    running = true; last = performance.now(); requestAnimationFrame(frame);
+  }
+  new IntersectionObserver(([e]) => { onScreen = e.isIntersecting; start(); }).observe(cv);
+  document.addEventListener('visibilitychange', start);
+  bGene.addEventListener('click', start); bIso.addEventListener('click', start);
+  new MutationObserver(start).observe(document.documentElement, { attributes: true });
+  // Repaint whenever the canvas changes size (window resize, zoom, layout shift), even while paused,
+  // and always paint one frame at load so the hero is never blank or stretched.
+  function paint() { size(); if (!running) { running = true; last = performance.now(); frame(last); } }
+  new ResizeObserver(paint).observe(cv);
+  paint();
 })();
