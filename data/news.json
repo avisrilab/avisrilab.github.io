@@ -1,5 +1,9 @@
 [
   {
+    "date": "Sep 2026",
+    "text": "The lab receives an NIH NIGMS Maximizing Investigators' Research Award (R35 MIRA, 1R35GM162519), <em>Next-generation single-cell multiomic methods for quantifying cellular identity</em>, funding the research program through 2031."
+  },
+  {
     "date": "Apr 2026",
     "text": "Avi presents <em>Isoform-Resolved Single-Cell Transcriptomics of Immunological Dysregulation</em> at the Wistar Institute Faculty Seminar. <a href=\"https://wistar.org\">Talk slides</a> cover BenchDrop-seq, Bagpiper, and the RRAS isoform switching story in melanoma."
   },
