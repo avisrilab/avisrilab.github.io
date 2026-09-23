@@ -1155,7 +1155,8 @@ h1 { font-weight: 500; }
 .dotfield__pills button.on { background: var(--text); color: var(--bg); }
 .dotfield__note { font-family: var(--font-mono); font-size: 12.5px; color: var(--text-muted); max-width: 260px;
   text-align: right; line-height: 1.5; min-height: 34px; margin: 0; }
-@media (max-width: 760px) {
+/* Stacked hero on phones, tablets and any portrait screen: dots on top, text below, buttons last */
+@media (max-width: 1023px), (orientation: portrait) {
   .dotfield { display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 52px; }
   .dotfield__copy, .dotfield__toggle { position: relative; left: auto; right: auto; bottom: auto; }
   .dotfield__lead { font-size: 1rem; }
@@ -1220,3 +1221,19 @@ h1 { font-weight: 500; }
 .pi-card__bio { max-width: 68ch; font-size: 0.95rem; line-height: 1.7; }
 .news-item__text { max-width: 72ch; }
 .contact-group__value { max-width: 62ch; }
+
+/* ── Text links: a thin underline slides in on hover ─────────────── */
+a:hover { text-decoration: none; }
+p a, .news-item__text a, .pub-item__title a, .doi-link, .footer__nav-links a,
+.collab-list a, .contact-group__value a, .foundations-note__body a, .pi-card__links a {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+  transition: background-size .25s ease, color var(--ease);
+}
+p a:hover, .news-item__text a:hover, .pub-item__title a:hover, .doi-link:hover, .footer__nav-links a:hover,
+.collab-list a:hover, .contact-group__value a:hover, .foundations-note__body a:hover, .pi-card__links a:hover,
+p a:focus-visible, .news-item__text a:focus-visible, .pub-item__title a:focus-visible {
+  background-size: 100% 1px;
+}
+@media (prefers-reduced-motion: reduce) {
+  p a, .news-item__text a, .pub-item__title a, .doi-link, .footer__nav-links a { transition: none; }
+}
