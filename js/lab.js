@@ -144,7 +144,7 @@ async function renderPublications(containerId, selectedOnly = false) {
 
         const thumb = pub.preview
           ? `<img class="pub-item__thumb" src="${pub.preview}" alt="${pub.title}" loading="lazy">`
-          : `<div class="pub-item__thumb--placeholder">📄</div>`;
+          : `<div class="pub-item__thumb--placeholder" aria-hidden="true"></div>`;
 
         const badge    = `<span class="journal-badge ${journalClass(pub.journal)}">${pub.journal}</span>`;
         const doiLink  = pub.doi
