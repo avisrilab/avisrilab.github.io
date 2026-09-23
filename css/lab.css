@@ -1096,7 +1096,7 @@ h1 { font-weight: 500; }
 /* labels: small mono, muted, sentence case */
 .section-label, .page-header__label, .theme-card__num, .research-theme__num, .lab-env__label,
 .prior-work__label, .foundations-note__label, .research-toc__title, .tools-heading, .pub-year-header,
-.footer__nav-title {
+.footer__nav-title, .pi-card__title, .role-header__title, .contact-group__label {
   font-family: var(--font-mono); font-weight: 400; font-size: 0.8rem; letter-spacing: 0.02em;
   text-transform: none; color: var(--text-muted); background: none; padding: 0;
 }
@@ -1162,3 +1162,28 @@ h1 { font-weight: 500; }
   .dotfield__toggle { padding: 1.25rem 2rem 0; align-items: flex-start; }
   .dotfield__note { text-align: left; }
   }
+
+/* ── Images: one treatment across the site ─────────────────────── */
+.research-theme__img { object-fit: contain; background: var(--bg-subtle); padding: 1rem; }
+.tool-item--featured img { background: var(--bg-subtle); object-fit: contain; padding: 4px; }
+/* borrowed paper thumbnails sit back in greyscale until hovered */
+.pub-item__thumb, .tool-strip--prior .tool-item img {
+  filter: grayscale(1) contrast(1.05) brightness(.9); opacity: .8; transition: filter .3s, opacity .3s;
+}
+.pub-item:hover .pub-item__thumb, .tool-strip--prior .tool-item:hover img { filter: none; opacity: 1; }
+.pub-item__thumb--placeholder {
+  background: radial-gradient(circle, var(--c-teal) 1.4px, transparent 1.9px) 0 0 / 9px 9px, var(--bg-subtle);
+  opacity: .7;
+}
+
+/* ── Page headers carry a faint cluster field ─────────────────── */
+.page-header { position: relative; overflow: hidden; }
+.page-header::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: url("../assets/img/art/header-dots.svg") right center / auto 100% no-repeat;
+  opacity: .55;
+  -webkit-mask-image: linear-gradient(to right, transparent 50%, #000 85%);
+          mask-image: linear-gradient(to right, transparent 50%, #000 85%);
+}
+.page-header .container { position: relative; z-index: 1; }
+@media (max-width: 760px) { .page-header::after { opacity: .3; } }
