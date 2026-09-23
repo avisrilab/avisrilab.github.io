@@ -19,12 +19,12 @@
     const moonIcon = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
 
     const updateIcon = () => {
-      btn.innerHTML = html.getAttribute('data-theme') === 'dark' ? sunIcon : moonIcon;
+      btn.innerHTML = html.getAttribute('data-theme') === 'light' ? moonIcon : sunIcon;
     };
     updateIcon();
 
     btn.addEventListener('click', () => {
-      const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       html.setAttribute('data-theme', next);
       localStorage.setItem('lab-theme', next);
       updateIcon();

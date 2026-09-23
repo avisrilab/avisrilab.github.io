@@ -8,7 +8,7 @@
   <meta name="description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper — technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/lab.css">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 </head>
@@ -39,70 +39,26 @@
     </div>
   </nav>
 
-  <!-- ── Hero ───────────────────────────────────────────────── -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero__split">
-        <div class="hero__content">
-          <p class="hero__eyebrow">Srivastava Lab &middot; The Wistar Institute &middot; Philadelphia</p>
-          <h1 class="hero__title">
-            Before the protein,<br>
-            <em>there is choice</em>.
-          </h1>
-          <p class="hero__vision">One exon. One cell. One decision at a time.</p>
-          <p class="hero__lead">
-            Splicing is where a gene becomes an isoform &mdash; quietly rewritten
-            in both drug-resistant cancer and hyperactivated autoimmune disease.
-            The Srivastava Lab builds the technology and the computation to measure
-            those decisions one cell, one isoform at a time.
-          </p>
-          <ul class="hero__anchors">
-            <li class="hero__anchor">
-              <span class="hero__anchor-label">Technology</span>
-              <span class="hero__anchor-text">BenchDrop-seq &mdash; PIP-seq capture + Oxford Nanopore, on any lab bench</span>
-            </li>
-            <li class="hero__anchor">
-              <span class="hero__anchor-label">Computation</span>
-              <span class="hero__anchor-text">Bagpiper &mdash; spacer-anchored barcodes and junction-aware isoform counts</span>
-            </li>
-            <li class="hero__anchor">
-              <span class="hero__anchor-label">Biology</span>
-              <span class="hero__anchor-text">From NRAS-mutant melanoma to multiple sclerosis and EBV dysregulation</span>
-            </li>
-          </ul>
-          <div class="hero__cta">
-            <a class="btn btn--primary" href="research.html">Our research &rarr;</a>
-            <a class="btn btn--ghost"   href="publications.html">Publications</a>
-            <a class="btn btn--ghost"   href="people.html">People</a>
-          </div>
-        </div>
-        <div class="hero__visual">
-          <img class="hero__rna-img" src="assets/img/isoform_resolution_hero.svg" alt="Two UMAP plots of the same cells: the gene-level view is a single uniform cloud, while the isoform-level view resolves a hidden disease-state subpopulation shown in amber.">
-          <p class="hero__visual-caption">Same cells, two views. What does a cell decide that gene-level resolution can never see?</p>
-        </div>
+  <!-- ── Hero: dot field ───────────────────────────────────── -->
+  <section class="dotfield">
+    <canvas id="dotfield" aria-hidden="true"></canvas>
+    <div class="dotfield__copy">
+      <div class="container">
+        <p class="dotfield__where">The Wistar Institute &middot; Philadelphia &middot; NIH NIGMS R35 MIRA</p>
+        <h1 class="dotfield__title">Same cells.<br>Different decisions.</h1>
+        <p class="dotfield__lead">Genes make many RNA isoforms, and single-cell data usually counts
+          them as one. We build the technology and software to count isoforms in every cell, and use
+          them to find cell states in cancer and autoimmunity that gene counts cannot separate.</p>
       </div>
+    </div>
+    <div class="dotfield__toggle">
+      <div class="dotfield__pills" role="group" aria-label="Resolution">
+        <button id="dfGene" type="button">gene-level</button>
+        <button id="dfIso" type="button">isoform-level</button>
+      </div>
+      <p class="dotfield__note" id="dfNote" aria-live="polite"></p>
     </div>
   </section>
-
-  <!-- ── Stats ──────────────────────────────────────────────── -->
-  <div class="stats">
-    <div class="container">
-      <div class="stats__inner">
-        <div class="stat">
-          <div class="stat__num">R35</div>
-          <div class="stat__label">NIH NIGMS MIRA, 2026 to 2031</div>
-        </div>
-        <div class="stat">
-          <div class="stat__num">2023</div>
-          <div class="stat__label">Lab founded at Wistar</div>
-        </div>
-        <div class="stat">
-          <div class="stat__num">2</div>
-          <div class="stat__label">Disease programs: melanoma, MS &amp; EBV</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- ── Why we exist ───────────────────────────────────────── -->
   <section class="section section--subtle">
@@ -133,22 +89,22 @@
       <p class="section-sub">Four tightly coupled efforts: a benchtop single-cell platform, a long-read isoform quantification pipeline, cross-platform integration, and co-equal biological programs in cancer and autoimmunity.</p>
       <div class="theme-grid">
         <a class="theme-card" href="research.html#measure">
-          <div class="theme-card__num">01 &middot; Measure</div>
+          <div class="theme-card__num">Measure</div>
           <div class="theme-card__title">BenchDrop-seq platform</div>
           <p class="theme-card__body">Microfluidics-free benchtop single-cell RNA-seq. PIP-seq capture + Oxford Nanopore sequencing on any standard lab bench, extending naturally to chromatin via PIP-ATAC.</p>
         </a>
         <a class="theme-card" href="research.html#quantify">
-          <div class="theme-card__num">02 &middot; Quantify</div>
+          <div class="theme-card__num">Quantify</div>
           <div class="theme-card__title">Bagpiper isoform pipeline</div>
           <p class="theme-card__body">Spacer-anchored barcode recovery, junction-based read assignment, EM-based multi-mapping resolution, and principled isoform &times; cell count matrices from raw Nanopore signal.</p>
         </a>
         <a class="theme-card" href="research.html#integrate">
-          <div class="theme-card__num">03 &middot; Integrate</div>
+          <div class="theme-card__num">Integrate</div>
           <div class="theme-card__title">Cross-platform projection</div>
           <p class="theme-card__body">Two-layer annotation strategies that transfer cell identity from short-read atlases to long-read BenchDrop-seq data, and multimodal frameworks that align RNA, chromatin, and isoform state per cell.</p>
         </a>
         <a class="theme-card" href="research.html#apply">
-          <div class="theme-card__num">04 &middot; Apply</div>
+          <div class="theme-card__num">Apply</div>
           <div class="theme-card__title">Cancer &amp; autoimmunity</div>
           <p class="theme-card__body">Two co-equal biological programs: drug-tolerant persister states in NRAS-mutant melanoma, and splicing rewiring of immune cell fate in multiple sclerosis and EBV-driven dysregulation.</p>
         </a>
@@ -277,5 +233,6 @@
   </footer>
 
   <script src="js/lab.js"></script>
+  <script src="js/hero.js"></script>
 </body>
 </html>
