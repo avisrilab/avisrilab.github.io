@@ -1187,3 +1187,36 @@ h1 { font-weight: 500; }
 }
 .page-header .container { position: relative; z-index: 1; }
 @media (max-width: 760px) { .page-header::after { opacity: .3; } }
+
+/* ── People: one portrait treatment ─────────────────────────────── */
+.pi-card__photo, .person-card__photo {
+  border: 1px solid var(--border); filter: saturate(.85) contrast(1.02);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--ring, var(--border));
+}
+.person-card__initials {
+  border: 1px solid var(--border); font-family: var(--font-mono); font-weight: 500; font-size: 1.1rem;
+  color: var(--text);
+  background: radial-gradient(circle, color-mix(in srgb, var(--ring, var(--c-teal)) 55%, transparent) 1.3px, transparent 1.8px) 0 0 / 9px 9px, var(--bg-subtle);
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 5px var(--ring, var(--border));
+}
+.people-grid > :nth-child(5n+1) { --ring: var(--c-teal); }
+.people-grid > :nth-child(5n+2) { --ring: var(--c-blue); }
+.people-grid > :nth-child(5n+3) { --ring: var(--c-violet); }
+.people-grid > :nth-child(5n+4) { --ring: var(--c-green); }
+.people-grid > :nth-child(5n+5) { --ring: var(--c-amber); }
+.pi-card { --ring: var(--c-teal); }
+.person-card:hover .person-card__photo, .person-card:hover .person-card__initials {
+  box-shadow: 0 0 0 4px var(--bg), 0 0 0 6px var(--ring, var(--accent)); border-color: var(--border);
+}
+.person-card:hover .person-card__name { color: var(--text); }
+
+/* ── Reading rhythm: ~65-character lines, one spacing scale ─────── */
+.section { padding: clamp(64px, 8vw, 104px) 0; }
+.why-exist { max-width: 62ch; }
+.why-exist__body { font-size: 1.2rem; line-height: 1.65; }
+.section-sub, .page-header__sub { max-width: 60ch; }
+.research-intro { max-width: 62ch; }
+.research-theme__body, .lab-env p, .foundations-note__body { max-width: 66ch; line-height: 1.7; }
+.pi-card__bio { max-width: 68ch; font-size: 0.95rem; line-height: 1.7; }
+.news-item__text { max-width: 72ch; }
+.contact-group__value { max-width: 62ch; }
