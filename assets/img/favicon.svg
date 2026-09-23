@@ -1,15 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="18" fill="#E84910"/>
-  <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Strand 1: left-to-right S-curve -->
-    <path d="M33,10 C55,22 67,30 67,50 C67,70 55,78 33,90"
-          stroke-width="9" opacity="1"/>
-    <!-- Strand 2: right-to-left S-curve (complementary) -->
-    <path d="M67,10 C45,22 33,30 33,50 C33,70 45,78 67,90"
-          stroke-width="9" opacity="0.5"/>
-    <!-- Base pairs -->
-    <line x1="39" y1="24" x2="61" y2="24" stroke-width="5" opacity="0.9"/>
-    <line x1="33" y1="50" x2="67" y2="50" stroke-width="5" opacity="0.9"/>
-    <line x1="39" y1="76" x2="61" y2="76" stroke-width="5" opacity="0.9"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#070b16"/>
+  <circle cx="22" cy="20" r="6" fill="#48bec8"/>
+  <circle cx="40" cy="17" r="5" fill="#48bec8"/>
+  <circle cx="45" cy="34" r="6" fill="#a478ff"/>
+  <circle cx="19" cy="38" r="6" fill="#608cff"/>
+  <circle cx="30" cy="48" r="5" fill="#5ad68c"/>
+  <circle cx="46" cy="49" r="5" fill="#ffb03c"/>
 </svg>
