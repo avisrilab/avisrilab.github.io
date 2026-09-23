@@ -43,7 +43,7 @@
     W = cv.clientWidth; H = cv.clientHeight;
     cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     // Must match the CSS query that stacks the hero.
-    const stacked = matchMedia('(max-width: 1023px), (orientation: portrait)').matches;
+    const stacked = matchMedia('(max-width: 699px), (orientation: portrait)').matches;
     // Stacked: the cloud lives in the space above the text block.
     const copy = cv.parentElement.querySelector('.dotfield__copy');
     const free = stacked && copy ? Math.max(copy.offsetTop, H * 0.3) : H;
