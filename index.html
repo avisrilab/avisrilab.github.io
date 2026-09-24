@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Srivastava Lab — Isoform-resolved single-cell biology · Wistar Institute</title>
+  <title>Srivastava Lab · Isoform-resolved single-cell biology · Wistar Institute</title>
   <link rel="canonical" href="https://avisrilab.org/">
-  <meta name="description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper — technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
+  <meta name="description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper, technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Srivastava Lab">
-  <meta property="og:title" content="Srivastava Lab — Isoform-resolved single-cell biology · Wistar Institute">
-  <meta property="og:description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper — technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
+  <meta property="og:title" content="Srivastava Lab · Isoform-resolved single-cell biology · Wistar Institute">
+  <meta property="og:description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper, technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
   <meta property="og:url" content="https://avisrilab.org/">
   <meta property="og:image" content="https://avisrilab.org/assets/img/og-card.jpg">
   <meta property="og:image:width" content="1200">
@@ -56,39 +56,43 @@
     <canvas id="dotfield" aria-hidden="true"></canvas>
     <div class="dotfield__copy">
       <div class="container">
-        <p class="dotfield__where">The Wistar Institute &middot; Philadelphia &middot; NIH NIGMS R35 MIRA</p>
         <h1 class="dotfield__title">Same cells.<br>Different decisions.</h1>
         <p class="dotfield__lead">Genes make many RNA isoforms, and single-cell data usually counts
           them as one. We build the technology and software to count isoforms in every cell, and use
           them to find cell states in cancer and autoimmunity that gene counts cannot separate.</p>
+        <div class="dotfield__toggle">
+          <div class="dotfield__pills" role="group" aria-label="Resolution">
+            <button id="dfGene" type="button">gene-level</button>
+            <button id="dfIso" type="button">isoform-level</button>
+          </div>
+          <p class="dotfield__note" id="dfNote" aria-live="polite"></p>
+        </div>
       </div>
-    </div>
-    <div class="dotfield__toggle">
-      <div class="dotfield__pills" role="group" aria-label="Resolution">
-        <button id="dfGene" type="button">gene-level</button>
-        <button id="dfIso" type="button">isoform-level</button>
-      </div>
-      <p class="dotfield__note" id="dfNote" aria-live="polite"></p>
     </div>
   </section>
 
   <!-- ── Why we exist ───────────────────────────────────────── -->
   <section class="section section--subtle">
     <div class="container">
+      <div class="why-exist-grid">
       <div class="why-exist">
         <p class="section-label">Why we exist</p>
         <p class="why-exist__body">
-          Biology is currently measured at gene-level resolution, which collapses
-          roughly twenty thousand protein-coding genes into a single number each and
-          erases the more than two hundred thousand isoforms those genes actually
-          produce. The choices hidden inside that collapse &mdash; which exon is
-          included, which 3&prime; end is used, which regulatory feature is
-          decorated &mdash; are exactly the choices that drive drug-resistant states
-          in cancer and hyperactivated states in autoimmune disease. The Srivastava
-          Lab builds the technology and the computation needed to measure that
-          regulation at isoform resolution, in individual cells, before the protein
-          is ever made.
+          Most single-cell studies count genes. That reduces about twenty thousand
+          protein-coding genes to one number each and hides the more than two
+          hundred thousand isoforms they produce. The differences lost in that count,
+          such as which exon a transcript includes or which 3&prime; end it uses,
+          can change what a cell does, including in drug-resistant cancer and in
+          autoimmune disease. We build the technology and software to measure those
+          differences in individual cells.
         </p>
+      </div>
+      <figure class="why-exist__fig burst">
+        <div class="burst__count" aria-live="off"><span id="burstCount">20,000</span> <span id="burstUnit">genes</span></div>
+        <canvas id="burst" role="img" aria-label="About twenty thousand gene-level dots burst into about two hundred thousand isoform dots."></canvas>
+        <figcaption>Each gray dot is 10 genes; each colored dot is 10 isoforms.
+          <button class="burst__replay" type="button">Replay</button></figcaption>
+      </figure>
       </div>
     </div>
   </section>
@@ -98,27 +102,31 @@
     <div class="container">
       <p class="section-label">Research pillars</p>
       <h2 class="section-title">Measure &middot; Quantify &middot; Integrate &middot; Apply</h2>
-      <p class="section-sub">Four tightly coupled efforts: a benchtop single-cell platform, a long-read isoform quantification pipeline, cross-platform integration, and co-equal biological programs in cancer and autoimmunity.</p>
+      <p class="section-sub">A benchtop single-cell platform, a long-read isoform pipeline, methods that connect its data to existing atlases, and two biology programs, one in cancer and one in autoimmunity.</p>
       <div class="theme-grid">
         <a class="theme-card" href="research.html#measure">
+          <img class="theme-card__art" src="assets/img/art/measure.svg" alt="" loading="lazy">
           <div class="theme-card__num">Measure</div>
           <div class="theme-card__title">BenchDrop-seq platform</div>
-          <p class="theme-card__body">Microfluidics-free benchtop single-cell RNA-seq. PIP-seq capture + Oxford Nanopore sequencing on any standard lab bench, extending naturally to chromatin via PIP-ATAC.</p>
+          <p class="theme-card__body">Single-cell long-read RNA-seq without a microfluidics instrument: PIP-seq capture plus Oxford Nanopore sequencing on a standard lab bench. PIP-ATAC applies it to chromatin.</p>
         </a>
         <a class="theme-card" href="research.html#quantify">
+          <img class="theme-card__art" src="assets/img/art/quantify.svg" alt="" loading="lazy">
           <div class="theme-card__num">Quantify</div>
           <div class="theme-card__title">Bagpiper isoform pipeline</div>
-          <p class="theme-card__body">Spacer-anchored barcode recovery, junction-based read assignment, EM-based multi-mapping resolution, and principled isoform &times; cell count matrices from raw Nanopore signal.</p>
+          <p class="theme-card__body">Turns Nanopore reads into isoform-by-cell count matrices: spacer-anchored barcode recovery, assignment by splice junction, and EM resolution of reads that fit several isoforms.</p>
         </a>
         <a class="theme-card" href="research.html#integrate">
+          <img class="theme-card__art" src="assets/img/art/integrate.svg" alt="" loading="lazy">
           <div class="theme-card__num">Integrate</div>
           <div class="theme-card__title">Cross-platform projection</div>
-          <p class="theme-card__body">Two-layer annotation strategies that transfer cell identity from short-read atlases to long-read BenchDrop-seq data, and multimodal frameworks that align RNA, chromatin, and isoform state per cell.</p>
+          <p class="theme-card__body">A two-layer annotation that transfers cell identity from short-read atlases onto BenchDrop-seq data, and methods that align RNA, chromatin and isoform measurements in each cell.</p>
         </a>
         <a class="theme-card" href="research.html#apply">
+          <img class="theme-card__art" src="assets/img/art/apply.svg" alt="" loading="lazy">
           <div class="theme-card__num">Apply</div>
           <div class="theme-card__title">Cancer &amp; autoimmunity</div>
-          <p class="theme-card__body">Two co-equal biological programs: drug-tolerant persister states in NRAS-mutant melanoma, and splicing rewiring of immune cell fate in multiple sclerosis and EBV-driven dysregulation.</p>
+          <p class="theme-card__body">Drug-tolerant persister cells in NRAS-mutant melanoma, and how splicing changes immune cell fate in multiple sclerosis and EBV infection.</p>
         </a>
       </div>
     </div>
@@ -129,7 +137,7 @@
     <div class="container">
       <p class="section-label">Srivastava Lab tools</p>
       <h2 class="section-title">Built here at Wistar</h2>
-      <p class="section-sub">Open-source platforms and pipelines developed independently in the lab since September 2023. Every method ships with documented, reproducible code.</p>
+      <p class="section-sub">Open-source methods developed in the lab since September 2023, each released with documented code.</p>
       <div class="tool-strip tool-strip--lab">
         <a class="tool-item tool-item--featured" href="https://www.biorxiv.org/content/10.1101/2026.03.12.706999" target="_blank" rel="noopener">
           <img src="assets/img/art/benchdrop.svg" alt="">
@@ -148,7 +156,7 @@
       </div>
 
       <div class="prior-work">
-        <div class="prior-work__label">Prior contributions &mdash; graduate work (Patro Lab, Stony Brook) &amp; postdoc (Satija Lab, NYGC / NYU)</div>
+        <div class="prior-work__label">Prior contributions: graduate work (Patro Lab, Stony Brook) and postdoc (Satija Lab, NYGC / NYU)</div>
         <div class="tool-strip tool-strip--prior">
           <a class="tool-item" href="https://www.nature.com/articles/s41587-023-01767-y" target="_blank" rel="noopener">
             <img src="assets/img/publication_preview/sv5.jpg" alt="Seurat v5">
@@ -246,5 +254,6 @@
 
   <script src="js/lab.js"></script>
   <script src="js/hero.js"></script>
+  <script src="js/burst.js"></script>
 </body>
 </html>

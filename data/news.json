@@ -1,7 +1,7 @@
 [
   {
     "date": "Sep 2026",
-    "text": "The lab receives an NIH NIGMS Maximizing Investigators' Research Award (R35 MIRA, 1R35GM162519), <em>Next-generation single-cell multiomic methods for quantifying cellular identity</em>, funding the research program through 2031."
+    "text": "The lab receives an NIH NIGMS Maximizing Investigators' Research Award (MIRA), <em>Next-generation single-cell multiomic methods for quantifying cellular identity</em>, funding the research program through 2031."
   },
   {
     "date": "Apr 2026",
@@ -9,7 +9,7 @@
   },
   {
     "date": "Mar 2026",
-    "text": "<a href=\"https://www.biorxiv.org/content/10.1101/2026.03.12.706999\">BenchDrop-seq</a> posted on bioRxiv. A microfluidics-free benchtop platform for single-cell long-read RNA sequencing — PIP-seq capture combined with Oxford Nanopore sequencing and the Bagpiper analysis pipeline."
+    "text": "<a href=\"https://www.biorxiv.org/content/10.1101/2026.03.12.706999\">BenchDrop-seq</a> posted on bioRxiv. A microfluidics-free benchtop platform for single-cell long-read RNA sequencing that combines PIP-seq capture with Oxford Nanopore sequencing and the Bagpiper analysis pipeline."
   },
   {
     "date": "Nov 2025",

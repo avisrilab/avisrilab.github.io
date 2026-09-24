@@ -45,10 +45,18 @@
     // Must match the CSS query that stacks the hero.
     const stacked = matchMedia('(max-width: 699px), (orientation: portrait)').matches;
     // Stacked: the cloud lives in the space above the text block.
+    if (!cv.isConnected) return;
     const copy = cv.parentElement.querySelector('.dotfield__copy');
     const free = stacked && copy ? Math.max(copy.offsetTop, H * 0.3) : H;
-    cx0 = stacked ? W * 0.5 : W * 0.7; cy0 = stacked ? free * 0.5 : H * 0.4;
-    S = stacked ? Math.min(W * 0.66, free * 0.85) : Math.min(W * 0.38, H * 0.7);
+    if (stacked) {
+      cx0 = W * 0.5; cy0 = free * 0.5; S = Math.min(W * 0.66, free * 0.85);
+    } else {
+      // Side by side: the cloud fills the space right of the paragraph, never behind it.
+      const lead = cv.parentElement.querySelector('.dotfield__lead');
+      const left = (lead ? lead.getBoundingClientRect().right - cv.getBoundingClientRect().left : W * 0.52) + 48;
+      const right = W - 32;
+      cx0 = (left + right) / 2; cy0 = H * 0.5; S = Math.max(120, Math.min((right - left) / 1.1, H * 0.78));
+    }
   }
   size();
 

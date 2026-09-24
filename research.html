@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research — Srivastava Lab</title>
+  <title>Research · Srivastava Lab</title>
   <link rel="canonical" href="https://avisrilab.org/research.html">
   <meta name="description" content="Research themes at the Srivastava Lab: multimodal single-cell genomics, uncertainty-aware ML, scalable quantification, and regulatory genomics.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Srivastava Lab">
-  <meta property="og:title" content="Research — Srivastava Lab">
+  <meta property="og:title" content="Research · Srivastava Lab">
   <meta property="og:description" content="Research themes at the Srivastava Lab: multimodal single-cell genomics, uncertainty-aware ML, scalable quantification, and regulatory genomics.">
   <meta property="og:url" content="https://avisrilab.org/research.html">
   <meta property="og:image" content="https://avisrilab.org/assets/img/og-card.jpg">
@@ -56,14 +56,12 @@
       <p class="page-header__label">Research</p>
       <h1 class="page-header__title">Technology, computation, biology</h1>
       <p class="page-header__sub">
-        The Srivastava Lab is a technology and computation group working on
-        post-transcriptional regulation of cell state. We build
-        <strong>BenchDrop-seq</strong> &mdash; a benchtop, microfluidics-free
-        platform for isoform-resolved single-cell RNA-seq &mdash; and the
-        <strong>Bagpiper</strong> pipeline that turns long reads into
-        isoform&thinsp;&times;&thinsp;cell counts. We apply both to two diseases
-        we take equally seriously: drug resistance in NRAS-mutant melanoma, and
-        immune dysregulation in multiple sclerosis and EBV infection.
+        We study how post-transcriptional regulation sets cell state. We build
+        <strong>BenchDrop-seq</strong>, a benchtop platform for single-cell long-read
+        RNA-seq that needs no microfluidics instrument, and <strong>Bagpiper</strong>,
+        the pipeline that turns its long reads into isoform-by-cell counts. We apply
+        both to drug resistance in NRAS-mutant melanoma and to immune dysregulation
+        in multiple sclerosis and EBV infection.
       </p>
     </div>
   </div>
@@ -92,15 +90,12 @@
           <div class="research-theme__num">Measure</div>
           <h2 class="research-theme__title">BenchDrop-seq platform</h2>
           <p class="research-theme__body">
-            The Srivastava Lab builds <strong>BenchDrop-seq</strong>, a
-            microfluidics-free benchtop platform that combines PIP-seq single-cell
-            capture with Oxford Nanopore long-read sequencing. It runs on any
-            standard lab bench without a dedicated instrument, puts isoform-level
-            single-cell transcriptomics within reach of any group with a
-            thermocycler, and extends naturally to chromatin accessibility with
-            <strong>PIP-ATAC</strong>. Every protocol is open, reproducible, and
-            engineered to scale from pilot experiments to atlas-scale immune
-            profiling.
+            <strong>BenchDrop-seq</strong> combines PIP-seq single-cell capture with
+            Oxford Nanopore long-read sequencing. It needs no microfluidics
+            instrument, so any lab with a thermocycler can measure isoforms in single
+            cells. <strong>PIP-ATAC</strong> applies the same capture to chromatin
+            accessibility. The protocols are open and scale from pilot experiments to
+            large immune-profiling studies.
           </p>
           <div class="research-theme__tools">
             <span class="tool-tag">BenchDrop-seq</span>
@@ -121,16 +116,13 @@
           <div class="research-theme__num">Quantify</div>
           <h2 class="research-theme__title">Bagpiper isoform pipeline</h2>
           <p class="research-theme__body">
-            Long-read single-cell data is computationally distinct from short-read
-            data: barcodes drift, reads disagree about which isoform they came
-            from, and UMI deduplication has to honour splice-junction evidence
-            rather than 3&prime; anchor alone. <strong>Bagpiper</strong> handles
-            these problems end-to-end: spacer-anchored barcode recovery,
-            junction-based read assignment, expectation-maximization multi-mapping
-            resolution, and principled isoform &times; cell count matrices. The
-            result is a reproducible path from raw Nanopore signal to
-            isoform-resolved quantification that downstream analyses can actually
-            trust.
+            Long-read single-cell data raises problems that short-read tools were not
+            built for: barcode positions drift, a read can fit several isoforms, and
+            UMI deduplication has to use splice junctions, not only the 3&prime; end.
+            <strong>Bagpiper</strong> handles each step. It recovers barcodes anchored
+            on the spacer, assigns reads by splice junction, resolves reads that fit
+            several isoforms by expectation maximization, and outputs an
+            isoform-by-cell count matrix from the raw Nanopore data.
           </p>
           <div class="research-theme__tools">
             <span class="tool-tag">Bagpiper</span>
@@ -151,15 +143,13 @@
           <div class="research-theme__num">Integrate</div>
           <h2 class="research-theme__title">Cross-platform projection &amp; multimodal integration</h2>
           <p class="research-theme__body">
-            Isoform-level measurements only become interpretable when they sit
-            alongside gene-level atlases, chromatin state, and surface-protein
-            markers. The lab builds two-layer annotation strategies that transfer
-            cell identity from established short-read references onto long-read
-            BenchDrop-seq data, and multimodal integration frameworks that align
-            transcriptome, chromatin, and isoform information into a single
-            coherent state per cell. These methods make BenchDrop-seq datasets
-            immediately comparable to existing immune and tumor atlases, without
-            forcing users to choose between depth and breadth.
+            Isoform measurements are easiest to interpret next to gene-level atlases,
+            chromatin state and surface-protein markers. We transfer cell identity
+            from established short-read references onto long-read BenchDrop-seq data
+            with a <strong>two-layer annotation</strong>, and we align transcriptome,
+            chromatin and isoform measurements from the same cell. BenchDrop-seq
+            datasets can then be compared directly with existing immune and tumor
+            atlases.
           </p>
           <div class="research-theme__tools">
             <span class="tool-tag">two-layer annotation</span>
@@ -179,22 +169,19 @@
           <div class="research-theme__num">Apply</div>
           <h2 class="research-theme__title">Cancer and autoimmunity, as co-equal programs</h2>
           <p class="research-theme__body">
-            The lab runs two biological programs side by side rather than ranking
-            one over the other. In cancer, BenchDrop-seq is applied to
-            <strong>NRAS-mutant melanoma</strong> to identify the drug-tolerant
-            persister states that survive pan-RAS inhibition and to track the
-            <strong>RRAS isoform switching</strong> that accompanies resistance,
-            in collaboration with the Villanueva Lab at Wistar.
+            The lab runs two biology programs with equal weight. In cancer, with the
+            Villanueva Lab at Wistar, we use BenchDrop-seq on
+            <strong>NRAS-mutant melanoma</strong> to find the drug-tolerant persister
+            cells that survive pan-RAS inhibition and to track the
+            <strong>RRAS isoform switch</strong> that accompanies resistance.
           </p>
           <p class="research-theme__body">
-            In autoimmunity, the same pipeline profiles
-            <strong>multiple sclerosis</strong> patient immune cells captured with
-            Parse Biosciences and <strong>EBV-driven immune dysregulation</strong>
-            in <em>ex vivo</em> PBMC models, asking where splicing rewires T cell
-            and B cell fate decisions &mdash; in collaboration with the Lieberman
-            Lab at Wistar. Cancer and autoimmunity are treated as two windows onto
-            the same underlying question: how post-transcriptional regulation
-            decides cell state.
+            In autoimmunity, with the Lieberman Lab at Wistar, the same pipeline
+            profiles immune cells from <strong>multiple sclerosis</strong> patients,
+            captured with Parse Biosciences, and <strong>EBV-driven immune
+            dysregulation</strong> in <em>ex vivo</em> PBMC models. The question is
+            where splicing changes T cell and B cell fate. Both programs ask how
+            post-transcriptional regulation sets cell state.
           </p>
           <div class="research-theme__tools">
             <span class="tool-tag">NRAS melanoma</span>
@@ -216,7 +203,7 @@
   <section class="section" style="padding: 48px 0;">
     <div class="container">
       <div class="foundations-note">
-        <p class="foundations-note__label">Foundations &mdash; not active Wistar directions</p>
+        <p class="foundations-note__label">Foundations: earlier work, not active Wistar directions</p>
         <p class="foundations-note__body">
           Tools developed during Avi&rsquo;s graduate work with Rob Patro
           (<a href="https://salmon.readthedocs.io/" target="_blank" rel="noopener">salmon</a>,
@@ -226,10 +213,9 @@
           (<a href="https://www.nature.com/articles/s41587-023-01767-y" target="_blank" rel="noopener">Seurat v5</a>,
           <a href="https://www.nature.com/articles/s41592-021-01282-5" target="_blank" rel="noopener">Signac</a>,
           <a href="https://www.nature.com/articles/s41587-022-01250-0" target="_blank" rel="noopener">scCUT&amp;Tag-pro</a>)
-          are widely used across the single-cell community and remain
-          foundational to the field. They are <em>not</em> active research
-          directions of the Srivastava Lab at Wistar &mdash; the lab&rsquo;s
-          independent program is the four pillars above. See
+          are widely used in single-cell analysis. They are <em>not</em> active
+          research directions at Wistar; the lab&rsquo;s own program is the four
+          pillars above. See
           <a href="publications.html">publications</a> for the full record.
         </p>
       </div>
@@ -242,28 +228,23 @@
       <p class="section-label">Collaborations</p>
       <h2 class="section-title">Working partners at Wistar and beyond</h2>
       <p class="section-sub">
-        Translational single-cell biology is a team sport. We share experimental
-        systems, clinical samples, and analytical problems with groups that ask
-        complementary questions.
+        We share experimental systems, clinical samples and analysis problems with
+        these groups.
       </p>
       <ul class="collab-list">
         <li>
-          <strong>Villanueva Lab</strong> &middot; The Wistar Institute
-          &mdash; NRAS-mutant melanoma, targeted therapy resistance, and
+          <strong>Villanueva Lab</strong> &middot; The Wistar Institute: NRAS-mutant melanoma, targeted therapy resistance, and
           isoform switching under pan-RAS inhibition.
         </li>
         <li>
-          <strong>Lieberman Lab</strong> &middot; The Wistar Institute
-          &mdash; EBV infection biology, immune dysregulation, and <em>ex vivo</em>
+          <strong>Lieberman Lab</strong> &middot; The Wistar Institute: EBV infection biology, immune dysregulation, and <em>ex vivo</em>
           PBMC models of viral latency.
         </li>
         <li>
-          <strong>Satija Lab</strong> &middot; New York Genome Center / NYU
-          &mdash; multimodal integration, Seurat v5, and community tooling.
+          <strong>Satija Lab</strong> &middot; New York Genome Center / NYU: multimodal integration, Seurat v5, and community tooling.
         </li>
         <li>
-          <strong>Patro Lab</strong> &middot; University of Maryland
-          &mdash; scalable quantification, alevin-fry, and long-read single-cell
+          <strong>Patro Lab</strong> &middot; University of Maryland: scalable quantification, alevin-fry, and long-read single-cell
           algorithm development.
         </li>
       </ul>

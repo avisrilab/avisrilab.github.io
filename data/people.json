@@ -12,7 +12,7 @@
     "scholar": "HhKXdy4AAAAJ",
     "orcid": "0000-0001-9798-2079",
     "linkedin": "avi-srivastava-ph-d-3a703814",
-    "bio": "Avi is an Assistant Professor at The Wistar Institute in Philadelphia, where he started his lab in September 2023. He is a computational biologist by training and by temperament — his research sits at the intersection of statistical machine learning, high-performance algorithms, and modern functional genomics. The lab builds isoform-resolved single-cell platforms (BenchDrop-seq), probabilistic quantification methods (salmon · alevin · alevin-fry · Bagpiper), and multimodal integration frameworks underlying Signac and Seurat v5. His work has appeared in Nature Methods, Nature Biotechnology, Cell, Genome Biology, Bioinformatics, and Nature Reviews Genetics. Before joining Wistar, Avi was a postdoctoral fellow with Rahul Satija at the New York Genome Center and NYU. He earned his Ph.D. in Computer Science at Stony Brook University, advised by Rob Patro.",
+    "bio": "Avi is an Assistant Professor at The Wistar Institute in Philadelphia, where he started his lab in September 2023. He is a computational biologist whose research combines statistical machine learning, high-performance algorithms and functional genomics. His lab builds BenchDrop-seq and Bagpiper for isoform-resolved single-cell biology. Earlier, he co-developed widely used quantification tools (salmon, alevin, alevin-fry) and integration frameworks (Signac, Seurat v5). His work has appeared in Nature Methods, Nature Biotechnology, Cell, Genome Biology, Bioinformatics, and Nature Reviews Genetics. Before joining Wistar, Avi was a postdoctoral fellow with Rahul Satija at the New York Genome Center and NYU. He earned his Ph.D. in Computer Science at Stony Brook University, advised by Rob Patro.",
     "importance": 1,
     "status": "current"
   },
@@ -36,6 +36,13 @@
     "role": "Research Assistants",
     "tagline": "Wet-lab Research Assistant · Single-cell Technologies",
     "photo": "assets/img/people/calen-nichols.jpg",
+    "status": "current"
+  },
+  {
+    "id": "varchas-bhardwaj",
+    "name": "Varchas Bhardwaj",
+    "role": "Rotation Students",
+    "tagline": "Rotation Student",
     "status": "current"
   },
   {

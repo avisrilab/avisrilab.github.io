@@ -203,25 +203,26 @@ async function renderPeople() {
       `;
     }
 
-    // Other members grouped by role
+    // Everyone else in one 'Current members' group, ordered by seniority (roles not listed go last)
     const roleOrder = [
       'Postdoctoral Researchers',
       'Graduate Students',
       'Research Assistants',
+      'Rotation Students',
       'Undergraduate Researchers',
       'Visiting Scientists',
     ];
-    const current = people.filter(p => p.status === 'current' && p.role !== 'Principal Investigator');
+    const rank = p => { const i = roleOrder.indexOf(p.role); return i < 0 ? roleOrder.length : i; };
+    const current = people.filter(p => p.status === 'current' && p.role !== 'Principal Investigator')
+      .sort((a, b) => rank(a) - rank(b));
     const alumni  = people.filter(p => p.status === 'alumni');
 
     const memberEl = document.getElementById('memberSection');
     if (!memberEl) return;
 
-    roleOrder.forEach(role => {
-      const members = current.filter(p => p.role === role);
-      if (!members.length) return;
-      memberEl.appendChild(makePeopleSection(role, members));
-    });
+    if (current.length) {
+      memberEl.appendChild(makePeopleSection('Current members', current));
+    }
 
     if (alumni.length) {
       memberEl.appendChild(makePeopleSection('Alumni', alumni));
