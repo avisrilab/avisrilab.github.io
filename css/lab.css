@@ -33,33 +33,29 @@
 
 
 [data-theme="light"] {
-  /* white with the dark theme's navy undertone: navy-black text, slate-blue muted
-     text, navy-tinted panels and a blue haze behind the dot field, so light and
-     dark read as one palette. (Apple neutral gray was: text #1d1d1f, muted #6e6e73,
-     subtle #f5f5f7, border #d2d2d7. Linen was: text #22201c, muted #6a635a,
-     bg #f7f3ee, subtle #efe8df, border #dfd4c6, glow and plate #fffdf9.) */
-  --accent:       #0b7c86;
-  --accent-hover: #075f67;
-  --text:         #0b1220;
-  --text-muted:   #5a6478;
-  --bg:           #ffffff;
-  --bg-subtle:    #f3f6fb;
-  --border:       #dfe5ef;
-  --hero-glow:    #e6eefa;
-  --dot-grey:     120,130,150;
-  --plate:        #ffffff;
-  /* cell-state colours: the dark theme's hues, deepened just enough to hold on white */
-  --c-teal:   #0e8a93;
-  --c-blue:   #3d5ce0;
-  --c-violet: #7a4fd0;
-  --c-green:  #2f9a5c;
-  --c-amber:  #d08400;
+  /* "linen": light warm white with ink-dark text. (A cool white tried on 2026-09-24:
+     bg #ffffff, subtle #f3f6fb, border #dfe5ef, text #0b1220, muted #5a6478, glow #e6eefa.) */
+  --accent:       #0f6b73;
+  --accent-hover: #0a5158;
+  --text:         #22201c;
+  --text-muted:   #6a635a;
+  --bg:           #f7f3ee;
+  --bg-subtle:    #efe8df;
+  --border:       #dfd4c6;
+  --hero-glow:    #fffdf9;
+  --dot-grey:     118,110,100;
+  --plate:        #fffdf9;
+  /* cell-state colours as printing inks, so they hold contrast on a light page */
+  --c-teal:   #0f7a82;
+  --c-blue:   #3651b8;
+  --c-violet: #6b3fa8;
+  --c-green:  #2b7a4b;
+  --c-amber:  #b56d00;
 }
-/* a faint paper grain (Linen only; off for the flat cool white)
+/* a faint paper grain */
 [data-theme="light"] body {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .27  0 0 0 0 .2  0 0 0 .055 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
-*/
 /* figures sit on lighter plates, like printed panels */
 [data-theme="light"] .locus__scroll, [data-theme="light"] .research-theme__img,
 [data-theme="light"] .pillars__svg, [data-theme="light"] .locus__card { background: var(--plate); }
@@ -1296,7 +1292,7 @@ p a:focus-visible, .news-item__text a:focus-visible, .pub-item__title a:focus-vi
 .vignette-list__title { display: block; font-weight: 500; color: var(--text); }
 .vignette-list__title:hover { color: var(--accent); }
 .vignette-list__blurb { display: block; margin-top: 0.15rem; color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; }
-[data-theme="light"] .tool-card { background: var(--bg-subtle); }   /* gray tiles on the white page */
+[data-theme="light"] .tool-card { background: var(--plate); }
 [data-theme="light"] .tool-card__icon { filter: brightness(.78) saturate(1.35); background: transparent; }
 @media (max-width: 600px) {
   .tool-card { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.25rem; }
