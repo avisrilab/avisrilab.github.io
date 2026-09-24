@@ -78,7 +78,7 @@
     grey = cs.getPropertyValue('--dot-grey').split(',').map(Number);
     VARS.forEach((v, i) => { const c = rgb(cs.getPropertyValue(v)); if (c) CL[i][6] = c; });
   };
-  readTheme(); new MutationObserver(readTheme).observe(document.documentElement, { attributes: true });
+  readTheme(); new MutationObserver(readTheme).observe(document.documentElement, { attributeFilter: ['data-theme'] });
 
   function frame(now) {
     const dt = Math.min((now - last) / 1000, 0.05); last = now;
@@ -87,16 +87,23 @@
     const t = now / 1000;
 
     ctx.clearRect(0, 0, W, H);
+    // Batch dots by cluster and by morph step (1/16): about 100 fills a frame instead of one per dot.
+    // Positions use the exact morph; only colour and alpha are stepped, which the eye cannot see.
+    const paths = new Map();
     for (const d of dots) {
       const m = ease(Math.max(0, Math.min(1, (mix * 1.35 - d.delay))));
       const x = d.gx + (d.ix - d.gx) * m, y = d.gy + (d.iy - d.gy) * m;
       const jx = reduce ? 0 : Math.sin(t * 0.6 + d.ph) * 0.0035, jy = reduce ? 0 : Math.cos(t * 0.5 + d.ph) * 0.0035;
-      const c = CL[d.k][6];
-      const r = grey[0] + (c[0] - grey[0]) * m, gg = grey[1] + (c[1] - grey[1]) * m, b = grey[2] + (c[2] - grey[2]) * m;
-      const alpha = 0.55 + 0.35 * m * (d.k === AMBER ? 1.2 : 1);
-      ctx.fillStyle = `rgba(${r|0},${gg|0},${b|0},${Math.min(alpha, 1)})`;
       const px = cx0 + (x + jx) * S, py = cy0 + (y + jy) * S, s = d.sz * (d.k === AMBER ? 1 + 0.4 * m : 1);
-      ctx.beginPath(); ctx.arc(px, py, s, 0, 6.283); ctx.fill();
+      const key = d.k * 17 + Math.round(m * 16);
+      let p = paths.get(key); if (!p) paths.set(key, p = new Path2D());
+      p.moveTo(px + s, py); p.arc(px, py, s, 0, 6.283);
+    }
+    for (const [key, p] of paths) {
+      const k = (key / 17) | 0, m = (key % 17) / 16, c = CL[k][6];
+      const alpha = Math.min(0.55 + 0.35 * m * (k === AMBER ? 1.2 : 1), 1);
+      ctx.fillStyle = `rgba(${(grey[0] + (c[0] - grey[0]) * m) | 0},${(grey[1] + (c[1] - grey[1]) * m) | 0},${(grey[2] + (c[2] - grey[2]) * m) | 0},${alpha})`;
+      ctx.fill(p);
     }
     // Keep animating only while visible; reduced motion draws a single still frame.
     if (!reduce && onScreen && !document.hidden) requestAnimationFrame(frame); else running = false;
@@ -111,7 +118,7 @@
   new IntersectionObserver(([e]) => { onScreen = e.isIntersecting; start(); }).observe(cv);
   document.addEventListener('visibilitychange', start);
   bGene.addEventListener('click', start); bIso.addEventListener('click', start);
-  new MutationObserver(start).observe(document.documentElement, { attributes: true });
+  new MutationObserver(start).observe(document.documentElement, { attributeFilter: ['data-theme'] });
   // Repaint whenever the canvas changes size (window resize, zoom, layout shift), even while paused,
   // and always paint one frame at load so the hero is never blank or stretched.
   function paint() { size(); if (!running) { running = true; last = performance.now(); frame(last); } }
