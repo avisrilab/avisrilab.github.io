@@ -33,6 +33,7 @@
         <a class="nav__logo" href="index.html">Srivastava <span>Lab</span></a>
         <ul class="nav__links" id="navLinks">
           <li><a href="research.html">Research</a></li>
+          <li><a href="tools.html">Tools</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -57,9 +58,10 @@
     <div class="dotfield__copy">
       <div class="container">
         <h1 class="dotfield__title">Same cells.<br>Different decisions.</h1>
-        <p class="dotfield__lead">Genes make many RNA isoforms, and single-cell data usually counts
-          them as one. We build the technology and software to count isoforms in every cell, and use
-          them to find states of immune cells and tumor cells that gene counts cannot separate.</p>
+        <p class="dotfield__lead">Two cells can express the same genes and still differ in which exons
+          they keep and where their transcripts end. We build the technology and software to measure
+          those decisions in single cells, and to find immune and tumor cell states that gene counts
+          cannot tell apart.</p>
         <div class="dotfield__toggle">
           <div class="dotfield__pills" role="group" aria-label="Resolution">
             <button id="dfGene" type="button">gene-level</button>
@@ -85,8 +87,6 @@
           can change what a cell does, including in drug-resistant cancer and in
           autoimmune disease. When a T cell is activated, for example, many of its mRNAs switch to
           <a href="https://doi.org/10.1126/science.1155390" target="_blank" rel="noopener">shorter 3&prime; ends</a>.
-          We build the technology and software to measure those
-          differences in individual cells.
         </p>
       </div>
       <figure class="why-exist__fig burst">
@@ -124,8 +124,8 @@
           <li><button class="pillars__step" type="button" role="tab" id="pillar-tab-2"
               aria-selected="false" aria-controls="pillar-panel-2" tabindex="-1" style="--dot: var(--c-violet)">
             <span class="pillars__num">Integrate</span>
-            <span class="pillars__title">Cross-platform projection</span>
-            <span class="pillars__body">A two-layer annotation that transfers cell identity from short-read atlases onto BenchDrop-seq data, so each dataset can be compared with existing immune and tumor atlases.</span>
+            <span class="pillars__title">Atlas projection &amp; Matisse</span>
+            <span class="pillars__body">A two-layer annotation carries cell identity from short-read atlases onto BenchDrop-seq data, and Matisse, our R package, computes per-cell splicing (PSI) inside Seurat.</span>
             <span class="pillars__bar" aria-hidden="true"><i></i></span>
           </button></li>
           <li><button class="pillars__step" type="button" role="tab" id="pillar-tab-3"
@@ -164,22 +164,9 @@
       <p class="section-label">Srivastava Lab tools</p>
       <h2 class="section-title">Built here at Wistar</h2>
       <p class="section-sub">Open-source methods developed in the lab since September 2023, each released with documented code.</p>
-      <div class="tool-strip tool-strip--lab">
-        <a class="tool-item tool-item--featured" href="https://doi.org/10.64898/2026.03.12.706999" target="_blank" rel="noopener">
-          <img src="assets/img/art/benchdrop.svg" alt="">
-          <div>
-            <div class="tool-item__name">BenchDrop-seq</div>
-            <div class="tool-item__journal">bioRxiv 2026 &middot; benchtop long-read single-cell platform</div>
-          </div>
-        </a>
-        <a class="tool-item tool-item--featured" href="https://github.com/avisrilab" target="_blank" rel="noopener">
-          <img src="assets/img/art/bagpiper.svg" alt="">
-          <div>
-            <div class="tool-item__name">Bagpiper</div>
-            <div class="tool-item__journal">Long-read single-cell analysis pipeline</div>
-          </div>
-        </a>
-      </div>
+      <!-- cards come from data/tools.json -->
+      <div class="tool-strip tool-strip--lab" id="labTools"></div>
+      <a class="tools-more" href="tools.html">All tools and vignettes &rarr;</a>
 
       <div class="prior-work">
         <div class="prior-work__label">Prior contributions: graduate work (Patro Lab, Stony Brook) and postdoc (Satija Lab, NYGC / NYU)</div>
@@ -255,6 +242,7 @@
             <div class="footer__nav-title">Navigate</div>
             <ul class="footer__nav-links">
               <li><a href="research.html">Research</a></li>
+              <li><a href="tools.html">Tools</a></li>
               <li><a href="publications.html">Publications</a></li>
               <li><a href="people.html">People</a></li>
               <li><a href="contact.html">Contact</a></li>

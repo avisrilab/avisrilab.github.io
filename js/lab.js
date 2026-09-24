@@ -268,10 +268,90 @@ function initials(name) {
   return name.split(' ').map(w => w[0]).slice(0, 2).join('').toUpperCase();
 }
 
+/* ── Render lab tools (index.html strip, tools.html list) ───────── */
+// data/tools.json is the one list of lab tools; each tool's docs and
+// vignettes live on its own site under avisrilab.org/<Tool>/.
+async function loadTools() {
+  const res = await fetch('data/tools.json');
+  return res.json();
+}
+
+async function renderToolStrip(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  try {
+    const tools = await loadTools();
+    container.innerHTML = tools.map(t => {
+      const href = t.docs || t.repo || (t.paper && t.paper.url) || `tools.html#${t.id}`;
+      const ext  = /^https?:/.test(href) ? ' target="_blank" rel="noopener"' : '';
+      return `
+        <a class="tool-item tool-item--featured" href="${href}"${ext}>
+          <img src="${t.icon}" alt="">
+          <div>
+            <div class="tool-item__name">${t.name}</div>
+            <div class="tool-item__journal">${t.tagline}</div>
+          </div>
+        </a>`;
+    }).join('');
+  } catch (e) {
+    container.innerHTML = '<p class="loading">Unable to load tools.</p>';
+  }
+}
+
+async function renderTools(containerId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  container.innerHTML = '<p class="loading">Loading tools…</p>';
+  try {
+    const tools = await loadTools();
+    container.innerHTML = tools.map(toolCard).join('');
+    // The cards arrive after load, so jump to a #tool link once they exist
+    const target = location.hash && document.getElementById(location.hash.slice(1));
+    if (target) target.scrollIntoView();
+  } catch (e) {
+    container.innerHTML = '<p class="loading">Unable to load tools.</p>';
+  }
+}
+
+function toolCard(t) {
+  const ext = ' target="_blank" rel="noopener"';
+  const links = [
+    t.docs  ? `<a class="tool-card__link" href="${t.docs}">Documentation</a>` : '',
+    t.repo  ? `<a class="tool-card__link" href="${t.repo}"${ext}>GitHub</a>` : '',
+    t.paper ? `<a class="tool-card__link" href="${t.paper.url}"${ext}>${t.paper.label}</a>` : ''
+  ].join('');
+  const install = t.install
+    ? `<pre class="tool-card__install"><code>${t.install}</code></pre>`
+    : '';
+  const vignettes = t.vignettes.length ? `
+        <p class="tool-card__label">Vignettes</p>
+        <ul class="vignette-list">
+          ${t.vignettes.map(v => `
+          <li class="vignette-list__item">
+            <a class="vignette-list__title" href="${t.docs}${v.path}">${v.title}</a>
+            <span class="vignette-list__blurb">${v.blurb}</span>
+          </li>`).join('')}
+        </ul>` : '';
+  return `
+    <article class="tool-card" id="${t.id}">
+      <img class="tool-card__icon" src="${t.icon}" alt="">
+      <div class="tool-card__body">
+        <p class="tool-card__meta">${t.pillar} &middot; ${t.kind}</p>
+        <h2 class="tool-card__name">${t.name}</h2>
+        <p class="tool-card__summary">${t.summary}</p>
+        ${links ? `<div class="tool-card__links">${links}</div>` : ''}
+        ${install}
+        ${vignettes}
+      </div>
+    </article>`;
+}
+
 /* ── Auto-init on page load ──────────────────────────────────── */
 window.addEventListener('DOMContentLoaded', () => {
   renderNews('newsList');
   renderPublications('pubContainer');
   renderPublications('featuredPubs', true);
   renderPeople();
+  renderToolStrip('labTools');
+  renderTools('toolList');
 });

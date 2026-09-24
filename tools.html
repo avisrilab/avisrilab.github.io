@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Publications · Srivastava Lab</title>
-  <link rel="canonical" href="https://avisrilab.org/publications.html">
-  <meta name="description" content="Full list of publications from the Srivastava Lab and its members' prior work.">
+  <title>Tools · Srivastava Lab</title>
+  <link rel="canonical" href="https://avisrilab.org/tools.html">
+  <meta name="description" content="Methods and software from the Srivastava Lab: BenchDrop-seq, Bagpiper and Matisse, with documentation and vignettes.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Srivastava Lab">
-  <meta property="og:title" content="Publications · Srivastava Lab">
-  <meta property="og:description" content="Full list of publications from the Srivastava Lab and its members' prior work.">
-  <meta property="og:url" content="https://avisrilab.org/publications.html">
+  <meta property="og:title" content="Tools · Srivastava Lab">
+  <meta property="og:description" content="Methods and software from the Srivastava Lab: BenchDrop-seq, Bagpiper and Matisse, with documentation and vignettes.">
+  <meta property="og:url" content="https://avisrilab.org/tools.html">
   <meta property="og:image" content="https://avisrilab.org/assets/img/og-card.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -54,33 +54,20 @@
   <!-- ── Page header ────────────────────────────────────────── -->
   <div class="page-header">
     <div class="container">
-      <p class="page-header__label">Publications</p>
-      <h1 class="page-header__title">Full publication record</h1>
+      <p class="page-header__label">Tools</p>
+      <h1 class="page-header__title">Methods and software</h1>
       <p class="page-header__sub">
-        Papers from the Srivastava Lab and from prior work by its members.
-        <strong>Avi Srivastava</strong> is highlighted in author lists.
-        See also:
-        <a href="https://scholar.google.com/citations?user=HhKXdy4AAAAJ" target="_blank" rel="noopener">Google Scholar</a> &middot;
-        <a href="https://orcid.org/0000-0001-9798-2079" target="_blank" rel="noopener">ORCID</a>.
+        Tools developed in the lab since September 2023. Where a tool has a
+        documentation site, its vignettes are listed with it below.
       </p>
     </div>
   </div>
 
-  <!-- ── Filter tabs ────────────────────────────────────────── -->
-  <div class="section section--subtle" style="padding: 24px 0;">
-    <div class="container">
-      <div class="filter-tabs">
-        <button class="filter-tab active" data-filter="all">All</button>
-        <button class="filter-tab" data-filter="selected">Highlighted</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Publications list ──────────────────────────────────── -->
+  <!-- ── Tools, from data/tools.json ────────────────────────── -->
   <section class="section">
     <div class="container">
-      <div id="pubContainer">
-        <p class="loading">Loading publications&hellip;</p>
+      <div class="tool-list" id="toolList">
+        <p class="loading">Loading tools&hellip;</p>
       </div>
     </div>
   </section>
@@ -122,18 +109,5 @@
   </footer>
 
   <script src="js/lab.js"></script>
-  <script>
-    // Filter tab logic
-    window.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.filter-tab').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          const filter = btn.dataset.filter;
-          renderPublications('pubContainer', filter === 'selected');
-        });
-      });
-    });
-  </script>
 </body>
 </html>

@@ -63,7 +63,7 @@
   // Timeline: target 0 = gene, 1 = isoform. Auto-cycles until the visitor picks one.
   let target = 1, mix = reduce ? 1 : 0, auto = !reduce, last = performance.now(), hold = 0;
   const bGene = document.getElementById('dfGene'), bIso = document.getElementById('dfIso'), note = document.getElementById('dfNote');
-  const NOTES = ['One population by gene counts.', 'Isoform counts split it into states.'];
+  const NOTES = ['Gene counts show one population.', 'Isoform counts show distinct states.'];
   function ui() { bGene.classList.toggle('on', target === 0); bIso.classList.toggle('on', target === 1); note.textContent = NOTES[target]; }
   bGene.onclick = () => { auto = false; target = 0; ui(); };
   bIso.onclick  = () => { auto = false; target = 1; ui(); };
