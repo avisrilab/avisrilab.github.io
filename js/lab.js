@@ -346,6 +346,21 @@ function toolCard(t) {
     </article>`;
 }
 
+/* ── Hero down-arrow ─────────────────────────────────────────── */
+// Fades once the reader scrolls. The class goes on the arrow itself, never on
+// <html>, so the rest of the page is not restyled.
+(function () {
+  const cue = document.querySelector('.dotfield__cue');
+  if (!cue) return;
+  let hidden = null;                          // touch the DOM only when the state flips
+  const onScroll = () => {
+    const h = window.scrollY > 40;
+    if (h !== hidden) { hidden = h; cue.classList.toggle('is-hidden', h); }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
 /* ── Auto-init on page load ──────────────────────────────────── */
 window.addEventListener('DOMContentLoaded', () => {
   renderNews('newsList');

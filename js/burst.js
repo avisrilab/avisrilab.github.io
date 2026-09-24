@@ -52,7 +52,7 @@
     VARS.forEach((v, i) => { const c = rgb(cs.getPropertyValue(v)); if (c) { COLS[i][0] = c[0]; COLS[i][1] = c[1]; COLS[i][2] = c[2]; } });
   };
   readTheme();
-  new MutationObserver(() => { readTheme(); if (W) draw(lastP); }).observe(document.documentElement, { attributes: true });
+  new MutationObserver(() => { readTheme(); if (W) draw(lastP); }).observe(document.documentElement, { attributeFilter: ['data-theme'] });
 
   function draw(p) {                           // p: 0 = gene view, 1 = fully burst
     lastP = p;
@@ -60,25 +60,36 @@
     const ox = (W - S) / 2, oy = (H - S) / 2;
     ctx.fillStyle = `rgba(${grey},${0.85 - 0.6 * p})`;
     for (const g of genes) ctx.fillRect(ox + g.x * S - 1, oy + g.y * S - 1, 2, 2);
-    if (p > 0) for (const k of kids) {
-      const q = ease(Math.max(0, Math.min(1, (p - k.delay) / 0.65)));
-      if (!q) continue;
-      ctx.fillStyle = `rgba(${k.c[0]},${k.c[1]},${k.c[2]},${0.85 * q})`;
-      ctx.fillRect(ox + (k.g.x + k.dx * q) * S - 0.8, oy + (k.g.y + k.dy * q) * S - 0.8, 1.6, 1.6);
+    if (p > 0) {
+      // One path per colour and fade step (1/16), about 80 fills instead of 20,000
+      const paths = new Map();
+      for (const k of kids) {
+        const q = ease(Math.max(0, Math.min(1, (p - k.delay) / 0.65)));
+        if (!q) continue;
+        const key = COLS.indexOf(k.c) * 17 + Math.round(q * 16);
+        let path = paths.get(key); if (!path) paths.set(key, path = new Path2D());
+        path.rect(ox + (k.g.x + k.dx * q) * S - 0.8, oy + (k.g.y + k.dy * q) * S - 0.8, 1.6, 1.6);
+      }
+      for (const [key, path] of paths) {
+        const c = COLS[(key / 17) | 0];
+        ctx.fillStyle = `rgba(${c[0]},${c[1]},${c[2]},${0.85 * (key % 17) / 16})`;
+        ctx.fill(path);
+      }
     }
     const n = p < 0.02 ? 20000 : 20000 + 180000 * ease(Math.min(1, p / 0.9));
     counter.textContent = fmt(n) + (p >= 1 ? '+' : '');
     unit.textContent = p < 0.02 ? 'genes' : 'isoforms';
   }
 
-  let t0 = null, played = false;
+  // Drawn at about 30 fps: smooth to the eye, and it leaves every other frame free for scrolling
+  let t0 = null, played = false, drawn = 0;
   function run(now) {
     if (t0 === null) t0 = now;
     const t = (now - t0) / 1000, p = Math.max(0, Math.min(1, (t - 0.8) / 2.2));
-    draw(p);
+    if (p >= 1 || now - drawn >= 30) { drawn = now; draw(p); }
     if (p < 1) requestAnimationFrame(run);
   }
-  function play() { t0 = null; played = true; requestAnimationFrame(run); }
+  function play() { t0 = null; drawn = 0; played = true; requestAnimationFrame(run); }
 
   new ResizeObserver(() => { size(); draw(played || reduce ? 1 : 0); }).observe(cv);
   size(); draw(reduce ? 1 : 0);
