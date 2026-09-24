@@ -5,24 +5,25 @@
     "authors": ["Jamie Bregman", "Calen Nichols", "Rajeev Ramisetti", "Avi Srivastava"],
     "journal": "bioRxiv",
     "year": 2026,
-    "doi": "10.1101/2026.03.12.706999",
+    "doi": "10.64898/2026.03.12.706999",
     "selected": true
   },
   {
-    "id": "yoon2025",
+    "id": "yoon2026",
     "title": "EBV infection outcomes determined by monocyte and Treg-driven immune dynamics in an ex vivo PBMC model",
-    "authors": ["L Yoon", "LN MacMullen", "LJ Castro Muñoz", "A Gu", "Jamie Bregman", "MS Campion", "Avi Srivastava", "et al."],
-    "journal": "bioRxiv",
-    "year": 2025,
-    "doi": "10.1101/2025.11.20.689441",
+    "authors": ["Leena Yoon", "Lauren N MacMullen", "Leonardo Josué Castro Muñoz", "Alina Gu", "Jamie Bregman", "Mary S Campion", "Avi Srivastava", "Rena R Xian", "Richard F Ambinder", "Andrew Kossenkov", "Samantha S Soldan", "Paul M Lieberman"],
+    "journal": "PLoS Pathogens",
+    "year": 2026,
+    "doi": "10.1371/journal.ppat.1013746",
     "selected": false
   },
   {
-    "id": "vela2025",
-    "title": "TET2-mutant clonal hematopoiesis enrichment in the tumor microenvironment is an actionable driver of treatment resistance in solid tumors: thyroid cancer as a paradigm",
-    "authors": ["PS Vela", "V Tiedje", "JL Yang", "BR Untch", "L Boucai", "AJ Stonestrom", "AB Costa", "Avi Srivastava", "et al."],
-    "journal": "Cancer Research",
-    "year": 2025,
+    "id": "patterson2026",
+    "title": "A phylogeny-guided framework for decoding mechanisms of human endogenous retrovirus regulation in health and disease",
+    "authors": ["Andrew Patterson", "Bryant Duong", "Leena Yoon", "Maya Foster", "Lauren MacMullen", "Jayamanna Wickramasinghe", "Anastasia Lucas", "Avi Srivastava", "Steven Jacobson", "Maureen E Murphy", "Samantha Soldan", "Paul Lieberman", "Noam Auslander"],
+    "journal": "Genome Biology (in press); bioRxiv",
+    "year": 2026,
+    "doi": "10.64898/2026.05.19.726217",
     "selected": false
   },
   {
@@ -47,7 +48,7 @@
   {
     "id": "heumos2023",
     "title": "Best practices for single-cell analysis across modalities",
-    "authors": ["Lukas Heumos", "Anna C. Schaar", "Christopher Lance", "Avi Srivastava", "et al.", "Fabian J. Theis"],
+    "authors": ["Lukas Heumos", "Anna C. Schaar", "Christopher Lance", "et al.", "Single-cell Best Practices Consortium (Avi Srivastava, consortium member)", "Herbert B. Schiller", "Fabian J. Theis"],
     "journal": "Nature Reviews Genetics",
     "year": 2023,
     "doi": "10.1038/s41576-023-00586-w",
