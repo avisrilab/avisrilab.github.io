@@ -296,6 +296,7 @@ code, kbd {
   text-decoration: none;
   transition: all var(--ease);
   flex: 0 0 auto;
+  max-width: 100%;
 }
 .tool-item:hover {
   border-color: var(--accent);
@@ -1098,7 +1099,8 @@ h1 { font-weight: 500; }
 
 /* ── Dot-field hero (index) ─────────────────────────────────────── */
 .dotfield {
-  position: relative; height: calc(100svh - var(--nav-h)); min-height: 560px; overflow: hidden;
+  /* capped so tall windows don't leave empty bands above and below the text */
+  position: relative; height: min(calc(100svh - var(--nav-h)), 620px); min-height: 560px; overflow: hidden;
   background: radial-gradient(circle at 70% 50%, var(--hero-glow) 0, var(--bg) 58%);
   color: var(--text); border-bottom: 1px solid var(--border);
 }
@@ -1108,7 +1110,8 @@ h1 { font-weight: 500; }
 .dotfield__copy .container > * { max-width: min(560px, 52vw); }
 .dotfield__title { color: var(--text); font-size: clamp(2.1rem, 4.6vw, 3.75rem); line-height: 1.04;
   letter-spacing: -0.025em; margin-bottom: 1.25rem; }
-.dotfield__lead { color: var(--text); font-weight: 400; font-size: 1.125rem; line-height: 1.55; max-width: 480px; margin: 0; }
+.dotfield__lead { color: var(--text); font-weight: 400; font-size: 1.125rem; line-height: 1.55; max-width: 480px; margin: 0;
+  text-wrap: pretty; }
 .dotfield__toggle { pointer-events: auto; display: flex; flex-direction: column; align-items: flex-start;
   gap: 10px; margin-top: 2rem; }
 .dotfield__pills { display: flex; border: 1px solid var(--border); border-radius: 999px; padding: 3px;
@@ -1256,3 +1259,37 @@ p a:focus-visible, .news-item__text a:focus-visible, .pub-item__title a:focus-vi
 .pillars__more { display: inline-block; margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); }
 .pillars__more:hover { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } .pillars__stage { position: static; order: -1; } }
+
+/* ── Lab tools: homepage link and the Tools page (tools.html) ──── */
+/* the lab's own tools sit in equal columns */
+.tool-strip--lab { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.tools-more { display: inline-block; margin: -1.25rem 0 2.5rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); }
+.tools-more:hover { text-decoration: underline; text-underline-offset: 3px; }
+.tool-list { display: grid; gap: 1.25rem; }
+.tool-card { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 1.5rem; padding: 1.75rem;
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-subtle);
+  scroll-margin-top: calc(var(--nav-h) + 1rem); }
+.tool-card__icon { width: 72px; height: 72px; padding: 4px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg); object-fit: contain; }
+.tool-card__meta { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.35rem; }
+.tool-card__name { font-size: 1.5rem; font-weight: 500; margin: 0 0 0.6rem; }
+.tool-card__summary { color: var(--text-muted); max-width: 68ch; line-height: 1.6; margin: 0 0 1rem; }
+.tool-card__links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+.tool-card__link { padding: 0.3rem 0.85rem; border: 1px solid var(--border); border-radius: 999px; font-size: 0.9rem;
+  color: var(--text); transition: border-color var(--ease); }
+.tool-card__link:hover { border-color: var(--text-muted); text-decoration: none; }
+.tool-card__install { margin: 0 0 1.25rem; padding: 0.75rem 1rem; overflow-x: auto; background: var(--bg);
+  border: 1px solid var(--border); border-radius: var(--radius); font-family: var(--font-mono); font-size: 0.85rem; }
+.tool-card__install code { background: none; border: 0; padding: 0; font-size: inherit; }
+.tool-card__label { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); margin: 0 0 0.5rem; }
+.vignette-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+.vignette-list__item { padding: 0.75rem 0; border-bottom: 1px solid var(--border); }
+.vignette-list__title { display: block; font-weight: 500; color: var(--text); }
+.vignette-list__title:hover { color: var(--accent); }
+.vignette-list__blurb { display: block; margin-top: 0.15rem; color: var(--text-muted); font-size: 0.92rem; line-height: 1.5; }
+[data-theme="light"] .tool-card { background: var(--plate); }
+[data-theme="light"] .tool-card__icon { filter: brightness(.78) saturate(1.35); background: transparent; }
+@media (max-width: 600px) {
+  .tool-card { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding: 1.25rem; }
+  .tool-card__icon { width: 56px; height: 56px; }
+}

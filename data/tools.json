@@ -1,0 +1,60 @@
+[
+  {
+    "id": "benchdrop-seq",
+    "name": "BenchDrop-seq",
+    "kind": "Benchtop platform",
+    "pillar": "Measure",
+    "icon": "assets/img/art/benchdrop.svg",
+    "tagline": "bioRxiv 2026 · benchtop long-read single-cell platform",
+    "summary": "Single-cell long-read RNA-seq without a microfluidics instrument: PIP-seq capture plus Oxford Nanopore sequencing on a standard lab bench.",
+    "docs": null,
+    "repo": null,
+    "paper": { "label": "bioRxiv 2026", "url": "https://doi.org/10.64898/2026.03.12.706999" },
+    "install": null,
+    "vignettes": []
+  },
+  {
+    "id": "bagpiper",
+    "name": "Bagpiper",
+    "kind": "Command-line pipeline (Rust)",
+    "pillar": "Quantify",
+    "icon": "assets/img/art/bagpiper.svg",
+    "tagline": "Long-read single-cell analysis pipeline",
+    "summary": "Turns Nanopore reads into isoform-by-cell count matrices: spacer-anchored barcode recovery, assignment by splice junction, and EM resolution of reads that fit several isoforms.",
+    "docs": null,
+    "repo": "https://github.com/avisrilab/bagpiper",
+    "paper": null,
+    "install": null,
+    "vignettes": []
+  },
+  {
+    "id": "matisse",
+    "name": "Matisse",
+    "kind": "R package",
+    "pillar": "Integrate",
+    "icon": "assets/img/art/matisse.svg",
+    "tagline": "R package · per-cell splicing (PSI) in Seurat",
+    "summary": "Computes percent spliced in (PSI) for each splicing event in each cell and stores it as an assay in the Seurat object, next to gene expression. It works from long-read transcript counts, such as Bagpiper output, or from short-read splice-junction counts from STARsolo.",
+    "docs": "/Matisse/",
+    "repo": "https://github.com/avisrilab/Matisse",
+    "paper": null,
+    "install": "remotes::install_github(\"avisrilab/Matisse\")",
+    "vignettes": [
+      {
+        "title": "Getting started with Matisse",
+        "path": "articles/intro.html",
+        "blurb": "What PSI measures, the two input modes, and a quick start for long and short reads."
+      },
+      {
+        "title": "Long-read workflow: transcript-based PSI",
+        "path": "articles/long-reads.html",
+        "blurb": "From a transcript count matrix to PSI on the UMAP: build the object, filter, cluster, compare cell types and draw a sashimi plot."
+      },
+      {
+        "title": "Short-read workflow: junction-based PSI",
+        "path": "articles/short-reads.html",
+        "blurb": "From STARsolo splice junctions to PSI: build the event table, filter, map splicing on the UMAP and combine datasets."
+      }
+    ]
+  }
+]
