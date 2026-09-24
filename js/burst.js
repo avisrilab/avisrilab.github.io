@@ -1,6 +1,8 @@
 /* "Why we exist" figure: gene-level dots burst into the isoforms they hide.
-   Scale is honest: each gray dot stands for 10 genes (2,000 dots, about 20,000 genes),
-   each coloured dot for 10 isoforms (20,000 dots, about 200,000 isoforms). */
+   Source: GENCODE release 50 (gencodegenes.org/human/stats_50.html) lists 19,442 protein-coding
+   genes and 278,455 protein-coding transcripts. Each gray dot stands for 10 genes (2,000 dots,
+   about 20,000 genes); each coloured dot for 10 isoforms (20,000 dots, 200,000, a floor under the
+   annotated total, hence the counter's "+"). How isoforms split across genes is drawn, not measured. */
 (() => {
   const cv = document.getElementById('burst');
   if (!cv) return;

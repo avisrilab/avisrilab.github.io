@@ -588,11 +588,6 @@ code, kbd {
   letter-spacing: 0.02em;
 }
 
-.journal-badge--nature  { border-color: #dc2626; color: #dc2626; background: rgba(220,38,38,.06); }
-.journal-badge--cell    { border-color: #7c3aed; color: #7c3aed; background: rgba(124,58,237,.06); }
-.journal-badge--genome  { border-color: #059669; color: #059669; background: rgba(5,150,105,.06); }
-.journal-badge--plos    { border-color: #0ea5e9; color: #0ea5e9; background: rgba(14,165,233,.06); }
-.journal-badge--preprint { border-color: #d97706; color: #d97706; background: rgba(217,119,6,.06); }
 
 .doi-link {
   font-size: 0.8rem;
@@ -649,12 +644,12 @@ code, kbd {
 
 .research-theme__inner {
   display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 4rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);   /* figures wide enough for their labels */
+  gap: 3rem;
   align-items: start;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 860px) {
   .research-theme__inner { grid-template-columns: 1fr; gap: 2rem; }
   .research-theme__img-wrap { order: -1; }
 }
@@ -1006,7 +1001,7 @@ code, kbd {
   margin-bottom: 0.6rem;
 }
 
-.page-header__title { margin-bottom: 0.75rem; }
+.page-header__title { margin-bottom: 0.75rem; font-size: clamp(2rem, 4vw, 3rem); }   /* below the hero title */
 
 .page-header__sub {
   font-size: 1rem;

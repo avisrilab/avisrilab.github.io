@@ -1,0 +1,38 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#222}canvas{display:block;width:1200px;height:630px}</style></head>
+<body><canvas id="c" width="2400" height="1260"></canvas><p id="s" style="color:#fff;font:14px monospace"></p>
+<script>
+(async () => {
+  await document.fonts.load('500 120px "IBM Plex Sans"'); await document.fonts.load('400 40px "IBM Plex Sans"');
+  await document.fonts.load('400 30px "IBM Plex Mono"');
+  const cv = document.getElementById('c'), x = cv.getContext('2d'); x.scale(2, 2);
+  const W = 1200, H = 630;
+  const gl = x.createRadialGradient(W*0.72, H*0.46, 0, W*0.72, H*0.46, W*0.5);
+  gl.addColorStop(0, '#111c36'); gl.addColorStop(1, '#070b16');
+  x.fillStyle = gl; x.fillRect(0, 0, W, H);
+  // seeded RNG so the card is reproducible
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  const g = () => { let u = 0, v = 0; while (!u) u = rnd(); while (!v) v = rnd(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); };
+  const CL = [[0,-.30,.16,.07,.4,.22,[72,190,200]],[-.42,.02,.09,.15,-.3,.18,[96,140,255]],[.40,.10,.13,.08,.9,.17,[164,120,255]],
+              [-.10,.34,.14,.06,-.2,.16,[90,214,140]],[.22,-.02,.06,.06,0,.15,[96,140,255]],[.30,.38,.05,.05,0,.12,[255,176,60]]];
+  let acc = 0; const cum = CL.map(c => acc += c[5]);
+  const cx0 = W*0.77, cy0 = H*0.46, S = 400;
+  for (let i = 0; i < 2200; i++) {
+    const r = rnd()*acc, kk = cum.findIndex(c => r <= c);
+    const [cx, cy, sx, sy, rot, , col] = CL[kk]; const a = g()*sx, b = g()*sy;
+    const px = cx0 + (cx + a*Math.cos(rot) - b*Math.sin(rot))*S, py = cy0 + (cy + a*Math.sin(rot) + b*Math.cos(rot))*S;
+    x.fillStyle = `rgba(${col},${kk === 5 ? 1 : .85})`; x.beginPath(); x.arc(px, py, kk === 5 ? 2.3 : 1.8, 0, 6.283); x.fill();
+  }
+  x.fillStyle = '#aab2bf'; x.font = '400 20px "IBM Plex Mono"'; x.fillText('Srivastava Lab · The Wistar Institute', 72, 96);
+  x.fillStyle = '#eef1f5'; x.font = '500 76px "IBM Plex Sans"';
+  x.fillText('Same cells.', 68, 330); x.fillText('Different decisions.', 68, 418);
+  x.fillStyle = '#c9d0da'; x.font = '400 26px "IBM Plex Sans"';
+  x.fillText('Isoform-resolved single-cell biology', 72, 500);
+  x.fillStyle = '#aab2bf'; x.font = '400 20px "IBM Plex Mono"'; x.fillText('avisrilab.org', 72, 560);
+  cv.toBlob(async b => {
+    const r = await fetch('/save', { method: 'POST', body: b });
+    document.getElementById('s').textContent = r.status + ' ' + await r.text();
+  }, 'image/png');
+})();
+</script></body></html>

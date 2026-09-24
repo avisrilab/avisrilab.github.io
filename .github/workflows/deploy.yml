@@ -15,6 +15,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Stops the deploy (the live site keeps its last good version) if an edit is broken
+      - name: Check site
+        run: python3 .github/scripts/check_site.py
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:

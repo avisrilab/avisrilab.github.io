@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><body style="background:#222"><canvas id="c" width="180" height="180"></canvas><p id="s" style="color:#fff"></p>
+<script>
+const x = document.getElementById('c').getContext('2d'), k = 180/64;
+x.fillStyle = '#070b16'; x.fillRect(0, 0, 180, 180);   // iOS applies its own rounding
+[[22,20,6,'#48bec8'],[40,17,5,'#48bec8'],[45,34,6,'#a478ff'],[19,38,6,'#608cff'],[30,48,5,'#5ad68c'],[46,49,5,'#ffb03c']]
+  .forEach(([cx,cy,r,c]) => { x.fillStyle = c; x.beginPath(); x.arc(cx*k, cy*k, r*k, 0, 6.283); x.fill(); });
+document.getElementById('c').toBlob(async b => {
+  const r = await fetch('/save', { method: 'POST', body: b }); document.getElementById('s').textContent = r.status;
+}, 'image/png');
+</script></body></html>

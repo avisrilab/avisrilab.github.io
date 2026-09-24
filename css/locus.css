@@ -9,8 +9,8 @@
 .lx-axis, .lx-base { stroke: var(--border); stroke-width: 1; }
 .lx-dna { stroke: color-mix(in srgb, var(--text-muted) 45%, transparent); stroke-width: 1; }
 .lx-label, .lx-name { fill: var(--text-muted); font-size: 11px; }
-.lx-tick { fill: color-mix(in srgb, var(--text-muted) 80%, transparent); font-size: 9.5px; }
-.lx-sub { font-size: 9px; }
+.lx-tick { fill: color-mix(in srgb, var(--text-muted) 80%, transparent); font-size: 12px; }
+.lx-sub { font-size: 11px; }
 
 /* gene model */
 .gm-intron { stroke: var(--text-muted); stroke-width: 1; }
