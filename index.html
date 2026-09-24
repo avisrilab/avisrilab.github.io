@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>try { var t = localStorage.getItem('lab-theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Srivastava Lab · Isoform-resolved single-cell biology · Wistar Institute</title>
   <link rel="canonical" href="https://avisrilab.org/">
-  <meta name="description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper, technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
+  <meta name="description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq, Bagpiper and Matisse, technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Srivastava Lab">
   <meta property="og:title" content="Srivastava Lab · Isoform-resolved single-cell biology · Wistar Institute">
-  <meta property="og:description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq and Bagpiper, technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
+  <meta property="og:description" content="The Srivastava Lab at The Wistar Institute builds BenchDrop-seq, Bagpiper and Matisse, technology and computation for measuring post-transcriptional regulation at single-cell, single-isoform resolution in cancer and autoimmune disease.">
   <meta property="og:url" content="https://avisrilab.org/">
   <meta property="og:image" content="https://avisrilab.org/assets/img/og-card.jpg">
   <meta property="og:image:width" content="1200">
@@ -95,7 +96,8 @@
       <figure class="why-exist__fig burst">
         <div class="burst__count" aria-live="off"><span id="burstCount">20,000</span> <span id="burstUnit">genes</span></div>
         <canvas id="burst" role="img" aria-label="About twenty thousand gene-level dots burst into about two hundred thousand isoform dots."></canvas>
-        <figcaption>Each gray dot is 10 genes; each colored dot is 10 isoforms.
+        <figcaption>1 dot = 10 genes (gray) or 10 isoforms (color),
+          <a href="https://www.gencodegenes.org/human/stats_50.html" target="_blank" rel="noopener">GENCODE 50</a>.
           <button class="burst__replay" type="button">Replay</button></figcaption>
       </figure>
       </div>
@@ -121,7 +123,7 @@
               aria-selected="false" aria-controls="pillar-panel-1" tabindex="-1" style="--dot: var(--c-blue)">
             <span class="pillars__num">Quantify</span>
             <span class="pillars__title">Bagpiper isoform pipeline</span>
-            <span class="pillars__body">Turns Nanopore reads into isoform-by-cell count matrices: spacer-anchored barcode recovery, assignment by splice junction, and EM resolution of reads that fit several isoforms.</span>
+            <span class="pillars__body">Turns barcoded Nanopore reads into isoform-by-cell count matrices: cell barcode and UMI error correction, alignment to the transcriptome, removal of PCR duplicates, and EM resolution of molecules that fit several isoforms.</span>
             <span class="pillars__bar" aria-hidden="true"><i></i></span>
           </button></li>
           <li><button class="pillars__step" type="button" role="tab" id="pillar-tab-2"

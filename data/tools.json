@@ -20,11 +20,11 @@
     "pillar": "Quantify",
     "icon": "assets/img/art/bagpiper.svg",
     "tagline": "Long-read single-cell analysis pipeline",
-    "summary": "Turns Nanopore reads into isoform-by-cell count matrices: spacer-anchored barcode recovery, assignment by splice junction, and EM resolution of reads that fit several isoforms.",
+    "summary": "Turns barcoded Nanopore reads into isoform-by-cell count matrices: cell barcode and UMI error correction, alignment to the transcriptome, removal of PCR duplicates, and EM resolution of molecules that fit several isoforms.",
     "docs": null,
     "repo": "https://github.com/avisrilab/bagpiper",
-    "paper": null,
-    "install": null,
+    "paper": { "label": "BenchDrop-seq, bioRxiv 2026", "url": "https://doi.org/10.64898/2026.03.12.706999" },
+    "install": "git clone --branch 0.1.0 https://github.com/avisrilab/bagpiper.git\ncd bagpiper && cargo build --release",
     "vignettes": []
   },
   {

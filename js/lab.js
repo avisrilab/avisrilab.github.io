@@ -6,10 +6,7 @@
 /* ── Theme toggle ────────────────────────────────────────────── */
 (function () {
   const html    = document.documentElement;
-  const stored  = localStorage.getItem('lab-theme');
-
-  // Apply stored preference immediately (before paint) to avoid flash
-  if (stored) html.setAttribute('data-theme', stored);
+  // The stored choice is applied by a one-line script in each page's <head>, before first paint
 
   window.addEventListener('DOMContentLoaded', () => {
     const btn = document.getElementById('themeToggle');
@@ -26,7 +23,7 @@
     btn.addEventListener('click', () => {
       const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       html.setAttribute('data-theme', next);
-      localStorage.setItem('lab-theme', next);
+      try { localStorage.setItem('lab-theme', next); } catch (e) {}
       updateIcon();
     });
   });
@@ -68,28 +65,27 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ── Helpers ─────────────────────────────────────────────────── */
-function journalClass(journal) {
-  const j = (journal || '').toLowerCase();
-  if (j.includes('nature')) return 'journal-badge--nature';
-  if (j.includes('cell') && !j.includes('computational')) return 'journal-badge--cell';
-  if (j.includes('genome')) return 'journal-badge--genome';
-  if (j.includes('plos')) return 'journal-badge--plos';
-  if (j.includes('biorxiv') || j.includes('preprint') || j.includes('arxiv') || j.includes('recomb')) return 'journal-badge--preprint';
-  return '';
-}
-
 function shortAuthorList(authors) {
-  // Bold "Avi Srivastava", truncate very long lists
+  // Bold "Avi Srivastava" (also inside a consortium credit). Long lists show the first three
+  // authors, Avi and the last author, with "…" for the gaps, so Avi is always visible.
   const MAX = 8;
-  const bold = (name) => name === 'Avi Srivastava'
-    ? `<strong>${name}</strong>`
-    : name;
+  const bold = (name) => name.replace('Avi Srivastava', '<strong>Avi Srivastava</strong>');
   if (authors.length <= MAX) return authors.map(bold).join(', ');
-  const displayed = authors.slice(0, MAX).map(bold).join(', ');
-  return `${displayed}, <span class="text-muted">et al.</span>`;
+  const me = authors.findIndex(a => a.includes('Avi Srivastava'));
+  const keep = [...new Set([0, 1, 2, me, authors.length - 1])].filter(i => i >= 0).sort((x, y) => x - y);
+  const out = [];
+  keep.forEach((i, k) => { if (k && i > keep[k - 1] + 1) out.push('…'); out.push(bold(authors[i])); });
+  return out.join(', ');
 }
 
 /* ── Render news (index.html) ────────────────────────────────── */
+// "2026-09" -> "Sep 2026" (split by hand: new Date('2026-09') lands in August in US time zones)
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function newsDate(ym) {
+  const [y, m] = ym.split('-');
+  return `${MONTHS[Number(m) - 1]} ${y}`;
+}
+
 async function renderNews(containerId) {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -97,12 +93,14 @@ async function renderNews(containerId) {
   try {
     const res  = await fetch('data/news.json');
     const news = await res.json();
+    // Dates are "YYYY-MM", so a string sort puts the newest first; entries can go anywhere in the file
+    news.sort((a, b) => b.date.localeCompare(a.date));
     container.innerHTML = '';
     news.forEach(item => {
       const li = document.createElement('li');
       li.className = 'news-item';
       li.innerHTML = `
-        <span class="news-item__date">${item.date}</span>
+        <span class="news-item__date">${newsDate(item.date)}</span>
         <p class="news-item__text">${item.text}</p>
       `;
       container.appendChild(li);
@@ -146,7 +144,7 @@ async function renderPublications(containerId, selectedOnly = false) {
           ? `<img class="pub-item__thumb" src="${pub.preview}" alt="${pub.title}" loading="lazy">`
           : `<div class="pub-item__thumb--placeholder" aria-hidden="true"></div>`;
 
-        const badge    = `<span class="journal-badge ${journalClass(pub.journal)}">${pub.journal}</span>`;
+        const badge    = `<span class="journal-badge">${pub.journal}</span>`;
         const doiLink  = pub.doi
           ? `<a class="doi-link" href="https://doi.org/${pub.doi}" target="_blank" rel="noopener">↗ DOI</a>`
           : '';
@@ -234,6 +232,8 @@ async function renderPeople() {
     }
   } catch (e) {
     console.error('Could not load people:', e);
+    const el = document.getElementById('memberSection');
+    if (el) el.innerHTML = '<p class="loading">Unable to load people.</p>';
   }
 }
 
@@ -323,7 +323,7 @@ function toolCard(t) {
   const install = t.install
     ? `<pre class="tool-card__install"><code>${t.install}</code></pre>`
     : '';
-  const vignettes = t.vignettes.length ? `
+  const vignettes = (t.vignettes || []).length && t.docs ? `
         <p class="tool-card__label">Vignettes</p>
         <ul class="vignette-list">
           ${t.vignettes.map(v => `
@@ -365,7 +365,6 @@ function toolCard(t) {
 window.addEventListener('DOMContentLoaded', () => {
   renderNews('newsList');
   renderPublications('pubContainer');
-  renderPublications('featuredPubs', true);
   renderPeople();
   renderToolStrip('labTools');
   renderTools('toolList');

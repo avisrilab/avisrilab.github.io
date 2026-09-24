@@ -1,50 +1,50 @@
 [
   {
-    "date": "Sep 2026",
+    "date": "2026-09",
     "text": "The lab receives an NIH NIGMS Maximizing Investigators' Research Award (MIRA), <em>Next-generation single-cell multiomic methods for quantifying cellular identity</em>, funding the research program through 2031."
   },
   {
-    "date": "Jul 2026",
+    "date": "2026-07",
     "text": "Avi presents <em>BenchDrop-seq: a microfluidics-free platform for single-cell long-read transcriptomics</em> at ISMB/ECCB 2026 in the Integrative RNA Biology track."
   },
   {
-    "date": "Apr 2026",
-    "text": "Avi presents <em>Isoform-Resolved Single-Cell Transcriptomics of Immunological Dysregulation</em> at the Wistar Institute Faculty Seminar. <a href=\"https://wistar.org\">Talk slides</a> cover BenchDrop-seq, Bagpiper, and the RRAS isoform switching story in melanoma."
+    "date": "2026-04",
+    "text": "Avi presents <em>Isoform-Resolved Single-Cell Transcriptomics of Immunological Dysregulation</em> at the Wistar Institute Faculty Seminar. The talk covered BenchDrop-seq, Bagpiper, and the RRAS isoform switching story in melanoma."
   },
   {
-    "date": "Mar 2026",
+    "date": "2026-03",
     "text": "<a href=\"https://doi.org/10.1371/journal.ppat.1013746\">EBV infection outcomes determined by monocyte and Treg-driven immune dynamics</a> published in <em>PLoS Pathogens</em>, with the Lieberman lab at Wistar."
   },
   {
-    "date": "Mar 2026",
+    "date": "2026-03",
     "text": "<a href=\"https://doi.org/10.64898/2026.03.12.706999\">BenchDrop-seq</a> posted on bioRxiv. A microfluidics-free benchtop platform for single-cell long-read RNA sequencing that combines PIP-seq capture with Oxford Nanopore sequencing and the Bagpiper analysis pipeline."
   },
   {
-    "date": "Nov 2025",
+    "date": "2025-11",
     "text": "New preprint: <a href=\"https://www.biorxiv.org/content/10.1101/2025.11.20.689441\">EBV infection outcomes determined by monocyte and Treg-driven immune dynamics</a> in an ex vivo PBMC model. A collaboration with the Lieberman lab at Wistar."
   },
   {
-    "date": "Oct 2024",
+    "date": "2024-10",
     "text": "New preprint: <a href=\"https://www.biorxiv.org/content/10.1101/2024.10.10.617685\">Targetable treatment resistance in thyroid cancer with clonal hematopoiesis</a>."
   },
   {
-    "date": "May 2023",
+    "date": "2023-05",
     "text": "<a href=\"https://www.nature.com/articles/s41587-023-01767-y\">Seurat v5</a> published in <em>Nature Biotechnology</em>. Dictionary learning for integrative, multimodal and scalable single-cell analysis."
   },
   {
-    "date": "Mar 2023",
+    "date": "2023-03",
     "text": "<a href=\"https://www.nature.com/articles/s41576-023-00586-w\">Best practices for single-cell analysis across modalities</a> published in <em>Nature Reviews Genetics</em>."
   },
   {
-    "date": "Mar 2022",
+    "date": "2022-03",
     "text": "<a href=\"https://www.nature.com/articles/s41592-022-01408-3\">Alevin-fry</a> published in <em>Nature Methods</em>. Rapid, accurate and memory-frugal quantification of single-cell RNA-seq data."
   },
   {
-    "date": "Mar 2022",
+    "date": "2022-03",
     "text": "<a href=\"https://www.nature.com/articles/s41587-022-01250-0\">scCUT&amp;Tag-pro</a> published in <em>Nature Biotechnology</em>. Characterizing cellular heterogeneity in chromatin state with a new multimodal single-cell assay."
   },
   {
-    "date": "Nov 2021",
+    "date": "2021-11",
     "text": "<a href=\"https://www.nature.com/articles/s41592-021-01282-5\">Signac</a> published in <em>Nature Methods</em>. A comprehensive toolkit for the analysis of single-cell chromatin data."
   }
 ]
