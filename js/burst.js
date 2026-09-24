@@ -42,10 +42,23 @@
 
   const ease = t => 1 - Math.pow(1 - t, 3);
   const fmt = n => Math.round(n).toLocaleString('en-US');
+  // Colours follow the theme: mutate COLS in place so every isoform dot picks up the change
+  const VARS = ['--c-teal', '--c-blue', '--c-violet', '--c-green', '--c-amber'];
+  const rgb = v => { const m = v.trim().match(/^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i); return m ? m.slice(1).map(x => parseInt(x, 16)) : null; };
+  let grey = '150,158,172', lastP = 0;
+  const readTheme = () => {
+    const cs = getComputedStyle(document.documentElement);
+    grey = cs.getPropertyValue('--dot-grey').trim() || grey;
+    VARS.forEach((v, i) => { const c = rgb(cs.getPropertyValue(v)); if (c) { COLS[i][0] = c[0]; COLS[i][1] = c[1]; COLS[i][2] = c[2]; } });
+  };
+  readTheme();
+  new MutationObserver(() => { readTheme(); if (W) draw(lastP); }).observe(document.documentElement, { attributes: true });
+
   function draw(p) {                           // p: 0 = gene view, 1 = fully burst
+    lastP = p;
     ctx.clearRect(0, 0, W, H);
     const ox = (W - S) / 2, oy = (H - S) / 2;
-    ctx.fillStyle = `rgba(150,158,172,${0.85 - 0.6 * p})`;
+    ctx.fillStyle = `rgba(${grey},${0.85 - 0.6 * p})`;
     for (const g of genes) ctx.fillRect(ox + g.x * S - 1, oy + g.y * S - 1, 2, 2);
     if (p > 0) for (const k of kids) {
       const q = ease(Math.max(0, Math.min(1, (p - k.delay) / 0.65)));

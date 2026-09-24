@@ -33,16 +33,31 @@
 
 
 [data-theme="light"] {
-  --accent:       #11747e;
-  --accent-hover: #0b5a62;
-  --text:         #0d1117;
-  --text-muted:   #4a525e;
-  --bg:           #fbfbfa;
-  --bg-subtle:    #f1f2f2;
-  --border:       #dfe2e6;
-  --hero-glow:    #ffffff;
-  --dot-grey:     110,118,130;
+  /* "linen": light warm white with ink-dark text */
+  --accent:       #0f6b73;
+  --accent-hover: #0a5158;
+  --text:         #22201c;
+  --text-muted:   #6a635a;
+  --bg:           #f7f3ee;
+  --bg-subtle:    #efe8df;
+  --border:       #dfd4c6;
+  --hero-glow:    #fffdf9;
+  --dot-grey:     118,110,100;
+  --plate:        #fffdf9;
+  /* cell-state colours as printing inks, so they hold contrast on a light page */
+  --c-teal:   #0f7a82;
+  --c-blue:   #3651b8;
+  --c-violet: #6b3fa8;
+  --c-green:  #2b7a4b;
+  --c-amber:  #b56d00;
 }
+/* a faint paper grain */
+[data-theme="light"] body {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .32  0 0 0 0 .27  0 0 0 0 .2  0 0 0 .055 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+/* figures sit on lighter plates, like printed panels */
+[data-theme="light"] .locus__scroll, [data-theme="light"] .research-theme__img,
+[data-theme="light"] .pillars__svg, [data-theme="light"] .locus__card { background: var(--plate); }
 
 /* ── Reset / base ───────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -254,56 +269,6 @@ code, kbd {
   max-width: 56ch;
   line-height: 1.7;
   margin-bottom: 0;
-}
-
-/* ── Theme cards (home research grid) ────────────────────────── */
-.theme-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  margin-top: 2.5rem;
-}
-
-@media (max-width: 1100px) { .theme-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 460px)  { .theme-grid { grid-template-columns: 1fr; } }
-
-.theme-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-  display: block;
-  transition: all var(--ease);
-}
-.theme-card:hover {
-  border-color: var(--accent);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
-  text-decoration: none;
-}
-
-.theme-card__num {
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.7rem;
-}
-
-.theme-card__title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 0.6rem;
-  line-height: 1.35;
-}
-
-.theme-card__body {
-  font-size: 0.94rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin: 0;
 }
 
 /* ── Tool strip (featured papers) ────────────────────────────── */
@@ -960,14 +925,14 @@ code, kbd {
 .footer__brand {
   font-size: 1.1rem;
   font-weight: 800;
-  color: #f1f5f9;
+  color: var(--text);
   letter-spacing: -0.02em;
 }
 .footer__brand span { color: var(--accent); }
 
 .footer__tagline {
   font-size: 0.8rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin-top: 0.3rem;
 }
 
@@ -984,7 +949,7 @@ code, kbd {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #475569;
+  color: var(--text-muted);
   margin-bottom: 0.75rem;
 }
 
@@ -997,15 +962,15 @@ code, kbd {
 
 .footer__nav-links a {
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--text-muted);
   text-decoration: none;
   transition: color var(--ease);
 }
-.footer__nav-links a:hover { color: #f1f5f9; }
+.footer__nav-links a:hover { color: var(--text); }
 
 .footer__bottom {
   padding-top: 1.5rem;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1015,10 +980,10 @@ code, kbd {
 
 .footer__copy {
   font-size: 0.8rem;
-  color: #475569;
+  color: var(--text-muted);
 }
-.footer__copy a { color: #64748b; }
-.footer__copy a:hover { color: #f1f5f9; }
+.footer__copy a { color: var(--text-muted); }
+.footer__copy a:hover { color: var(--text); }
 
 /* ── Page headers ─────────────────────────────────────────────── */
 .page-header {
@@ -1094,7 +1059,7 @@ h1 { font-weight: 500; }
 .nav__icon-btn:hover { color: var(--text); border-color: var(--text-muted); }
 
 /* labels: small mono, muted, sentence case */
-.section-label, .page-header__label, .theme-card__num, .research-theme__num, .lab-env__label,
+.section-label, .page-header__label, .research-theme__num, .lab-env__label,
 .prior-work__label, .foundations-note__label, .research-toc__title, .tools-heading, .pub-year-header,
 .footer__nav-title, .pi-card__title, .role-header__title, .contact-group__label {
   font-family: var(--font-mono); font-weight: 400; font-size: 0.8rem; letter-spacing: 0.02em;
@@ -1104,20 +1069,19 @@ h1 { font-weight: 500; }
   display: block; padding-bottom: 0.4rem; border-radius: 0; }
 
 /* the four programmes carry the hero's cluster colours */
-.theme-card__num::before, .research-theme__num::before {
+.research-theme__num::before {
   content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
   margin-right: 0.55rem; background: var(--dot, var(--accent)); vertical-align: 1px;
 }
-.theme-card:nth-child(1), #measure   { --dot: var(--c-teal); }
-.theme-card:nth-child(2), #quantify  { --dot: var(--c-blue); }
-.theme-card:nth-child(3), #integrate { --dot: var(--c-violet); }
-.theme-card:nth-child(4), #apply     { --dot: var(--c-green); }
+#measure   { --dot: var(--c-teal); }
+#quantify  { --dot: var(--c-blue); }
+#integrate { --dot: var(--c-violet); }
+#apply     { --dot: var(--c-green); }
 
-.theme-card, .tool-item, .collab-list li, .lab-env, .pi-card, .research-toc, .foundations-note {
+.tool-item, .collab-list li, .lab-env, .pi-card, .research-toc, .foundations-note {
   background: transparent; border-radius: var(--radius);
 }
-.theme-card:hover, .tool-item:hover { transform: none; box-shadow: none; border-color: var(--text-muted); }
-.theme-card__title { font-weight: 500; font-size: 1.05rem; }
+.tool-item:hover { transform: none; box-shadow: none; border-color: var(--text-muted); }
 .tool-item--featured { border-color: var(--border); border-width: 1px; }
 .collab-list li { border-left: 1px solid var(--border); }
 .section--subtle { background: var(--bg-subtle); }
@@ -1248,8 +1212,6 @@ p a:focus-visible, .news-item__text a:focus-visible, .pub-item__title a:focus-vi
 .why-exist__fig figcaption { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);
   margin-top: 0.6rem; line-height: 1.5; }
 @media (max-width: 860px) { .why-exist-grid { grid-template-columns: 1fr; } .why-exist__fig { max-width: 420px; } }
-.theme-card__art { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: var(--bg-subtle);
-  border-radius: var(--radius); margin-bottom: 1rem; padding: 0.5rem; }
 
 /* ── "Why we exist" burst figure ────────────────────────────────── */
 .burst { position: relative; }
@@ -1262,3 +1224,35 @@ p a:focus-visible, .news-item__text a:focus-visible, .pub-item__title a:focus-vi
   border-bottom: 1px solid transparent; }
 .burst__replay:hover, .burst__replay:focus-visible { border-bottom-color: currentColor; }
 .why-exist__fig.burst img { display: none; }
+
+/* Light theme: the remaining pre-coloured images deepen to match the ink colours */
+[data-theme="light"] .page-header::after, [data-theme="light"] .tool-item--featured img { filter: brightness(.78) saturate(1.35); }
+
+/* ── Homepage research pillars: a step list beside one large figure (js/pillars.js) ── */
+.pillars { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start; margin-top: 2.5rem; }
+.pillars__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.3rem; }
+.pillars__step { all: unset; box-sizing: border-box; position: relative; display: grid; gap: 0.3rem; width: 100%;
+  padding: 1rem 1.15rem 1.2rem; border: 1px solid transparent; border-radius: var(--radius); cursor: pointer;
+  transition: background var(--ease), border-color var(--ease); }
+.pillars__step:hover { background: color-mix(in srgb, var(--text) 3%, transparent); }
+.pillars__step.is-on { background: var(--bg-subtle); border-color: var(--border); }
+.pillars__step:focus-visible { outline: 1px solid var(--text-muted); outline-offset: 2px; }
+.pillars__num { font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted); }
+.pillars__num::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  margin-right: 0.55rem; background: var(--dot); vertical-align: 1px; }
+.pillars__title { font-weight: 500; font-size: 1.1rem; color: var(--text); }
+.pillars__body { display: none; color: var(--text-muted); font-size: 0.94rem; line-height: 1.6; }
+.pillars__step.is-on .pillars__body { display: block; }
+.pillars__bar { position: absolute; left: 1.15rem; right: 1.15rem; bottom: 0.5rem; height: 2px; border-radius: 2px; overflow: hidden; }
+.pillars__bar i { display: block; width: 0; height: 100%; background: var(--dot); }
+.pillars.is-auto .pillars__step.is-on .pillars__bar { background: var(--border); }
+.pillars.is-auto .pillars__step.is-on .pillars__bar i { animation: pillar-fill 6s linear forwards; }
+.pillars.is-paused .pillars__bar i, .pillars.is-offscreen .pillars__bar i { animation-play-state: paused; }
+@keyframes pillar-fill { from { width: 0; } to { width: 100%; } }
+.pillars__stage { position: sticky; top: calc(var(--nav-h) + 1.5rem); }
+.pillars__svg { display: block; box-sizing: border-box; width: 100%; height: auto; aspect-ratio: 4 / 3; padding: 0.75rem;
+  background: var(--bg-subtle); border: 1px solid var(--border); border-radius: var(--radius); }
+.pillars__more { display: inline-block; margin-top: 0.75rem; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); }
+.pillars__more:hover { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 860px) { .pillars { grid-template-columns: 1fr; } .pillars__stage { position: static; order: -1; } }

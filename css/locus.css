@@ -1,0 +1,69 @@
+/* Research page: "One gene, many RNAs" locus figure (built by js/locus.js).
+   Genome-browser styling: hairline axes, translucent coverage, thin junction arcs. */
+.locus { margin: 2rem 0 0; }
+.locus__scroll { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-subtle); padding: 14px 10px 8px; }
+.locus svg { display: block; width: 100%; min-width: 860px; height: auto; font-family: var(--font-mono); }
+
+/* axes and labels */
+.lx-axis, .lx-base { stroke: var(--border); stroke-width: 1; }
+.lx-dna { stroke: color-mix(in srgb, var(--text-muted) 45%, transparent); stroke-width: 1; }
+.lx-label, .lx-name { fill: var(--text-muted); font-size: 11px; }
+.lx-tick { fill: color-mix(in srgb, var(--text-muted) 80%, transparent); font-size: 9.5px; }
+.lx-sub { font-size: 9px; }
+
+/* gene model */
+.gm-intron { stroke: var(--text-muted); stroke-width: 1; }
+.gm-chev { fill: none; stroke: var(--text-muted); stroke-width: 1; }
+.gm-exon { fill: var(--text-muted); }
+.gm-alt { fill: var(--c-amber); }
+.gm-sno { fill: var(--c-green); }
+.gm-pa { stroke: var(--c-amber); stroke-width: 1.2; }
+.gm-enh { fill: none; stroke: var(--c-blue); stroke-width: 1; stroke-dasharray: 3 2; }
+.gm-tss { fill: none; stroke: var(--text); stroke-width: 1.1; }
+
+/* coverage tracks */
+.cov-plus  { fill: color-mix(in srgb, var(--c-teal) 26%, transparent); stroke: var(--c-teal); stroke-width: .8; }
+.cov-minus { fill: color-mix(in srgb, var(--c-blue) 26%, transparent); stroke: var(--c-blue); stroke-width: .8; }
+.cov-spl   { fill: color-mix(in srgb, var(--c-teal) 38%, transparent); stroke: var(--c-teal); stroke-width: .8; }
+.cov-small { fill: color-mix(in srgb, var(--c-green) 40%, transparent); stroke: var(--c-green); stroke-width: .8; }
+.cov-end   { fill: color-mix(in srgb, var(--c-amber) 40%, transparent); stroke: var(--c-amber); stroke-width: .8; }
+.arc { fill: none; stroke: var(--c-violet); stroke-width: 1.1; opacity: .8; }
+.arc--main { stroke-width: 1.6; }
+.arc--circ { stroke: var(--c-amber); stroke-dasharray: 3 3; }
+
+/* annotation rows, one per RNA class */
+.lx-row { cursor: pointer; transition: opacity .2s; }
+.lx-row:focus { outline: none; }
+.lx-row:focus-visible .lx-name, .lx-row.is-on .lx-name { fill: var(--text); }
+.lx-row.is-dim { opacity: .3; }
+.lx-hit { fill: transparent; }
+.lx-row:hover .lx-hit, .lx-row.is-on .lx-hit { fill: color-mix(in srgb, var(--text) 4%, transparent); }
+.lx-hair { stroke: var(--text-muted); stroke-width: 1; }
+.f-mrna { fill: var(--c-teal); }
+.f-mrna.lx-alt { fill: var(--c-amber); }
+.f-pre { fill: color-mix(in srgb, var(--text-muted) 70%, transparent); }
+.f-erna { fill: var(--c-blue); }
+.f-erna-l { fill: none; stroke: var(--c-blue); stroke-width: 1.2; }
+.f-prompt { fill: var(--c-violet); }
+.f-prompt-l { fill: none; stroke: var(--c-violet); stroke-width: 1.2; }
+.f-sno { fill: var(--c-green); }
+.f-ri { fill: color-mix(in srgb, var(--c-teal) 70%, transparent); }
+.f-circ { fill: var(--c-amber); }
+.f-circ-l { fill: none; stroke: var(--c-amber); stroke-width: 1.2; }
+.lx-band { fill: color-mix(in srgb, var(--text) 5%, transparent);
+  stroke: color-mix(in srgb, var(--text) 35%, transparent); stroke-width: 1; stroke-dasharray: 3 3; }
+
+/* explanation card and the classes that live elsewhere in the genome */
+.locus__card { margin: 1rem 0 0; padding: 1rem 1.25rem; min-height: 6.5rem; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--bg); }
+.locus__name { font-weight: 500; margin: 0 0 .35rem; }
+.locus__text { color: var(--text-muted); margin: 0 0 .5rem; max-width: 74ch; line-height: 1.6; }
+.locus__meta { font-family: var(--font-mono); font-size: .8rem; color: var(--text-muted); margin: 0; }
+.locus__beyond { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin-top: 1rem;
+  font-family: var(--font-mono); font-size: .8rem; color: var(--text-muted); }
+.locus__chip { all: unset; cursor: pointer; padding: .3rem .75rem; border: 1px solid var(--border);
+  border-radius: 999px; color: var(--text); transition: border-color var(--ease); }
+.locus__chip:hover, .locus__chip:focus-visible, .locus__chip.is-on { border-color: var(--text-muted); }
+@media (max-width: 900px) { .locus__scroll::after { content: "Scroll sideways to see the whole locus"; display: block;
+  font-family: var(--font-mono); font-size: .75rem; color: var(--text-muted); padding: 6px 4px 0; position: sticky; left: 0; } }

@@ -71,8 +71,14 @@
 
   const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
   let grey = [150, 158, 172];
-  const readGrey = () => { grey = getComputedStyle(document.documentElement).getPropertyValue('--dot-grey').split(',').map(Number); };
-  readGrey(); new MutationObserver(readGrey).observe(document.documentElement, { attributes: true });
+  const VARS = ['--c-teal', '--c-blue', '--c-violet', '--c-green', '--c-blue', '--c-amber'];
+  const rgb = v => { const m = v.trim().match(/^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i); return m ? m.slice(1).map(x => parseInt(x, 16)) : null; };
+  const readTheme = () => {
+    const cs = getComputedStyle(cv.parentElement);          // the hero may carry its own palette
+    grey = cs.getPropertyValue('--dot-grey').split(',').map(Number);
+    VARS.forEach((v, i) => { const c = rgb(cs.getPropertyValue(v)); if (c) CL[i][6] = c; });
+  };
+  readTheme(); new MutationObserver(readTheme).observe(document.documentElement, { attributes: true });
 
   function frame(now) {
     const dt = Math.min((now - last) / 1000, 0.05); last = now;
